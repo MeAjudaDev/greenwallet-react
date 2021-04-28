@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import EditCategory from './EditCategory';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <EditCategory title="Nova Categoria De Despesas"/>
+        <EditCategory title="Editar Categoria De Despesas"/>
     </React.StrictMode>,
     document.getElementById('root')
 );

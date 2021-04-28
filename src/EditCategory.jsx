@@ -1,9 +1,9 @@
 import './EditCategory.css';
 
-function EditCategory() {
+function EditCategory(props) {
     return (
         <div className="container">
-            <h1>Editar Categoria De Despesas</h1>
+            <h1>{props.title}</h1>
             <label id="description">
                 Descrição
                 <br />
@@ -20,4 +20,4 @@ function EditCategory() {
     );
 }
 
-export default App;
+export default EditCategory;
