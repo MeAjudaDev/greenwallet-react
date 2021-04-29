@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import EditExpense from './EditExpense';
+import EditExpenses from './EditExpenses';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <EditExpense />
+        <EditExpenses />
     </React.StrictMode>,
     document.getElementById('root')
 );
