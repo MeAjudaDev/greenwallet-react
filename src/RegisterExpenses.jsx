@@ -1,5 +1,5 @@
 import React from "react";
-import "./RegisterExpenses.css"
+import "./RegisterExpenses.css";
 
 function RegisterExpenses() {
     const [type, setType] = React.useState("variavel");
@@ -15,11 +15,12 @@ function RegisterExpenses() {
             </header>
             <section className="">
                 <main>
-                    <div className="">
-                        <span>R$</span>
-                        <span>0,00</span>
-                    </div>
-                    <form action="#" className="registerForm" >
+                    <form action="#" className="registerForm">
+                        <div className="">
+                            <span>R$</span>
+                            <input type="number" name="value" id="value" />
+                        </div>
+
                         <div className="">
                             <fieldset>
                                 <label>
@@ -31,7 +32,7 @@ function RegisterExpenses() {
                                     />
                                 </label>
                             </fieldset>
-                            <div className="registerForm__options" >
+                            <div className="registerForm__options">
                                 <fieldset>
                                     <h2>Categoria</h2>
                                     <label>
