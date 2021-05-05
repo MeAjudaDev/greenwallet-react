@@ -1,0 +1,26 @@
+
+/*edições de listas*/
+.expensesList {
+    list-style: none;
+}
+
+.expensesListHeader,
+.expensesList .expensesList__item {
+   display: flex;
+   justify-content: space-between;
+}
+
+
+/*edições nos botões*/
+
+.expensesListWrapper .buttonListExpenses {
+    align-self: flex-start;
+    background: rgb(60, 224, 224);
+    color: white;
+    margin: 5px;
+    border-radius: 7px;
+    border: 0;
+    font-size: 20px;
+    padding: 11px 35px;
+}
+
