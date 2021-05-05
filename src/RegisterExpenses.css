@@ -1,0 +1,27 @@
+fieldset {
+    border: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.registerForm label {
+    display: block;
+    width: 100%;
+}
+
+.registerForm label input[type="text"] {
+    display: block;
+    width: 100%;
+}
+
+.registerForm__options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.registerForm__buttons button{
+    display: block;
+    width: 100%;
+}
