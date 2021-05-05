@@ -2,7 +2,7 @@ fieldset {
     border: none;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -16,12 +16,12 @@ button{
     width: 100%;
 }
 
-.registerForm__options{
+.registerForm__options {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.registerForm__buttons button{
+.registerForm__buttons button {
     display: block;
     width: 100%;
 }
