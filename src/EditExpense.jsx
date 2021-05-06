@@ -15,37 +15,37 @@ function EditExpenses(props) {
             <div className="column">
                 <label>
                     <span>Descrição</span>
-                    <input type="text" placeholder="Compras de Supermercado"/>
+                    <input type="text" placeholder="Compras de Supermercado" />
                 </label>
             </div>
             <div className="row">
                 <span>Categoria</span>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Alimentação</span>
                 </label>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Casa</span>
                 </label>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Transporte</span>
                 </label>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Conhecimento</span>
                 </label>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Saúde</span>
                 </label>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Lazer</span>
                 </label>
                 <label>
-                    <input type= "radio"/>
+                    <input type="radio" />
                     <span>Diverso</span>
                 </label>
             </div>
@@ -59,21 +59,21 @@ function EditExpenses(props) {
                     <input type="radio" className="check-item" />
                     <span>variável</span>
                 </label>
-                </div>
-                <div className="column">
+            </div>
+            <div className="column">
                 <label>
-                <input type="checkBox" className="check-item" />
+                    <input type="checkBox" className="check-item" />
                     <span>Com Vencimento</span>
                 </label>
                 <span>08/04/2021</span>
-                </div>
-                <div className="column">
-                    <button>Cancelar</button>
-                    <button>Salvar</button>
-                    <button>Voltar</button>
-                </div>
+            </div>
+            <div className="column">
+                <button>Cancelar</button>
+                <button>Salvar</button>
+                <button>Voltar</button>
+            </div>
         </div>
-);
+    );
 }
 
 export default EditExpenses;
