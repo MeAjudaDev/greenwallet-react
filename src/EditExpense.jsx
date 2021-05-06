@@ -1,4 +1,4 @@
-import './EditExpenses.css';
+import './EditExpense.css';
 
 function EditExpenses(props) {
     return (
