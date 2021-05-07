@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <EditExpense title="Despesas"/>
+        <EditExpense title="Editar Despesa"/>
     </React.StrictMode>,
     document.getElementById('root')
 );

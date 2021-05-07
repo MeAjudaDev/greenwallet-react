@@ -3,6 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+:root {
+    --border-radius-default: 6px;
+
+    --color-background-danger: var(--color-danger);
+    --color-background-dark: #A2A1A1;
+    --color-background-default: #F9F8FE;
+    --color-background-gray: #EBEBEB;
+    --color-background-light: #fff;
+    --color-background-success: #01C9B8;
+    --color-danger: #FF7E78;
+    --color-title: #444C66;
+
+    --spacing-extra-small: 1rem;
+    --spacing-small: 1.5rem;
+    --spacing-default: 1.8rem;
+}
+
 * {
     border: none;
     box-sizing: border-box;
@@ -17,8 +34,15 @@ html {
 }
 
 body {
-    background-color: #F9F8FE;
+    background-color: var(--color-background-default);
     font-size: 1.6rem;
     height: 100vh;
     overflow: auto;
+    padding: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-title);
+    font-weight: 400;
+    margin-bottom: 0.25em;
 }

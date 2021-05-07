@@ -5,64 +5,76 @@ function EditExpenses(props) {
         <>
             <h1>{props.title}</h1>
             <form method="post" action="#" className="editExpenseForm">
-                <label className="twoColumns center">
+                <label className="editExpenseForm__value">
                     <span>R$</span>
-                    <input type="number" />
+                    <input type="number" className="bigInput" />
                 </label>
-                <label className="twoColumns">
-                    <span>Descrição</span>
-                    <input type="text" />
-                </label>
-                <fieldset>
-                    <legend>Categoria</legend>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Alimentação</span>
+                <fieldset className="editExpenseForm__fields">
+                    <label className="twoColumns">
+                        <span>Descrição</span>
+                        <input type="text" />
                     </label>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Casa</span>
+                    <fieldset className="editExpenseForm__fieldset">
+                        <legend>Categoria</legend>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Alimentação</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Casa</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Transporte</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Conhecimento</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Saúde</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Lazer</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="category" />
+                            {' '}
+                            <span>Diverso</span>
+                        </label>
+                    </fieldset>
+                    <fieldset className="editExpenseForm__fieldset">
+                        <legend>Tipo</legend>
+                        <label>
+                            <input type="radio" name="expense-type" />
+                            {' '}
+                            <span>Fixa</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="expense-type" />
+                            {' '}
+                            <span>Variável</span>
+                        </label>
+                    </fieldset>
+                    <label className="twoColumns">
+                        <input type="checkbox" />
+                        {' '}
+                        <span>Com Vencimento</span>
                     </label>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Transporte</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Conhecimento</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Saúde</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Lazer</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="category" />
-                        <span>Diverso</span>
-                    </label>
+                    <input id="dueDate" type="text" className="editExpenseForm__dueDate twoColumns center bigInput" />
                 </fieldset>
-                <fieldset>
-                    <legend>Tipo</legend>
-                    <label>
-                        <input type="radio" name="expense-type" />
-                        <span>Fixa</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="expense-type" />
-                        <span>variável</span>
-                    </label>
-                </fieldset>
-                <label className="twoColumns">
-                    <input type="checkbox" />
-                    <span>Com Vencimento</span>
-                </label>
-                <input type="date" className="twoColumns center" />
-                <button type="button" className="twoColumns">Cancelar</button>
-                <button type="button" className="twoColumns">Salvar</button>
-                <button type="button" className="twoColumns">Voltar</button>
+                <button type="button" className="editExpenseForm__actionButton bgSuccess">Salvar</button>
+                <button type="button" className="editExpenseForm__actionButton bgDanger">Cancelar</button>
+                <button type="button" className="editExpenseForm__actionButton bgDark">Voltar</button>
             </form>
         </>
     );
