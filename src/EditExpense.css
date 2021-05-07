@@ -1,31 +1,18 @@
-/*Edit all input page*/
-
-.container {
+.editExpenseForm {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 10px;
-    padding: 10px;
-  }
+    grid-template-rows: repeat(8, auto);
+    grid-template-columns: 1fr 1fr;
+}
 
-  .container > div {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-    padding: 0;
-  }
+.editExpenseForm fieldset {
+    display: flex;
+    flex-direction: column;
+}
 
-  .column {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
+.twoColumns {
+    grid-column: 1 / 3;
+}
 
-  .row span {
-      display: grid;
-      gap: 0;
-  }
-
-  .row > label {
-      display:grid;
-      grid-template-columns: repeat(3, 2fr);
-
-  }
+.center {
+    justify-self: center;
+}

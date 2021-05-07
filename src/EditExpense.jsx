@@ -2,77 +2,69 @@ import './EditExpense.css';
 
 function EditExpenses(props) {
     return (
-        <div className="container">
-            <div className="column">
-                <h1>{props.title}</h1>
-            </div>
-            <div className="column">
-                <label>
-                    <span>Valor R$:</span>
-                    <span>99.90</span>
+        <>
+            <h1>{props.title}</h1>
+            <form method="post" action="#" className="editExpenseForm">
+                <label className="twoColumns center">
+                    <span>R$</span>
+                    <input type="number" />
                 </label>
-            </div>
-            <div className="column">
-                <label>
+                <label className="twoColumns">
                     <span>Descrição</span>
-                    <input type="text" placeholder="Compras de Supermercado" />
+                    <input type="text" />
                 </label>
-            </div>
-            <div className="row">
-                <span>Categoria</span>
-                <label>
-                    <input type="radio" />
-                    <span>Alimentação</span>
-                </label>
-                <label>
-                    <input type="radio" />
-                    <span>Casa</span>
-                </label>
-                <label>
-                    <input type="radio" />
-                    <span>Transporte</span>
-                </label>
-                <label>
-                    <input type="radio" />
-                    <span>Conhecimento</span>
-                </label>
-                <label>
-                    <input type="radio" />
-                    <span>Saúde</span>
-                </label>
-                <label>
-                    <input type="radio" />
-                    <span>Lazer</span>
-                </label>
-                <label>
-                    <input type="radio" />
-                    <span>Diverso</span>
-                </label>
-            </div>
-            <div className="row">
-                <span>Tipo</span>
-                <label>
-                    <input type="radio" className="check-item" />
-                    <span>Fixa</span>
-                </label>
-                <label>
-                    <input type="radio" className="check-item" />
-                    <span>variável</span>
-                </label>
-            </div>
-            <div className="column">
-                <label>
-                    <input type="checkBox" className="check-item" />
+                <fieldset>
+                    <legend>Categoria</legend>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Alimentação</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Casa</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Transporte</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Conhecimento</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Saúde</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Lazer</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" />
+                        <span>Diverso</span>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Tipo</legend>
+                    <label>
+                        <input type="radio" name="expense-type" />
+                        <span>Fixa</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="expense-type" />
+                        <span>variável</span>
+                    </label>
+                </fieldset>
+                <label className="twoColumns">
+                    <input type="checkbox" />
                     <span>Com Vencimento</span>
                 </label>
-                <span>08/04/2021</span>
-            </div>
-            <div className="column">
-                <button>Cancelar</button>
-                <button>Salvar</button>
-                <button>Voltar</button>
-            </div>
-        </div>
+                <input type="date" className="twoColumns center" />
+                <button type="button" className="twoColumns">Cancelar</button>
+                <button type="button" className="twoColumns">Salvar</button>
+                <button type="button" className="twoColumns">Voltar</button>
+            </form>
+        </>
     );
 }
 
