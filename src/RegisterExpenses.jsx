@@ -3,78 +3,64 @@ import "./RegisterExpenses.css";
 
 function RegisterExpenses() {
     const [type, setType] = useState("variavel");
+    const [hasExpiration, setHasExpiration] = useState(true);
 
     const handleChange = ({ target }) => {
         setType(target.value);
     };
 
     return (
-        <div>
-            <header>
+        <div className="container newExpenseContainer">
+            <header className="newExpenseHeader twoColumns">
                 <h1>Nova Despesa</h1>
+                <img src="/images/avatar.svg" alt="avatar" />
             </header>
-            <form action="#" className="registerForm">
-                <label>
-                    <span>R$</span>
+            <form action="#" className="newExpenseForm twoColumns">
+                <label className="newExpenseForm__value twoColumns">
+                    <sup>R$</sup>
                     <input type="number" name="value" id="value" />
                 </label>
-                <label>
-                    <span>Descrição</span>
+                <label className="newExpenseForm__description twoColumns">
+                    <strong>Descrição</strong>
                     <input type="text" autoFocus name="description" />
                 </label>
-                <fieldset>
-                    <legend>Categoria</legend>
+                <fieldset className="newExpenseForm__categories">
+                    <strong>Categoria</strong>
                     <label>
                         <input
-                            type="checkbox"
-                            name="alimentacao"
+                            type="radio"
+                            name="category"
                             value="alimentacao"
                         />
                         <span>Alimentação</span>
                     </label>
                     <label>
-                        <input type="checkbox" name="casa" value="casa" />
+                        <input type="radio" name="category" value="casa" />
                         <span>Casa</span>
                     </label>
                     <label>
                         <input
-                            type="checkbox"
-                            name="transporte"
+                            type="radio"
+                            name="category"
                             value="transporte"
                         />
                         <span>Transporte</span>
                     </label>
                     <label>
-                        <input
-                            type="checkbox"
-                            name="conhecimento"
-                            value="conhecimento"
-                        />
-                        <span>Conhecimento</span>
+                        <input type="radio" name="category" value="estudo" />
+                        <span>Estudo</span>
                     </label>
                     <label>
-                        <input type="checkbox" name="saude" value="saude" />
+                        <input type="radio" name="category" value="saude" />
                         <span>Saúde</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" name="lazer" value="lazer" />
-                        <span>Lazer</span>
-                    </label>
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="diversos"
-                            value="diversos"
-                        />
-                        <span>Diversos</span>
                     </label>
                 </fieldset>
                 <fieldset>
-                    <legend>Tipo</legend>
+                    <strong>Tipo</strong>
                     <label>
                         <input
                             type="radio"
-                            name="grupo-radio"
+                            name="type"
                             value="variavel"
                             checked={type === "variavel"}
                             onChange={handleChange}
@@ -84,7 +70,7 @@ function RegisterExpenses() {
                     <label>
                         <input
                             type="radio"
-                            name="grupo-radio"
+                            name="type"
                             value="fixo"
                             checked={type === "fixo"}
                             onChange={handleChange}
@@ -92,17 +78,35 @@ function RegisterExpenses() {
                         <span>Fixo</span>
                     </label>
                 </fieldset>
-                <label>
+                <label className="newExpenseForm__expiration twoColumns">
                     <input
                         type="checkbox"
                         value="com-vencimento"
-                        defaultChecked
+                        checked={hasExpiration}
+                        onChange={() => setHasExpiration(!hasExpiration)}
                     />
                     <span>Com vencimento</span>
                 </label>
-                <input type="date" name="expiration" id="expiration" />
-                <button type="submit">Salvar</button>
-                <button type="button">Voltar</button>
+                {hasExpiration && (
+                    <input
+                        className="twoColumns newExpenseForm__expirationdate"
+                        type="date"
+                        name="expiration"
+                        id="expiration"
+                    />
+                )}
+                <button
+                    className="twoColumns newExpenseForm__button newExpenseForm__button--primary"
+                    type="submit"
+                >
+                    Salvar
+                </button>
+                <button
+                    className="twoColumns newExpenseForm__button newExpenseForm__button--secondary"
+                    type="button"
+                >
+                    Voltar
+                </button>
             </form>
         </div>
     );

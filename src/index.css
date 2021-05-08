@@ -1,9 +1,33 @@
 /*importação das fontes*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 * {
+    border: none;
     box-sizing: border-box;
-    padding: 0;
+    margin: 0;
     outline: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+body,
+input, textarea {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #f9f8fe;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    padding: 1.5rem 1.1rem 0.6rem;
 }
