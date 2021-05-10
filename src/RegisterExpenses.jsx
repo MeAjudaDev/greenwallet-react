@@ -3,9 +3,14 @@ import "./RegisterExpenses.css";
 
 function RegisterExpenses() {
     const [type, setType] = useState("variavel");
+    const [category, setCategory] = useState("alimentacao");
     const [hasExpiration, setHasExpiration] = useState(true);
 
-    const handleChange = ({ target }) => {
+    const handleCategoryChange = ({ target }) => {
+        setCategory(target.value);
+    };
+
+    const handleTypeChange = ({ target }) => {
         setType(target.value);
     };
 
@@ -31,11 +36,14 @@ function RegisterExpenses() {
                             type="radio"
                             name="category"
                             value="alimentacao"
+                            checked={category === "alimentacao"}
+                            onChange={handleCategoryChange}
                         />
                         <span>Alimentação</span>
                     </label>
                     <label>
-                        <input type="radio" name="category" value="casa" />
+                        <input type="radio" name="category" value="casa" checked={category === "casa"}
+                            onChange={handleCategoryChange} />
                         <span>Casa</span>
                     </label>
                     <label>
@@ -43,19 +51,23 @@ function RegisterExpenses() {
                             type="radio"
                             name="category"
                             value="transporte"
+                            checked={category === "transporte"}
+                            onChange={handleCategoryChange}
                         />
                         <span>Transporte</span>
                     </label>
                     <label>
-                        <input type="radio" name="category" value="estudo" />
+                        <input type="radio" name="category" value="estudo" checked={category === "estudo"}
+                            onChange={handleCategoryChange} />
                         <span>Estudo</span>
                     </label>
                     <label>
-                        <input type="radio" name="category" value="saude" />
+                        <input type="radio" name="category" value="saude" checked={category === "saude"}
+                            onChange={handleCategoryChange} />
                         <span>Saúde</span>
                     </label>
                 </fieldset>
-                <fieldset>
+                <fieldset className="newExpenseForm__type">
                     <strong>Tipo</strong>
                     <label>
                         <input
@@ -63,7 +75,7 @@ function RegisterExpenses() {
                             name="type"
                             value="variavel"
                             checked={type === "variavel"}
-                            onChange={handleChange}
+                            onChange={handleTypeChange}
                         />
                         <span>Variável</span>
                     </label>
@@ -73,7 +85,7 @@ function RegisterExpenses() {
                             name="type"
                             value="fixo"
                             checked={type === "fixo"}
-                            onChange={handleChange}
+                            onChange={handleTypeChange}
                         />
                         <span>Fixo</span>
                     </label>
@@ -87,14 +99,12 @@ function RegisterExpenses() {
                     />
                     <span>Com vencimento</span>
                 </label>
-                {hasExpiration && (
                     <input
                         className="twoColumns newExpenseForm__expirationdate"
                         type="date"
                         name="expiration"
                         id="expiration"
                     />
-                )}
                 <button
                     className="twoColumns newExpenseForm__button newExpenseForm__button--primary"
                     type="submit"

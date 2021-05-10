@@ -1,4 +1,7 @@
-fieldset {
+fieldset,
+.newExpenseForm__value,
+.newExpenseForm__description,
+.newExpenseForm__expiration {
     background: #ffffff;
 }
 
@@ -31,9 +34,9 @@ strong {
     font-weight: 700;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    color: #01c9b8;
+input[type="radio"],
+input[type="checkbox"] {
+    opacity: 0;
 }
 
 input::-webkit-calendar-picker-indicator {
@@ -76,7 +79,6 @@ input::-webkit-datetime-edit-fields-wrapper {
 }
 
 .newExpenseForm__value {
-    background: #ffffff;
     border-radius: 0.6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -97,7 +99,6 @@ input::-webkit-datetime-edit-fields-wrapper {
 }
 
 .newExpenseForm__description {
-    background: #ffffff;
     border-top-left-radius: 0.6rem;
     border-top-right-radius: 0.6rem;
     margin-top: 1.5rem;
@@ -116,8 +117,42 @@ input::-webkit-datetime-edit-fields-wrapper {
     padding: 0rem 4.1rem 2.3rem 2.2rem;
 }
 
+.newExpenseForm__categories label,
+.newExpenseForm__type label,
 .newExpenseForm__expiration {
-    background: #ffffff;
+    position: relative;
+}
+
+.newExpenseForm__categories label span::after,
+.newExpenseForm__type label span::after {
+    border-radius: 50%;
+    left: 0;
+}
+
+.newExpenseForm__expiration span::after {
+    left: 2.2rem;
+}
+
+.newExpenseForm__categories label span::after,
+.newExpenseForm__type label span::after,
+.newExpenseForm__expiration span::after {
+    background-color: #f1eeee;
+    border: 1.5px solid #cccccc;
+    content: "";
+    height: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 0.3rem;
+    width: 12px;
+}
+
+.newExpenseForm__categories label input:checked + span::after,
+.newExpenseForm__type label input:checked + span::after,
+.newExpenseForm__expiration input:checked + span::after {
+    background-color: #01c9b8;
+}
+
+.newExpenseForm__expiration {
     padding-left: 2.2rem;
     padding-bottom: 1.5rem;
 }
