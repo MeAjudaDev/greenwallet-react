@@ -2,9 +2,20 @@ import React, { useState } from "react";
 import "./RegisterExpenses.css";
 
 function RegisterExpenses() {
-    const [type, setType] = useState("variavel");
+    const [value, setValue] = useState(0);
+    const [description, setDescription] = useState("");
     const [category, setCategory] = useState("alimentacao");
+    const [type, setType] = useState("variavel");
     const [hasExpiration, setHasExpiration] = useState(true);
+    const [expirationDate, setExpirationDate] = useState('');
+
+    const handleValueChange = ({ target }) => {
+        setValue(target.value);
+    };
+
+    const handleDescriptionChange = ({ target }) => {
+        setDescription(target.value);
+    };
 
     const handleCategoryChange = ({ target }) => {
         setCategory(target.value);
@@ -12,6 +23,10 @@ function RegisterExpenses() {
 
     const handleTypeChange = ({ target }) => {
         setType(target.value);
+    };
+
+    const handleDateChange = ({ target }) => {
+        setExpirationDate(target.value);
     };
 
     return (
@@ -23,11 +38,23 @@ function RegisterExpenses() {
             <form action="#" className="newExpenseForm twoColumns">
                 <label className="newExpenseForm__value twoColumns">
                     <sup>R$</sup>
-                    <input type="number" name="value" id="value" />
+                    <input
+                        type="number"
+                        name="value"
+                        id="value"
+                        value={value}
+                        onChange={handleValueChange}
+                    />
                 </label>
                 <label className="newExpenseForm__description twoColumns">
                     <strong>Descrição</strong>
-                    <input type="text" autoFocus name="description" />
+                    <input
+                        type="text"
+                        autoFocus
+                        name="description"
+                        value={description}
+                        onChange={handleDescriptionChange}
+                    />
                 </label>
                 <fieldset className="newExpenseForm__categories">
                     <strong>Categoria</strong>
@@ -42,8 +69,13 @@ function RegisterExpenses() {
                         <span>Alimentação</span>
                     </label>
                     <label>
-                        <input type="radio" name="category" value="casa" checked={category === "casa"}
-                            onChange={handleCategoryChange} />
+                        <input
+                            type="radio"
+                            name="category"
+                            value="casa"
+                            checked={category === "casa"}
+                            onChange={handleCategoryChange}
+                        />
                         <span>Casa</span>
                     </label>
                     <label>
@@ -57,13 +89,23 @@ function RegisterExpenses() {
                         <span>Transporte</span>
                     </label>
                     <label>
-                        <input type="radio" name="category" value="estudo" checked={category === "estudo"}
-                            onChange={handleCategoryChange} />
+                        <input
+                            type="radio"
+                            name="category"
+                            value="estudo"
+                            checked={category === "estudo"}
+                            onChange={handleCategoryChange}
+                        />
                         <span>Estudo</span>
                     </label>
                     <label>
-                        <input type="radio" name="category" value="saude" checked={category === "saude"}
-                            onChange={handleCategoryChange} />
+                        <input
+                            type="radio"
+                            name="category"
+                            value="saude"
+                            checked={category === "saude"}
+                            onChange={handleCategoryChange}
+                        />
                         <span>Saúde</span>
                     </label>
                 </fieldset>
@@ -99,12 +141,14 @@ function RegisterExpenses() {
                     />
                     <span>Com vencimento</span>
                 </label>
-                    <input
-                        className="twoColumns newExpenseForm__expirationdate"
-                        type="date"
-                        name="expiration"
-                        id="expiration"
-                    />
+                <input
+                    className="twoColumns newExpenseForm__expirationdate"
+                    type="date"
+                    name="expiration"
+                    id="expiration"
+                    value={expirationDate}
+                    onChange={handleDateChange}
+                />
                 <button
                     className="twoColumns newExpenseForm__button newExpenseForm__button--primary"
                     type="submit"
