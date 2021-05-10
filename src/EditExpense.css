@@ -58,6 +58,7 @@
     display: block;
     padding: var(--spacing-small);
     width: 100%;
+    font-size: 1.6rem;
 }
 
 .editExpenseForm__actionButton:not(:first-of-type) {
