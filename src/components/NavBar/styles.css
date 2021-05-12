@@ -1,8 +1,8 @@
 .navbar {
     display: flex;
-    list-style: none;
     margin-left: -0.6rem;
     margin-right: -0.6rem;
+    margin-bottom: 1.6rem;
 }
 
 .navbar__link {

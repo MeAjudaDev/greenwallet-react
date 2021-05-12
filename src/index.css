@@ -10,8 +10,10 @@
     --color-background-gray: #ebebeb;
     --color-background-light: #fff;
     --color-background-success: #01c9b8;
+    --color-background-info: var(--color-info);
     --color-danger: #ff7e78;
     --color-title: #444c66;
+    --color-info: #78d7ed;
 
     --spacing-extra-small: 1rem;
     --spacing-small: 1.5rem;
@@ -38,7 +40,12 @@ body {
     padding: 1.8rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--color-title);
     font-weight: 400;
     margin-bottom: 0.25em;
@@ -50,6 +57,10 @@ a {
 
 button {
     cursor: pointer;
+}
+
+ul{
+    list-style: none;
 }
 
 .bigInput {

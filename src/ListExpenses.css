@@ -1,26 +1,24 @@
-
-/*edições de listas*/
-.expensesList {
-    list-style: none;
+.expensesList__totalValue {
+    text-align: center;
+    color: var(--color-info);
+    margin-bottom: 2rem;
 }
 
-.expensesListHeader,
-.expensesList .expensesList__item {
-   display: flex;
-   justify-content: space-between;
+.expensesList{
+    font-size: 1.8rem;   
 }
 
-
-/*edições nos botões*/
-
-.expensesListWrapper .buttonListExpenses {
-    align-self: flex-start;
-    background: rgb(60, 224, 224);
-    color: white;
-    margin: 5px;
-    border-radius: 7px;
-    border: 0;
-    font-size: 20px;
-    padding: 11px 35px;
+.expensesList__item{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
 }
 
+.expensesList__item span{
+    color: var(--color-title);
+}
+
+.expensesList__item span:last-child{
+    color: var(--color-info);
+}
