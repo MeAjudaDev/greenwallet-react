@@ -1,0 +1,66 @@
+.editExpenseForm__value {
+    background-color: var(--color-background-light);
+    border-radius: var(--border-radius-default);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 3rem 1rem;
+}
+
+.editExpenseForm__value > span:first-child {
+    color: var(--color-danger);
+    margin-top: 0.5rem;
+}
+
+.editExpenseForm__value > input {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.editExpenseForm__fields {
+    background-color: var(--color-background-light);
+    border-radius: var(--border-radius-default);
+    display: grid;
+    gap: var(--spacing-small);
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--spacing-default);
+    padding: var(--spacing-default);
+}
+
+.editExpenseForm__fields label > span:first-child,
+.editExpenseForm__fields legend {
+    display: block;
+    font-weight: 700;
+    margin-bottom: var(--spacing-extra-small);
+}
+
+.editExpenseForm__fields input[type="text"] {
+    background-color: var(--color-background-gray);
+    border-radius: var(--border-radius-default);
+    padding: var(--spacing-small);
+    width: 100%;
+}
+
+#dueDate {
+    background-color: var(--color-background-light);
+    padding: 0;
+    text-align: center;
+}
+
+.editExpenseForm__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-extra-small);
+}
+
+.editExpenseForm__actionButton {
+    display: block;
+    padding: var(--spacing-small);
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.editExpenseForm__actionButton:not(:first-of-type) {
+    margin-top: var(--spacing-extra-small);
+}
