@@ -47,6 +47,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.25em;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
 .twoColumns {
     grid-column: 1 / 3;
 }
