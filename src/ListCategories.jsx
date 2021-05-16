@@ -1,6 +1,7 @@
 import './ListCategories.css';
 import AppHeader from './components/AppHeader';
 import NavBar from './components/NavBar';
+import toBRL from './utils/formatNumber';
 
 function ListCategories(props) {
     const months = [
@@ -24,6 +25,19 @@ function ListCategories(props) {
         <div>
             <AppHeader title={props.title} />
             <NavBar items={months} />
+            <section className='categoriesListWrapper'>
+                <h2 className='categoriesList__totalValue'>{toBRL(3599.57)}</h2>
+                <h3 className='categoriesList__description'>TOTAL POR CATEGORIA</h3>
+                <hr className='categoriesList__divider' />
+                <ul className='categoriesList'>
+                    {categories.map(category =>
+                        <li key={category.description} className='categoriesList__item'>
+                            <span>{category.description}</span>
+                            <span>{toBRL(category.value)}</span>
+                        </li>
+                    )}
+                </ul>
+            </section>
         </div>
     );
 }
