@@ -1,4 +1,4 @@
-import './EditCategory.css';
+import "./EditCategory.css";
 
 function EditCategory(props) {
     return (
