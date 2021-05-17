@@ -1,19 +1,16 @@
-/*importação das fontes*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 :root {
     --border-radius-default: 6px;
 
     --color-background-danger: var(--color-danger);
-    --color-background-dark: #A2A1A1;
-    --color-background-default: #F9F8FE;
-    --color-background-gray: #EBEBEB;
+    --color-background-dark: #a2a1a1;
+    --color-background-default: #f9f8fe;
+    --color-background-gray: #ebebeb;
     --color-background-light: #fff;
-    --color-background-success: #01C9B8;
-    --color-danger: #FF7E78;
-    --color-title: #444C66;
+    --color-background-success: #01c9b8;
+    --color-danger: #ff7e78;
+    --color-title: #444c66;
 
     --spacing-extra-small: 1rem;
     --spacing-small: 1.5rem;
@@ -41,10 +38,19 @@ body {
     padding: 1.8rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--color-title);
     font-weight: 400;
     margin-bottom: 0.25em;
+}
+
+button {
+    cursor: pointer;
 }
 
 .twoColumns {
@@ -76,4 +82,8 @@ h1, h2, h3, h4, h5, h6 {
 .bgDark,
 .bgSuccess {
     color: white;
+}
+
+.container {
+    padding: 1.5rem 1.1rem 0.6rem;
 }
