@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import ListCategories from './ListCategories';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import RegisterExpenses from "./RegisterExpenses";
+import EditExpense from "./EditExpense";
+import ListCategories from "./ListCategories";
 
 ReactDOM.render(
     <React.StrictMode>
-        <ListCategories title='Despesas' />
+        <RegisterExpenses />
+        <EditExpense title="Editar Despesa" />
+        <ListCategories title="Despesas" />
     </React.StrictMode>,
-    document.getElementById('root')
+    document.getElementById("root")
 );
 
 reportWebVitals();
