@@ -5,17 +5,11 @@ export async function filterExpenses(filter) {
             categories: [1, 2, 3],
         }
     */
-    return [
-        {
-            id: 1,
-            userId: 2,
-            categoryId: 3,
-            description: "some description",
-            value: 123.45,
-            isFixed: true,
-            dueDate: "2021-12-25",
-            expenseType: "E",
-            expenseState: "A",
-        },
-    ];
+    return fetch(`${process.env.REACT_APP_API_URL}/expenses`);
+}
+
+export function deleteExpense(expenseId) {
+    return fetch(`${process.env.REACT_APP_API_URL}/expenses/${expenseId}`, {
+        method: "DELETE"
+    });
 }

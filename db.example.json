@@ -1,0 +1,37 @@
+{
+    "expenses": [
+        {
+            "id": 1,
+            "userId": 2,
+            "categoryId": 3,
+            "description": "some description",
+            "value": 123.45,
+            "isFixed": true,
+            "dueDate": "2021-12-25",
+            "expenseType": "E",
+            "expenseState": "A"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "categoryId": 3,
+            "description": "some description",
+            "value": 123.45,
+            "isFixed": true,
+            "dueDate": "2021-12-25",
+            "expenseType": "E",
+            "expenseState": "A"
+        },
+        {
+            "id": 3,
+            "userId": 2,
+            "categoryId": 3,
+            "description": "some description",
+            "value": 123.45,
+            "isFixed": true,
+            "dueDate": "2021-12-25",
+            "expenseType": "E",
+            "expenseState": "A"
+        }
+    ]
+}
