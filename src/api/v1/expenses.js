@@ -5,11 +5,11 @@ export async function filterExpenses(filter) {
             categories: [1, 2, 3],
         }
     */
-    return fetch(`${process.env.API_URL}/expenses`);
+    return fetch(`${process.env.REACT_APP_API_URL}/expenses`);
 }
 
 export function deleteExpense(expenseId) {
-    return fetch(`${process.env.API_URL}/expenses/${expenseId}`, {
+    return fetch(`${process.env.REACT_APP_API_URL}/expenses/${expenseId}`, {
         method: "DELETE"
     });
 }
