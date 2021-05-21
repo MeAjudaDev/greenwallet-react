@@ -33,5 +33,21 @@
             "expenseType": "E",
             "expenseState": "A"
         }
+    ],
+    "categories": [
+        {
+            "id": 4,
+            "userId": 2,
+            "name": "Contas Mensais",
+            "state": "A",
+            "type": "E"
+        },
+        {
+            "id": 5,
+            "userId": 3,
+            "name": "Google Pay",
+            "state": "A",
+            "type": "E"
+        }
     ]
 }

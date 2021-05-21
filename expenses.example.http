@@ -4,6 +4,18 @@ GET http://localhost:8080/api/v1/expenses
 ### Delete expense
 DELETE http://localhost:8080/api/v1/expenses/1
 
+### Post Categories
+POST http://localhost:8080/api/v1/categories
+content-type: application/json
+
+{
+    "id": 1,
+    "userId": 2,
+    "name": "Google Play",
+    "state": "A",
+    "type": "E"
+}
+
 ### Request 2
 [GET|POST] [REST API URL]
 [Request Headers]
