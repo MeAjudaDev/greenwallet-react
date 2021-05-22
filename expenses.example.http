@@ -9,8 +9,8 @@ PUT http://localhost:8080/api/v1/expenses/1
 Content-Type: application/json
 
 {
-   "id": 1,
-   "userId": 2,
+    "id": 1,
+    "userId": 2,
     "categoryId": 4,
     "description": "Fone de ouvido",
     "value": 444.99,
