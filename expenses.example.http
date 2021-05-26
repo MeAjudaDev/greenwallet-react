@@ -1,6 +1,9 @@
 ### Request 1
 GET http://localhost:8080/api/v1/expenses
 
+### Show Expense By Id
+GET http://localhost:8080/api/v1/expenses/8
+
 ### Delete expense
 DELETE http://localhost:8080/api/v1/expenses/1
 
@@ -19,6 +22,9 @@ Content-Type: application/json
     "expenseType": "A",
     "expenseState": "E"
 }
+
+### Get expense categories
+GET http://localhost:8080/api/v1/categories
 
 ### Request 2
 [GET|POST] [REST API URL]
