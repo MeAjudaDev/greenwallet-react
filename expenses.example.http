@@ -13,8 +13,30 @@ content-type: application/json
     "type": "E"
 }
 
+### Show Expense By Id
+GET http://localhost:8080/api/v1/expenses/8
+
 ### Delete expense
 DELETE http://localhost:8080/api/v1/expenses/1
+
+### Put Edit Expense
+PUT http://localhost:8080/api/v1/expenses/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "userId": 2,
+    "categoryId": 4,
+    "description": "Fone de ouvido",
+    "value": 444.99,
+    "isFixed": false,
+    "dueDate": "2021-06-20",
+    "expenseType": "A",
+    "expenseState": "E"
+}
+
+### Get expense categories
+GET http://localhost:8080/api/v1/categories
 
 ### Request 2
 [GET|POST] [REST API URL]
