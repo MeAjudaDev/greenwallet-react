@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import EditExpense from "./EditExpense";
+import ExpenseForm from "./ExpenseForm";
 import ListCategories from "./ListCategories";
 import ListExpenses from "./ListExpenses";
 
 ReactDOM.render(
     <React.StrictMode>
-        <EditExpense title="Editar Despesa" isEditing={true} />
-        <EditExpense title="Nova Despesa" />
+        <ExpenseForm title="Editar Despesa" isEditing={true} />
+        <ExpenseForm title="Nova Despesa" />
         <ListCategories title="Despesas" />
         <ListExpenses title="Despesas" group="Casa" />
     </React.StrictMode>,

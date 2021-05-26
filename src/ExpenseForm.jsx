@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./EditExpense.css";
+import "./ExpenseForm.css";
 
-function EditExpense({ title, isEditing = false }) {
+function ExpenseForm({ title, isEditing = false }) {
     const [value, setValue] = useState(0);
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("alimentacao");
@@ -174,4 +174,4 @@ function EditExpense({ title, isEditing = false }) {
     );
 }
 
-export default EditExpense;
+export default ExpenseForm;
