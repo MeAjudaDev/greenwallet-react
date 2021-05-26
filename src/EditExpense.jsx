@@ -1,83 +1,177 @@
-import './EditExpense.css';
+import React, { useState } from "react";
+import "./EditExpense.css";
 
-function EditExpenses(props) {
+function EditExpense({ title, isEditing = false }) {
+    const [value, setValue] = useState(0);
+    const [description, setDescription] = useState("");
+    const [category, setCategory] = useState("alimentacao");
+    const [type, setType] = useState("variavel");
+    const [hasExpiration, setHasExpiration] = useState(true);
+    const [expirationDate, setExpirationDate] = useState("");
+
+    const handleValueChange = ({ target }) => {
+        setValue(target.value);
+    };
+
+    const handleDescriptionChange = ({ target }) => {
+        setDescription(target.value);
+    };
+
+    const handleCategoryChange = ({ target }) => {
+        setCategory(target.value);
+    };
+
+    const handleTypeChange = ({ target }) => {
+        setType(target.value);
+    };
+
+    const handleDateChange = ({ target }) => {
+        setExpirationDate(target.value);
+    };
+
     return (
-        <>
-            <h1>{props.title}</h1>
-            <form method="post" action="#" className="editExpenseForm">
-                <label className="editExpenseForm__value">
-                    <span>R$</span>
-                    <input type="number" className="bigInput" />
+        <div className="container newExpenseContainer">
+            <header className="newExpenseHeader twoColumns">
+                <h1>{title}</h1>
+                <img src="/images/avatar.svg" alt="avatar" />
+            </header>
+            <form action="#" className="newExpenseForm twoColumns">
+                <label className="newExpenseForm__value twoColumns">
+                    <sup>R$</sup>
+                    <input
+                        type="number"
+                        name="value"
+                        id="value"
+                        value={value}
+                        onChange={handleValueChange}
+                    />
                 </label>
-                <fieldset className="editExpenseForm__fields">
-                    <label className="twoColumns">
-                        <span>Descrição</span>
-                        <input type="text" />
+                <label className="newExpenseForm__description twoColumns">
+                    <strong>Descrição</strong>
+                    <input
+                        type="text"
+                        autoFocus
+                        name="description"
+                        value={description}
+                        onChange={handleDescriptionChange}
+                    />
+                </label>
+                <fieldset className="newExpenseForm__categories">
+                    <strong>Categoria</strong>
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="alimentacao"
+                            checked={category === "alimentacao"}
+                            onChange={handleCategoryChange}
+                        />
+                        <span>Alimentação</span>
                     </label>
-                    <fieldset className="editExpenseForm__fieldset">
-                        <legend>Categoria</legend>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Alimentação</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Casa</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Transporte</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Conhecimento</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Saúde</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Lazer</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="category" />
-                            {' '}
-                            <span>Diverso</span>
-                        </label>
-                    </fieldset>
-                    <fieldset className="editExpenseForm__fieldset">
-                        <legend>Tipo</legend>
-                        <label>
-                            <input type="radio" name="expense-type" />
-                            {' '}
-                            <span>Fixa</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="expense-type" />
-                            {' '}
-                            <span>Variável</span>
-                        </label>
-                    </fieldset>
-                    <label className="twoColumns">
-                        <input type="checkbox" />
-                        {' '}
-                        <span>Com Vencimento</span>
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="casa"
+                            checked={category === "casa"}
+                            onChange={handleCategoryChange}
+                        />
+                        <span>Casa</span>
                     </label>
-                    <input id="dueDate" type="text" className="editExpenseForm__dueDate twoColumns center bigInput" />
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="transporte"
+                            checked={category === "transporte"}
+                            onChange={handleCategoryChange}
+                        />
+                        <span>Transporte</span>
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="estudo"
+                            checked={category === "estudo"}
+                            onChange={handleCategoryChange}
+                        />
+                        <span>Estudo</span>
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="saude"
+                            checked={category === "saude"}
+                            onChange={handleCategoryChange}
+                        />
+                        <span>Saúde</span>
+                    </label>
                 </fieldset>
-                <button type="button" className="editExpenseForm__actionButton bgSuccess">Salvar</button>
-                <button type="button" className="editExpenseForm__actionButton bgDanger">Cancelar</button>
-                <button type="button" className="editExpenseForm__actionButton bgDark">Voltar</button>
+                <fieldset className="newExpenseForm__type">
+                    <strong>Tipo</strong>
+                    <label>
+                        <input
+                            type="radio"
+                            name="type"
+                            value="variavel"
+                            checked={type === "variavel"}
+                            onChange={handleTypeChange}
+                        />
+                        <span>Variável</span>
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="type"
+                            value="fixo"
+                            checked={type === "fixo"}
+                            onChange={handleTypeChange}
+                        />
+                        <span>Fixo</span>
+                    </label>
+                </fieldset>
+                <label className="newExpenseForm__expiration twoColumns">
+                    <input
+                        type="checkbox"
+                        value="com-vencimento"
+                        checked={hasExpiration}
+                        onChange={() => setHasExpiration(!hasExpiration)}
+                    />
+                    <span>Com vencimento</span>
+                </label>
+                <input
+                    className="twoColumns newExpenseForm__expirationdate"
+                    type="date"
+                    name="expiration"
+                    id="expiration"
+                    value={expirationDate}
+                    onChange={handleDateChange}
+                />
+                <button
+                    className="twoColumns newExpenseForm__button newExpenseForm__button--primary"
+                    type="submit"
+                >
+                    Salvar
+                </button>
+                {isEditing && (
+                    <button
+                        className="twoColumns newExpenseForm__button bgDanger"
+                        type="button"
+                    >
+                        Excluir
+                    </button>
+                )}
+                <button
+                    className="twoColumns newExpenseForm__button newExpenseForm__button--secondary"
+                    type="button"
+                >
+                    Voltar
+                </button>
             </form>
-        </>
+        </div>
     );
 }
 
-export default EditExpenses;
+export default EditExpense;
