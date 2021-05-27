@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./RegisterExpenses.css";
+import "./ExpenseForm.css";
 
-function RegisterExpenses() {
+function ExpenseForm({ title, isEditing = false }) {
     const [value, setValue] = useState(0);
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("alimentacao");
     const [type, setType] = useState("variavel");
     const [hasExpiration, setHasExpiration] = useState(true);
-    const [expirationDate, setExpirationDate] = useState('');
+    const [expirationDate, setExpirationDate] = useState("");
 
     const handleValueChange = ({ target }) => {
         setValue(target.value);
@@ -32,7 +32,7 @@ function RegisterExpenses() {
     return (
         <div className="container newExpenseContainer">
             <header className="newExpenseHeader twoColumns">
-                <h1>Nova Despesa</h1>
+                <h1>{title}</h1>
                 <img src="/images/avatar.svg" alt="avatar" />
             </header>
             <form action="#" className="newExpenseForm twoColumns">
@@ -155,6 +155,14 @@ function RegisterExpenses() {
                 >
                     Salvar
                 </button>
+                {isEditing && (
+                    <button
+                        className="twoColumns newExpenseForm__button bgDanger"
+                        type="button"
+                    >
+                        Excluir
+                    </button>
+                )}
                 <button
                     className="twoColumns newExpenseForm__button newExpenseForm__button--secondary"
                     type="button"
@@ -166,4 +174,4 @@ function RegisterExpenses() {
     );
 }
 
-export default RegisterExpenses;
+export default ExpenseForm;

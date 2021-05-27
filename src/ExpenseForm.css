@@ -172,6 +172,7 @@ input::-webkit-datetime-edit-fields-wrapper {
     color: #ffffff;
     font-size: 1.6rem;
     height: 3.5rem;
+    margin-bottom: var(--spacing-extra-small);
 }
 
 .newExpenseForm__button:hover {
@@ -180,12 +181,10 @@ input::-webkit-datetime-edit-fields-wrapper {
 
 .newExpenseForm__button--primary {
     background-color: #01c9b8;
-    margin-top: 0.9rem;
 }
 
 .newExpenseForm__button--secondary {
     background-color: #a2a1a1;
-    margin: 0.6rem 0rem;
 }
 
 .twoColumns {
