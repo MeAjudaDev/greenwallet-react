@@ -34,8 +34,12 @@ strong {
     font-weight: 700;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+.newExpenseForm__categories input[type="radio"],
+.newExpenseForm__categories input[type="checkbox"],
+.newExpenseForm__expiration input[type="radio"],
+.newExpenseForm__expiration input[type="checkbox"],
+.newExpenseForm__type input[type="radio"],
+.newExpenseForm__type input[type="checkbox"] {
     opacity: 0;
 }
 
