@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCategoryById } from "./api/v1/expenses";
+import { getCategoryById, updateCategory } from "./api/v1/expenses";
 import "./EditCategory.css";
 
 function EditCategory({ id, title }) {
@@ -38,7 +38,11 @@ function EditCategory({ id, title }) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(category);
+        updateCategory(category)
+            .then((response) => {
+                console.log('Enviou dados')
+                console.log(response)
+            });
     }
 
     return (
