@@ -10,7 +10,6 @@
         'cancel save';
     gap: 1rem;
     justify-items: stretch;
-    max-width: 30rem;
 }
 
 .container #description {
