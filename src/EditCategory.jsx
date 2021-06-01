@@ -3,7 +3,10 @@ import { getCategoryById } from "./api/v1/expenses";
 import "./EditCategory.css";
 
 function EditCategory({ id, title }) {
-    const [category, setCategory] = useState({});
+    const [category, setCategory] = useState({
+        name: "",
+        state: "",
+    });
 
     useEffect(() => {
         getCategoryById(id).then((category) => {
