@@ -41,7 +41,7 @@ function EditCategory({ id, title }) {
                 <br />
                 <input
                     onChange={handleTextInputChange}
-                    type="input"
+                    type="text"
                     name="name"
                     value={category?.name}
                 />
