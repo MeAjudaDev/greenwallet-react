@@ -36,31 +36,44 @@ function EditCategory({ id, title }) {
         });
     }
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(category);
+    }
+
     return (
         <div className="container">
             <h1>{title}</h1>
-            <label id="description">
-                Descrição
-                <br />
-                <input
-                    onChange={handleTextInputChange}
-                    type="text"
-                    name="name"
-                    value={category?.name}
-                />
-            </label>
-            <label id="enabled">
-                Habilitado?
-                <br />
-                <input
-                    onChange={handleCheckboxChange}
-                    checked={category?.state === "A"}
-                    name="state"
-                    type="checkbox"
-                />
-            </label>
-            <button className="buttonCancelar">Cancelar</button>
-            <button className="buttonSalvar">Salvar</button>
+            <form
+                action="#"
+                className="newCategoryForm twoColumns"
+                onSubmit={handleSubmit}
+            >
+                <label id="description">
+                    Descrição
+                    <br />
+                    <input
+                        onChange={handleTextInputChange}
+                        type="text"
+                        name="name"
+                        value={category?.name}
+                    />
+                </label>
+                <label id="enabled">
+                    Habilitado?
+                    <br />
+                    <input
+                        onChange={handleCheckboxChange}
+                        checked={category?.state === "A"}
+                        name="state"
+                        type="checkbox"
+                    />
+                </label>
+                <button className="buttonCancelar">Cancelar</button>
+                <button type="submit" className="buttonSalvar">
+                    Salvar
+                </button>
+            </form>
         </div>
     );
 }
