@@ -61,7 +61,7 @@ export default function ListExpenses(props) {
             <section className="expensesListWrapper">
                 <h2 className="expensesList__totalValue">{toBRL(1956)}</h2>
                 <ul className="expensesList">
-                    {expenses.map((expense) => (
+                    {expenses && expenses.map((expense) => (
                         <li
                             key={expense.id}
                             className="expensesList__item"
