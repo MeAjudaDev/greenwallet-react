@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getCategoryById, updateCategory } from "./api/v1/expenses";
+import { getCategoryById, updateCategory } from "../../api/v1/expenses";
 import "./EditCategory.css";
 
-function EditCategory({ id, title }) {
+export default function EditCategory({ id, title }) {
     const [category, setCategory] = useState({
         name: "",
         state: "",
@@ -81,5 +81,3 @@ function EditCategory({ id, title }) {
         </div>
     );
 }
-
-export default EditCategory;

@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import ExpenseForm from "./ExpenseForm";
 import ListCategories from "./ListCategories";
 import ListExpenses from "./ListExpenses";
-import EditCategory from "./EditCategory";
+import EditCategory from "./pages/EditCategory/index";
 
 ReactDOM.render(
     <React.StrictMode>
