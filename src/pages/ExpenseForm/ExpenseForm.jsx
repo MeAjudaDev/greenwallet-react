@@ -35,8 +35,8 @@ function ExpenseForm({ title, isEditing = false }) {
                 <h1>{title}</h1>
                 <img src="/images/avatar.svg" alt="avatar" />
             </header>
-            <form action="#" className={`form twoColumns`}>
-                <label className={`newExpenseForm__value twoColumns`}>
+            <form action="#" className={`${styles.form} ${styles.twoColumns}`}>
+                <label className={`${styles.transactionValue} ${styles.twoColumns}`}>
                     <sup>R$</sup>
                     <input
                         type="number"
@@ -46,7 +46,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         onChange={handleValueChange}
                     />
                 </label>
-                <label className={`newExpenseForm__description twoColumns`}>
+                <label className={`${styles.transactionDescription} ${styles.twoColumns}`}>
                     <strong>Descrição</strong>
                     <input
                         type="text"
@@ -56,7 +56,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         onChange={handleDescriptionChange}
                     />
                 </label>
-                <fieldset className={`newExpenseForm__categories`}>
+                <fieldset className={`${styles.categories}`}>
                     <strong>Categoria</strong>
                     <label>
                         <input
@@ -109,7 +109,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         <span>Saúde</span>
                     </label>
                 </fieldset>
-                <fieldset className={`newExpenseForm__type`}>
+                <fieldset className={`${styles.expenseType}`}>
                     <strong>Tipo</strong>
                     <label>
                         <input
@@ -132,7 +132,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         <span>Fixo</span>
                     </label>
                 </fieldset>
-                <label className={`newExpenseForm__expiration twoColumns`}>
+                <label className={`${styles.hasExpiration} ${styles.twoColumns}`}>
                     <input
                         type="checkbox"
                         value="com-vencimento"
@@ -142,7 +142,7 @@ function ExpenseForm({ title, isEditing = false }) {
                     <span>Com vencimento</span>
                 </label>
                 <input
-                    className={`twoColumns newExpenseForm__expirationdate`}
+                    className={`${styles.twoColumns} ${styles.expirationDate}`}
                     type="date"
                     name="expiration"
                     id="expiration"
@@ -150,7 +150,7 @@ function ExpenseForm({ title, isEditing = false }) {
                     onChange={handleDateChange}
                 />
                 <button
-                    className={`twoColumns newExpenseForm__button newExpenseForm__button--primary`}
+                    className={`${styles.twoColumns} newExpenseForm__button bgSuccess`}
                     type="submit"
                 >
                     Salvar
