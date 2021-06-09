@@ -1,7 +1,7 @@
 fieldset,
-.newExpenseForm__value,
-.newExpenseForm__description,
-.newExpenseForm__expiration {
+.transactionValue,
+.transactionDescription,
+.hasExpiration {
     background: #ffffff;
 }
 
@@ -34,12 +34,12 @@ strong {
     font-weight: 700;
 }
 
-.newExpenseForm__categories input[type="radio"],
-.newExpenseForm__categories input[type="checkbox"],
-.newExpenseForm__expiration input[type="radio"],
-.newExpenseForm__expiration input[type="checkbox"],
-.newExpenseForm__type input[type="radio"],
-.newExpenseForm__type input[type="checkbox"] {
+.categories input[type="radio"],
+.categories input[type="checkbox"],
+.hasExpiration input[type="radio"],
+.hasExpiration input[type="checkbox"],
+.expenseType input[type="radio"],
+.expenseType input[type="checkbox"] {
     opacity: 0;
 }
 
@@ -78,7 +78,7 @@ input::-webkit-datetime-edit-fields-wrapper {
 
 .transactionValue,
 .transactionValue input,
-.newExpenseForm__expirationdate {
+.expirationDate {
     color: #ff7e78;
 }
 
@@ -172,23 +172,15 @@ input::-webkit-datetime-edit-fields-wrapper {
     padding-bottom: 1rem;
 }
 
-.newExpenseForm__button {
+.button {
     color: #ffffff;
     font-size: 1.6rem;
     height: 3.5rem;
     margin-bottom: var(--spacing-extra-small);
 }
 
-.newExpenseForm__button:hover {
+.button:hover {
     filter: brightness(0.95);
-}
-
-.newExpenseForm__button--primary {
-    background-color: #01c9b8;
-}
-
-.newExpenseForm__button--secondary {
-    background-color: #a2a1a1;
 }
 
 .twoColumns {

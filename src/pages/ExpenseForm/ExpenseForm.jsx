@@ -150,21 +150,21 @@ function ExpenseForm({ title, isEditing = false }) {
                     onChange={handleDateChange}
                 />
                 <button
-                    className={`${styles.twoColumns} newExpenseForm__button bgSuccess`}
+                    className={`${styles.twoColumns} ${styles.button} bgSuccess`}
                     type="submit"
                 >
                     Salvar
                 </button>
                 {isEditing && (
                     <button
-                        className={`twoColumns newExpenseForm__button bgDanger`}
+                        className={`${styles.twoColumns} ${styles.button} bgDanger`}
                         type="button"
                     >
                         Excluir
                     </button>
                 )}
                 <button
-                    className={`twoColumns newExpenseForm__button newExpenseForm__button--secondary`}
+                    className={`${styles.twoColumns} ${styles.button} bgDark`}
                     type="button"
                 >
                     Voltar
