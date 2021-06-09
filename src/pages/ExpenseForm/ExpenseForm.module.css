@@ -52,25 +52,25 @@ input::-webkit-datetime-edit-fields-wrapper {
     justify-content: center;
 }
 
-.newExpenseContainer {
+.wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto, 2);
 }
 
-.newExpenseHeader {
+.header {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-.newExpenseHeader h1 {
+.header h1 {
     color: #444c66;
     font-size: 3.6rem;
     font-weight: 400;
 }
 
-.newExpenseForm {
+.form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(7, auto);
