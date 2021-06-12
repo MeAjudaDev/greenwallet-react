@@ -6,7 +6,7 @@ import NavBar from "../../components/NavBar";
 import { filterExpenses } from "../../api/v1/expenses";
 import toBRL from "../../utils/formatNumber";
 
-import "./ListExpenses.css";
+import styles from './ListExpenses.module.scss'
 
 export default function ListExpenses(props) {
     const [expenses, setExpenses] = useState([]);
