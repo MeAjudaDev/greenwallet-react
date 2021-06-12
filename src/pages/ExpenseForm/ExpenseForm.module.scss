@@ -5,23 +5,25 @@ fieldset,
     background: #ffffff;
 }
 
-fieldset label {
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 0.7rem;
-}
+fieldset {
+    label {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0.7rem;
 
-fieldset label:nth-child(2) {
-    margin-top: 1.8rem;
-}
+        &:nth-child(2) {
+            margin-top: 1.8rem;
+        }
 
-fieldset label:not(:last-child) {
-    margin-bottom: 1.3rem;
-}
+        &:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
 
-fieldset label span {
-    margin-left: 0.9rem;
+        span {
+            margin-left: 0.9rem;
+        }
+    }
 }
 
 label,
@@ -34,22 +36,26 @@ strong {
     font-weight: 700;
 }
 
-.categories input[type="radio"],
-.categories input[type="checkbox"],
-.hasExpiration input[type="radio"],
-.hasExpiration input[type="checkbox"],
-.expenseType input[type="radio"],
-.expenseType input[type="checkbox"] {
-    opacity: 0;
+.categories,
+.hasExpiration,
+.expenseType {
+    input {
+        &[type="radio"],
+        &[type="checkbox"] {
+            opacity: 0;
+        }
+    }
 }
 
-input::-webkit-calendar-picker-indicator {
-    display: none;
-}
+input{
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+    }
 
-input::-webkit-datetime-edit-fields-wrapper {
-    display: flex;
-    justify-content: center;
+    &::-webkit-datetime-edit-fields-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .wrapper {
@@ -62,12 +68,12 @@ input::-webkit-datetime-edit-fields-wrapper {
     align-items: center;
     display: flex;
     justify-content: space-between;
-}
 
-.header h1 {
-    color: #444c66;
-    font-size: 3.6rem;
-    font-weight: 400;
+    h1 {
+        color: #444c66;
+        font-size: 3.6rem;
+        font-weight: 400;
+    }
 }
 
 .form {
@@ -77,9 +83,10 @@ input::-webkit-datetime-edit-fields-wrapper {
 }
 
 .transactionValue,
-.transactionValue input,
 .expirationDate {
-    color: #ff7e78;
+    &, input {
+        color: #ff7e78;
+    }
 }
 
 .transactionValue {
@@ -89,81 +96,89 @@ input::-webkit-datetime-edit-fields-wrapper {
     height: 8rem;
     justify-items: end;
     margin-top: 1.3rem;
-}
 
-.transactionValue sup {
-    font-size: 1.4rem;
-    margin-top: 2.4rem;
-}
+    sup {
+        font-size: 1.4rem;
+        margin-top: 2.4rem;
+    }
 
-.transactionValue input {
-    background: none;
-    font-size: 3.6rem;
-    width: 100%;
-}
+    input {
+        background: none;
+        font-size: 3.6rem;
+        width: 100%;
+    }
+} 
 
 .transactionDescription {
     border-top-left-radius: 0.6rem;
     border-top-right-radius: 0.6rem;
     margin-top: 1.5rem;
     padding: 2.2rem 4.5rem 1.8rem 2.2rem;
-}
 
-.transactionDescription input {
-    background: #ebebeb;
-    height: 4.3rem;
-    margin-top: 1.1rem;
-    width: 100%;
-    padding-left: 0.9rem;
+    input {
+        background: #ebebeb;
+        height: 4.3rem;
+        margin-top: 1.1rem;
+        width: 100%;
+        padding-left: 0.9rem;
+    }
 }
 
 .categories {
     padding: 0rem 4.1rem 2.3rem 2.2rem;
 }
 
-.categories label,
-.expenseType label,
+.categories,
+.expenseType,
 .hasExpiration {
-    position: relative;
+    &, label {
+        position: relative;
+    }
 }
 
-.categories label span::after,
-.expenseType label span::after {
-    border-radius: 50%;
-    left: 0;
+.categories ,
+.expenseType {
+    label span::after {
+        border-radius: 50%;
+        left: 0;
+    } 
 }
 
 .hasExpiration span::after {
     left: 2.2rem;
 }
 
-.categories label span::after,
-.expenseType label span::after,
-.hasExpiration span::after {
-    background-color: #f1eeee;
-    border: 1.5px solid #cccccc;
-    content: "";
-    height: 12px;
-    pointer-events: none;
-    position: absolute;
-    top: 0.3rem;
-    width: 12px;
+.categories label,
+.expenseType label,
+.hasExpiration {
+    span::after {
+        background-color: #f1eeee;
+        border: 1.5px solid #cccccc;
+        content: "";
+        height: 12px;
+        pointer-events: none;
+        position: absolute;
+        top: 0.3rem;
+        width: 12px;
+    }
 }
 
-.categories label input:checked + span::after,
-.expenseType label input:checked + span::after,
-.hasExpiration input:checked + span::after {
-    background-color: #01c9b8;
+.categories label,
+.expenseType label,
+.hasExpiration {
+    input:checked + span::after {
+        background-color: #01c9b8;
+    }
 }
 
 .hasExpiration {
     padding-left: 2.2rem;
     padding-bottom: 1.5rem;
-}
 
-.hasExpiration span {
-    margin-left: 0.7rem;
-}
+    span {
+        margin-left: 0.7rem;
+    }
+} 
 
 .expirationDate {
     border-bottom-left-radius: 0.6rem;
@@ -177,10 +192,10 @@ input::-webkit-datetime-edit-fields-wrapper {
     font-size: 1.6rem;
     height: 3.5rem;
     margin-bottom: var(--spacing-extra-small);
-}
 
-.button:hover {
-    filter: brightness(0.95);
+    &:hover {
+        filter: brightness(0.95);
+    }
 }
 
 .twoColumns {
