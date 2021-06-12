@@ -1,7 +1,7 @@
-import './ListCategories.css';
 import AppHeader from '../../components/AppHeader';
 import NavBar from '../../components/NavBar';
 import toBRL from '../../utils/formatNumber';
+import styles from './ListCategories.module.scss'
 
 function ListCategories(props) {
     const months = [
