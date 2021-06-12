@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCategoryById, updateCategory } from "../../api/v1/expenses";
-import "./EditCategory.css";
+import styles from './EditCategory.module.scss'
 
 export default function EditCategory({ id, title }) {
     const [category, setCategory] = useState({
