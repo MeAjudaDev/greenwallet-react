@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./ExpenseForm.module.css";
+import styles from "./ExpenseForm.module.scss";
 
 function ExpenseForm({ title, isEditing = false }) {
     const [value, setValue] = useState(0);
