@@ -4,7 +4,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import ExpenseForm from "./pages/ExpenseForm";
 import ListCategories from "./pages/ListCategories";
-import ListExpenses from "./ListExpenses";
+import ListExpenses from "./pages/ListExpenses";
 import EditCategory from "./pages/EditCategory";
 
 ReactDOM.render(

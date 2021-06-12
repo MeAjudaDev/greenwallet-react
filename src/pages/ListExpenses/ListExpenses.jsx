@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-import AppHeader from "./components/AppHeader";
-import NavBar from "./components/NavBar";
+import AppHeader from "../../components/AppHeader";
+import NavBar from "../../components/NavBar";
 
-import { filterExpenses } from "./api/v1/expenses";
-import toBRL from "./utils/formatNumber";
+import { filterExpenses } from "../../api/v1/expenses";
+import toBRL from "../../utils/formatNumber";
 
 import "./ListExpenses.css";
 
