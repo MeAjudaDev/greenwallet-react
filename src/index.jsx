@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import ExpenseForm from "./ExpenseForm";
-import ListCategories from "./ListCategories";
+import ExpenseForm from "./pages/ExpenseForm";
+import ListCategories from "./pages/ListCategories";
 import ListExpenses from "./ListExpenses";
-import EditCategory from "./pages/EditCategory/index";
+import EditCategory from "./pages/EditCategory";
 
 ReactDOM.render(
     <React.StrictMode>
