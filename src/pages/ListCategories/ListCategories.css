@@ -1,0 +1,37 @@
+.categoriesList__totalValue {
+    text-align: center;
+    color: var(--color-danger);
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+    margin-top: 25px;
+}
+
+.categoriesList__description {
+    color: #AFB3BB;
+}
+
+.categoriesList__divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-danger);
+    margin-bottom: 15px;
+}
+
+.categoriesList{
+    font-size: 1.8rem;   
+}
+
+.categoriesList__item{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+}
+
+.categoriesList__item span{
+    color: var(--color-title);
+}
+
+.categoriesList__item span:last-child{
+    color: var(--color-danger);
+}
