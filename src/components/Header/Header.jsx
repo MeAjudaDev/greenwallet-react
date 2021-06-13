@@ -1,12 +1,14 @@
 import React from 'react';
+import styles from './Header.module.scss'
 
 function Header(props) {
     return (
-        <div className="container">
+        <div className={styles.container}>
+
             <header>
-                <span class="material-icons-outlined">account_circle</span>
-                <h1>Despesas</h1>
-                <span class="material-icons-outlined-">menu</span>
+                <span className="material-icons">menu</span>
+                <h1>{props.title}</h1>
+                <span className="material-icons">account_circle</span>
             </header>
         </div>
     );
