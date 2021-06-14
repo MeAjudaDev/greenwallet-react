@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 
 import AppHeader from "../../components/AppHeader";
-import NavBar from "../../components/NavBar";
+import MonthsNavBar from "../../components/MonthsNavBar";
 
 import { filterExpenses } from "../../api/v1/expenses";
 import toBRL from "../../utils/formatNumber";
 
-import styles from './ListExpenses.module.scss'
-
-export default function ListExpenses(props) {
+export default function ListExpenses() {
     const [expenses, setExpenses] = useState([]);
 
     useEffect(() => {
@@ -57,7 +55,7 @@ export default function ListExpenses(props) {
     return (
         <>
             <AppHeader title="Casa" />
-            <NavBar items={months} />
+            <MonthsNavBar items={months} />
             <section className="expensesListWrapper">
                 <h2 className="expensesList__totalValue">{toBRL(1956)}</h2>
                 <ul className="expensesList">
