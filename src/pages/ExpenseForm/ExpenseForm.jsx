@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import Menu from '../../components/Menu';
+
 import styles from "./ExpenseForm.module.scss";
 
 function ExpenseForm({ title, isEditing = false }) {
@@ -31,6 +34,7 @@ function ExpenseForm({ title, isEditing = false }) {
 
     return (
         <div className={`container ${styles.wrapper}`}>
+            <Menu />
             <header className={`${styles.header} ${styles.twoColumns}`}>
                 <h1>{title}</h1>
                 <img src="/images/avatar.svg" alt="avatar" />
