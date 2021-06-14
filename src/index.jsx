@@ -10,10 +10,10 @@ import EditCategory from "./pages/EditCategory";
 ReactDOM.render(
     <React.StrictMode>
         <ExpenseForm title="Editar Despesa" isEditing={true} />
-        <ExpenseForm title="Nova Despesa" />
+        {/* <ExpenseForm title="Nova Despesa" />
         <ListCategories title="Despesas" />
         <ListExpenses title="Despesas" group="Casa" />
-        <EditCategory title="Editar Categoria" id={1} />
+        <EditCategory title="Editar Categoria" id={1} /> */}
     </React.StrictMode>,
     document.getElementById("root")
 );
