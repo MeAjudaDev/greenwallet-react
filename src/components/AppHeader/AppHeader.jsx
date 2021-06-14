@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './AppHeader.module.scss'
 
 const DEFAULT_PROPS = {
     IMG: "/images/Avatar.svg",
@@ -7,9 +7,9 @@ const DEFAULT_PROPS = {
 
 const AppHeader = ({ title = DEFAULT_PROPS.TITLE, img = DEFAULT_PROPS.IMG }) => {
     return (
-        <header className="appHeader">
-            <h1 className="appHeader__title">{title}</h1>
-            <img className="appHeader__img" src={img} alt="avatar" />
+        <header className={`${styles.header}`}>
+            <h1 className={`${styles.title}`}>{title}</h1>
+            <img src={img} alt="avatar" />
         </header>
     );
 }
