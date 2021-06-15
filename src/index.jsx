@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import ExpenseForm from "./pages/ExpenseForm";
 import ListCategories from "./pages/ListCategories";

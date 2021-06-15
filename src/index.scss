@@ -1,23 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-:root {
-    $border-radius-default: 6px;
+$border-radius-default: 6px;
 
-    $color-background-danger: var($color-danger);
-    $color-background-dark: #a2a1a1;
-    $color-background-default: #f9f8fe;
-    $color-background-gray: #ebebeb;
-    $color-background-light: #fff;
-    $color-background-success: #01c9b8;
-    $color-background-info: var($color-info);
-    $color-danger: #ff7e78;
-    $color-title: #444c66;
-    $color-info: #78d7ed;
+$color-danger: #ff7e78;
+$color-title: #444c66;
+$color-info: #78d7ed;
+$color-background-danger: $color-danger;
+$color-background-dark: #a2a1a1;
+$color-background-default: #f9f8fe;
+$color-background-gray: #ebebeb;
+$color-background-light: #fff;
+$color-background-success: #01c9b8;
+$color-background-info: $color-info;
 
-    $spacing-extra-small: 1rem;
-    $spacing-small: 1.5rem;
-    $spacing-default: 1.8rem;
-}
+$spacing-extra-small: 1rem;
+$spacing-small: 1.5rem;
+$spacing-default: 1.8rem;
 
 * {
     border: none;
@@ -33,7 +31,7 @@ html {
 }
 
 body {
-    background-color: var($color-background-default);
+    background-color: $color-background-default;
     font-size: 1.6rem;
     height: 100vh;
     overflow: auto;
@@ -46,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var($color-title);
+    color: $color-title;
     font-weight: 400;
     margin-bottom: 0.25em;
 }
@@ -69,19 +67,19 @@ ul {
 
 .bigInput {
     font-size: 3.6rem;
-    color: var($color-danger);
+    color: $color-danger;
 }
 
 .bgSuccess {
-    background-color: var($color-background-success);
+    background-color: $color-background-success;
 }
 
 .bgDanger {
-    background-color: var($color-background-danger);
+    background-color: $color-background-danger;
 }
 
 .bgDark {
-    background-color: var($color-background-dark);
+    background-color: $color-background-dark;
 }
 
 .bgDanger,
