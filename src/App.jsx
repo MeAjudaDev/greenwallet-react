@@ -16,7 +16,7 @@ function App() {
                 <Route path="/edit-expense">
                     <ExpenseForm title="Editar Despesa" isEditing={true} />
                 </Route>
-                <Route path="/edit-expense">
+                <Route path="/">
                     <ExpenseForm title="Nova Despesa" />
                 </Route>
                 <Route path="/list-category">
