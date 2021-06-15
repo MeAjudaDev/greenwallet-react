@@ -24,7 +24,7 @@
         max-width: 100%;
         display: block;
     }
-    
+
 }
 .active{
     left:0%
@@ -36,11 +36,11 @@
     }
 }
 
-.menu {
+ul {
     margin-top: 40px;
     flex: 1;
 
-    li {
+    li,.logOut {
         a {
             color: #222;
             display: flex;
@@ -55,22 +55,5 @@
         &:not(:last-child) {
             margin-bottom: 24px;
         }
-    }
-}
-
-.logOut {
-    a {
-        color: #222;
-        display: flex;
-        font-size: 1.6rem;
-        img {
-            height: 16px;
-            margin-right: 12px;
-            width: 16px;
-        }
-    }
-
-    &:not(:last-child) {
-        margin-bottom: 12px;
     }
 }
