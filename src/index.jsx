@@ -12,7 +12,7 @@ import Header from "./components/Header";
 ReactDOM.render(
     <React.StrictMode>
         <Header title="Despesas"/>
-         <ExpenseForm title="Editar Despesa" isEditing={true} />
+        <ExpenseForm title="Editar Despesa" isEditing={true} />
         <ExpenseForm title="Nova Despesa" />
         <ListCategories title="Despesas" />
         <ListExpenses title="Despesas" group="Casa" />
