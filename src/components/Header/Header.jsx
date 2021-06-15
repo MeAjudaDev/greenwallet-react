@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.scss'
 
-function Header(props) {
+export default function Header(props) {
     return (
         <div className={styles.container}>
 
@@ -13,5 +13,3 @@ function Header(props) {
         </div>
     );
 }
-
-export default Header
