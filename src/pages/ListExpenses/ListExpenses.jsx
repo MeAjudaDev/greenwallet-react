@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import AppHeader from "../../components/AppHeader";
+import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
 
 import { filterExpenses } from "../../api/v1/expenses";
@@ -56,7 +56,7 @@ export default function ListExpenses(props) {
 
     return (
         <>
-            <AppHeader title="Casa" />
+            <Header title="Casa" />
             <NavBar items={months} />
             <section className="expensesListWrapper">
                 <h2 className="expensesList__totalValue">{toBRL(1956)}</h2>

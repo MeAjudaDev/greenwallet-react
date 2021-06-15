@@ -1,4 +1,4 @@
-import AppHeader from '../../components/AppHeader';
+import Header from '../../components/Header';
 import NavBar from '../../components/NavBar';
 import toBRL from '../../utils/formatNumber';
 import styles from './ListCategories.module.scss'
@@ -23,7 +23,7 @@ function ListCategories(props) {
 
     return (
         <div>
-            <AppHeader title={props.title} />
+            <Header title={props.title} />
             <NavBar items={months} />
             <section className='categoriesListWrapper'>
                 <h2 className='categoriesList__totalValue'>{toBRL(3599.57)}</h2>
