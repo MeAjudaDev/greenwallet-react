@@ -33,7 +33,7 @@ function Menu() {
                 <img src={logo} alt="logo image" />
             </div>
             <nav>
-                <ul className={styles.menu}>
+                <ul>
                     <li>
                         <a href="/">
                             <img src={graphUp} alt="graphUp Icon" />
