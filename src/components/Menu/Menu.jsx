@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from "./Menu.module.scss";
 import closeIcon from "../../assets/close.svg";
 import logo from "../../assets/logo.svg";
@@ -10,9 +11,22 @@ import config from "../../assets/config.svg";
 import logOut from "../../assets/log-out.svg";
 
 function Menu() {
+
+    const [open, setOpen] = React.useState(false)
+
+    const handleCloseMenu = () => {
+        setOpen(false)
+    }
+
+    const handleOpenMenu = () => {
+        setOpen(true)
+    }
+
     return (
-        <aside className={styles.wrapper}>
-            <button>
+        <>
+        <button onClick={handleOpenMenu}>Menu</button>
+        <aside className={`${styles.wrapper} ${open ? styles.active : ''}`}>
+            <button onClick={handleCloseMenu}>
                 <img src={closeIcon} alt="close icon" />
             </button>
             <div className={styles.brand}>
@@ -67,6 +81,7 @@ function Menu() {
                 </ul>
             </nav>
         </aside>
+        </>
     );
 }
 
