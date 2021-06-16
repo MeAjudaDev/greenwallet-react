@@ -2,21 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import ExpenseForm from "./pages/ExpenseForm";
-import ListCategories from "./pages/ListCategories";
-import ListExpenses from "./pages/ListExpenses";
-import EditCategory from "./pages/EditCategory";
-import Header from "./components/Header";
-
+import App from "./App";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Header title="Despesas"/>
-        <ExpenseForm title="Editar Despesa" isEditing={true} />
-        <ExpenseForm title="Nova Despesa" />
-        <ListCategories title="Despesas" />
-        <ListExpenses title="Despesas" group="Casa" />
-        <EditCategory title="Editar Categoria" id={1} />
+        <App/>
     </React.StrictMode>,
     document.getElementById("root")
 );
