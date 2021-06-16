@@ -6,9 +6,12 @@ import ExpenseForm from "./pages/ExpenseForm";
 import ListCategories from "./pages/ListCategories";
 import ListExpenses from "./pages/ListExpenses";
 import EditCategory from "./pages/EditCategory";
+import Header from "./components/Header";
+
 
 ReactDOM.render(
     <React.StrictMode>
+        <Header title="Despesas"/>
         <ExpenseForm title="Editar Despesa" isEditing={true} />
         <ExpenseForm title="Nova Despesa" />
         <ListCategories title="Despesas" />
