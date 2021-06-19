@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import AppHeader from "../../components/AppHeader";
+import Header from "../../components/Header";
 import MonthsNavBar from "../../components/MonthsNavBar";
 
 import { filterExpenses } from "../../api/v1/expenses";
@@ -12,16 +12,19 @@ export default function ListExpenses() {
     useEffect(() => {
         filterExpenses({
             month: 4,
-        }).then((response) => {
-            if (response.status !== 200) {
-                throw new Error(response.statusText);
-            }
-            return response.json();
-        }).catch((err) => {
-            console.error(err);
-        }).then(response => {
-            setExpenses(response);
-        });
+        })
+            .then((response) => {
+                if (response.status !== 200) {
+                    throw new Error(response.statusText);
+                }
+                return response.json();
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+            .then((response) => {
+                setExpenses(response);
+            });
     }, []);
 
     const months = [
@@ -54,20 +57,18 @@ export default function ListExpenses() {
 
     return (
         <>
-            <AppHeader title="Casa" />
+            <Header title="Casa" />
             <MonthsNavBar items={months} />
             <section className="expensesListWrapper">
                 <h2 className="expensesList__totalValue">{toBRL(1956)}</h2>
                 <ul className="expensesList">
-                    {expenses && expenses.map((expense) => (
-                        <li
-                            key={expense.id}
-                            className="expensesList__item"
-                        >
-                            <span>{expense.description}</span>
-                            <span>{toBRL(expense.value)}</span>
-                        </li>
-                    ))}
+                    {expenses &&
+                        expenses.map((expense) => (
+                            <li key={expense.id} className="expensesList__item">
+                                <span>{expense.description}</span>
+                                <span>{toBRL(expense.value)}</span>
+                            </li>
+                        ))}
                 </ul>
             </section>
         </>
