@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 .categoriesList__totalValue {
     text-align: center;
     color: $color-danger;
@@ -7,7 +9,7 @@
 }
 
 .categoriesList__description {
-    color: #AFB3BB;
+    color: #afb3bb;
 }
 
 .categoriesList__divider {
@@ -17,21 +19,21 @@
     margin-bottom: 15px;
 }
 
-.categoriesList{
-    font-size: 1.8rem;   
+.categoriesList {
+    font-size: 1.8rem;
 }
 
-.categoriesList__item{
+.categoriesList__item {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.4rem;
 }
 
-.categoriesList__item span{
+.categoriesList__item span {
     color: $color-title;
 }
 
-.categoriesList__item span:last-child{
+.categoriesList__item span:last-child {
     color: $color-danger;
 }
