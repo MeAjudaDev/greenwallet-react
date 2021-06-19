@@ -1,13 +1,13 @@
-import "./styles.scss";
+import styles from "./MonthsNavBar.module.scss";
 
-const NavBar = ({ items = [] }) => {
+export default function MonthsNavBar({ items = [] }) {
     return (
         <nav>
-            <ul className="navbar">
+            <ul className={`${styles.navbar}`}>
                 {items.map((item) => (
-                    <li key={item.label} className="navbar__item">
+                    <li key={item.label}>
                         <a
-                            className={`navbar__link ${
+                            className={`${styles.link} ${
                                 item.selected ? "active" : ""
                             }`}
                             href={item.link ?? "#"}
@@ -19,6 +19,4 @@ const NavBar = ({ items = [] }) => {
             </ul>
         </nav>
     );
-};
-
-export default NavBar;
+}

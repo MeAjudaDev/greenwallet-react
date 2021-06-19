@@ -7,16 +7,16 @@
     margin-bottom: 1.6rem;
 }
 
-.navbar__link {
+.link {
     padding: 0.4rem 0.6rem;
     color: $color-title;
     font-size: 1.8rem;
     transition: color 0.3s;
-}
 
-.navbar__link:hover,
-.navbar__link:focus,
-.navbar__link:active,
-.navbar__link.active {
-    color: $color-danger;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $color-danger;
+    }
 }

@@ -1,0 +1,22 @@
+@import "../../variables.module.scss";
+
+.navbar {
+    display: flex;
+    margin-left: -0.6rem;
+    margin-right: -0.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.link {
+    padding: 0.4rem 0.6rem;
+    color: $color-title;
+    font-size: 1.8rem;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $color-danger;
+    }
+}
