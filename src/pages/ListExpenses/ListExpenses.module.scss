@@ -1,24 +1,26 @@
+@import "../../variables.module.scss";
+
 .expensesList__totalValue {
     text-align: center;
-    color: var(--color-info);
+    color: $color-info;
     margin-bottom: 2rem;
 }
 
-.expensesList{
-    font-size: 1.8rem;   
+.expensesList {
+    font-size: 1.8rem;
 }
 
-.expensesList__item{
+.expensesList__item {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.4rem;
 }
 
-.expensesList__item span{
-    color: var(--color-title);
+.expensesList__item span {
+    color: $color-title;
 }
 
-.expensesList__item span:last-child{
-    color: var(--color-info);
+.expensesList__item span:last-child {
+    color: $color-info;
 }

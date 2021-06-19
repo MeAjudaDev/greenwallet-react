@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 fieldset,
 .transactionValue,
 .transactionDescription,
@@ -47,7 +49,7 @@ strong {
     }
 }
 
-input{
+input {
     &::-webkit-calendar-picker-indicator {
         display: none;
     }
@@ -84,7 +86,8 @@ input{
 
 .transactionValue,
 .expirationDate {
-    &, input {
+    &,
+    input {
         color: #ff7e78;
     }
 }
@@ -107,7 +110,7 @@ input{
         font-size: 3.6rem;
         width: 100%;
     }
-} 
+}
 
 .transactionDescription {
     border-top-left-radius: 0.6rem;
@@ -131,17 +134,18 @@ input{
 .categories,
 .expenseType,
 .hasExpiration {
-    &, label {
+    &,
+    label {
         position: relative;
     }
 }
 
-.categories ,
+.categories,
 .expenseType {
     label span::after {
         border-radius: 50%;
         left: 0;
-    } 
+    }
 }
 
 .hasExpiration span::after {
@@ -178,7 +182,7 @@ input{
     span {
         margin-left: 0.7rem;
     }
-} 
+}
 
 .expirationDate {
     border-bottom-left-radius: 0.6rem;
@@ -191,7 +195,7 @@ input{
     color: #ffffff;
     font-size: 1.6rem;
     height: 3.5rem;
-    margin-bottom: var(--spacing-extra-small);
+    margin-bottom: $spacing-extra-small;
 
     &:hover {
         filter: brightness(0.95);
