@@ -5,6 +5,7 @@ import EditCategory from "./pages/EditCategory";
 import ExpenseForm from "./pages/ExpenseForm";
 import ListCategories from "./pages/ListCategories";
 import ListExpenses from "./pages/ListExpenses";
+import ExportModal from './components/ExportModal';
 
 function App() {
     return (
@@ -16,8 +17,11 @@ function App() {
                 <Route path="/edit-expense">
                     <ExpenseForm title="Editar Despesa" isEditing={true} />
                 </Route>
-                <Route path="/">
+                <Route path="/new-expense">
                     <ExpenseForm title="Nova Despesa" />
+                </Route>
+                <Route path="/">
+                    <ExportModal/>
                 </Route>
                 <Route path="/list-category">
                     <ListCategories title="Despesas" />
