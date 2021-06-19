@@ -7,12 +7,16 @@ export default function MonthsNavBar({ items = [] }) {
                 {items.map((item) => (
                     <li key={item.label}>
                         <a
-                            className={`${styles.link} ${item.selected ? 'active' : ''}`}
+                            className={`${styles.link} ${
+                                item.selected ? "active" : ""
+                            }`}
                             href={item.link ?? "#"}
-                        >{item.label}</a>
+                        >
+                            {item.label}
+                        </a>
                     </li>
                 ))}
             </ul>
         </nav>
     );
-};
+}
