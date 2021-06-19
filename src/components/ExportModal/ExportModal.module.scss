@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.modalContainer {
+    background-color: rgba($color: #000, $alpha: 0.3);
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalWrapper {
+    padding: 1.6rem;
+    background: white;
+    height: 50vh;
+    width: 90%;
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.8rem;
+    }
+
+    input {
+        height: 30px;
+        background: $color-background-gray;
+        border-radius: 5px;
+        &::-webkit-calendar-picker-indicator {
+            background-color: $color-background-success;
+        }
+
+        &::-webkit-datetime-edit-fields-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
