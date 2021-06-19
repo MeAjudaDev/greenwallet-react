@@ -16,16 +16,20 @@
 .modalWrapper {
     padding: 1.6rem;
     background: white;
-    height: 50vh;
     width: 90%;
 
-    form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 0.8rem;
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
     }
 
-    input {
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    input[type="date"] {
         height: 30px;
         background: $color-background-gray;
         border-radius: 5px;
@@ -38,4 +42,31 @@
             justify-content: center;
         }
     }
+
+    h3 {
+        color: #222222;
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+}
+
+.dateWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.8rem;
+    margin-bottom: 32px;
+}
+
+.radioWrapper{
+    flex: 1;
+    margin-bottom: 32px;
+
+    label:first-child{
+        margin-bottom: 8px;
+    }
+}
+
+.buttonWrapper{
+    align-self: flex-end;
+    justify-self: flex-end;
 }
