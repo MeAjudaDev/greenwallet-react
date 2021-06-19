@@ -1,6 +1,6 @@
 .expensesList__totalValue {
     text-align: center;
-    color: var(--color-info);
+    color: $color-info;
     margin-bottom: 2rem;
 }
 
@@ -16,9 +16,9 @@
 }
 
 .expensesList__item span{
-    color: var(--color-title);
+    color: $color-title;
 }
 
 .expensesList__item span:last-child{
-    color: var(--color-info);
+    color: $color-info;
 }

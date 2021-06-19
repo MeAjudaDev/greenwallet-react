@@ -1,6 +1,6 @@
 .categoriesList__totalValue {
     text-align: center;
-    color: var(--color-danger);
+    color: $color-danger;
     font-size: 3.6rem;
     margin-bottom: 2rem;
     margin-top: 25px;
@@ -13,7 +13,7 @@
 .categoriesList__divider {
     border: none;
     height: 1px;
-    background-color: var(--color-danger);
+    background-color: $color-danger;
     margin-bottom: 15px;
 }
 
@@ -29,9 +29,9 @@
 }
 
 .categoriesList__item span{
-    color: var(--color-title);
+    color: $color-title;
 }
 
 .categoriesList__item span:last-child{
-    color: var(--color-danger);
+    color: $color-danger;
 }

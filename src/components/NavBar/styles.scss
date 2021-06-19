@@ -7,7 +7,7 @@
 
 .navbar__link {
     padding: 0.4rem 0.6rem;
-    color: var(--color-title);
+    color: $color-title;
     font-size: 1.8rem;
     transition: color 0.3s;
 }
@@ -16,5 +16,5 @@
 .navbar__link:focus,
 .navbar__link:active,
 .navbar__link.active {
-    color: var(--color-danger);
+    color: $color-danger;
 }

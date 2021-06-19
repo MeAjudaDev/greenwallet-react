@@ -191,7 +191,7 @@ input{
     color: #ffffff;
     font-size: 1.6rem;
     height: 3.5rem;
-    margin-bottom: var(--spacing-extra-small);
+    margin-bottom: $spacing-extra-small;
 
     &:hover {
         filter: brightness(0.95);
