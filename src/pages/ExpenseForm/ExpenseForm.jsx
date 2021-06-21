@@ -33,9 +33,9 @@ function ExpenseForm({ title, isEditing = false }) {
     };
 
     return (
-        <div className={`container ${styles.wrapper}`}>
-            <Header title={title} />
-            <form action="#" className={`${styles.form} ${styles.twoColumns}`}>
+        <>
+            <Header className={styles.header} title={title} />
+            <form action="#" className={`container ${styles.form} ${styles.twoColumns}`}>
                 <label
                     className={`${styles.transactionValue} ${styles.twoColumns}`}
                 >
@@ -176,7 +176,7 @@ function ExpenseForm({ title, isEditing = false }) {
                     Voltar
                 </button>
             </form>
-        </div>
+        </>
     );
 }
 
