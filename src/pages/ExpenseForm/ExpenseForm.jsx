@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
+import Header from '../../components/Header';
 
 import styles from "./ExpenseForm.module.scss";
 
@@ -32,10 +34,7 @@ function ExpenseForm({ title, isEditing = false }) {
 
     return (
         <div className={`container ${styles.wrapper}`}>
-            <header className={`${styles.header} ${styles.twoColumns}`}>
-                <h1>{title}</h1>
-                <img src="/images/avatar.svg" alt="avatar" />
-            </header>
+            <Header title={title} />
             <form action="#" className={`${styles.form} ${styles.twoColumns}`}>
                 <label
                     className={`${styles.transactionValue} ${styles.twoColumns}`}
