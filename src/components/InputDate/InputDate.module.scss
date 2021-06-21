@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.wrapper {
+    position: relative;
+    display: table-cell;
+    img {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+.input {
+    height: 32px;
+    background-color: $color-background-gray;
+    padding-left: 16px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+.react-datepicker {
+    font-size: 24px !important;
+}
