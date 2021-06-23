@@ -1,7 +1,16 @@
+@import "../../../variables.module.scss";
+
 input.textInput {
-    background: #ebebeb;
-    height: 4.3rem;
-    margin-top: 1.1rem;
+    background: $color-background-light-gray;
+    border: 1px solid $color-background-gray;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    height: 4.0rem;
+    padding: $spacing-extra-small $spacing-small;
+    border-radius: $border-radius-default;
     width: 100%;
-    padding-left: 0.9rem;
+
+    &::placeholder {
+        color: $color-background-dark;
+    }
 }

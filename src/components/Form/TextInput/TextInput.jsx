@@ -4,6 +4,7 @@ export default function TextInput({
     autoFocus = false,
     name,
     onChange,
+    placeholder,
     value,
 }) {
     return (
@@ -12,6 +13,7 @@ export default function TextInput({
             className={styles.textInput}
             name={name}
             onChange={onChange}
+            placeholder={placeholder}
             type="text"
             value={value}
         />
