@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import TextInput from "../../components/Form/TextInput";
+
 import styles from "./ExpenseForm.module.scss";
 
 function ExpenseForm({ title, isEditing = false }) {
@@ -53,13 +55,7 @@ function ExpenseForm({ title, isEditing = false }) {
                     className={`${styles.transactionDescription} ${styles.twoColumns}`}
                 >
                     <strong>Descrição</strong>
-                    <input
-                        type="text"
-                        autoFocus
-                        name="description"
-                        value={description}
-                        onChange={handleDescriptionChange}
-                    />
+                    <TextInput />
                 </label>
                 <fieldset className={`${styles.categories}`}>
                     <strong>Categoria</strong>
