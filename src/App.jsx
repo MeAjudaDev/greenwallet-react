@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch as Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch as Routes, Route } from "react-router-dom";
 import "./App.css";
 import EditCategory from "./pages/EditCategory";
 import ExpenseForm from "./pages/ExpenseForm";
