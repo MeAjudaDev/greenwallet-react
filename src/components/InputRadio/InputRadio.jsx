@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 
-export default function InputRadio() {
+import styles from "./InputRadio.module.scss";
+
+export default function InputRadio({ checked, label, inputName }) {
     return (
         <>
-            <input type="radio" name="radio-group" checked />
-            <label for="test1">Apple</label>
+            <label className={styles.inputRadio}>
+                <input type="radio" name={inputName} checked={checked} />
+                <span>{label}</span>
+            </label>
         </>
     );
 }
