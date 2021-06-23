@@ -51,7 +51,12 @@ function ExpenseForm({ title, isEditing = false }) {
                 </label>
                 <label className={`${styles.transactionDescription} ${styles.twoColumns}`}>
                     <strong>Descrição</strong>
-                    <TextInput />
+                    <TextInput
+                        autoFocus
+                        onChange={handleDescriptionChange}
+                        placeholder="Descrição"
+                        value={description}
+                    />
                 </label>
                 <fieldset className={`${styles.categories}`}>
                     <strong>Categoria</strong>

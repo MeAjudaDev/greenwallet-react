@@ -115,6 +115,10 @@ input {
 .transactionDescription {
     margin-top: 1.5rem;
     padding: 2.2rem 4.5rem 1.8rem 2.2rem;
+
+    strong {
+        margin-bottom: 1.1rem;
+    }
 }
 
 .categories {
