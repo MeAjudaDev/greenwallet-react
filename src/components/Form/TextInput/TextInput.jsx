@@ -1,3 +1,5 @@
+import styles from './TextInput.module.scss';
+
 export default function TextInput({
     autoFocus = false,
     name,
@@ -7,6 +9,7 @@ export default function TextInput({
     return (
         <input
             autoFocus={autoFocus}
+            className={styles.textInput}
             name={name}
             onChange={onChange}
             type="text"
