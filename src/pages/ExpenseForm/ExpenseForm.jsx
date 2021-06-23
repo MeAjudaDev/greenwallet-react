@@ -39,9 +39,7 @@ function ExpenseForm({ title, isEditing = false }) {
                 <img src="/images/avatar.svg" alt="avatar" />
             </header>
             <form action="#" className={`${styles.form} ${styles.twoColumns}`}>
-                <label
-                    className={`${styles.transactionValue} ${styles.twoColumns}`}
-                >
+                <label className={`${styles.transactionValue} ${styles.twoColumns}`}>
                     <sup>R$</sup>
                     <input
                         type="number"
@@ -51,9 +49,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         onChange={handleValueChange}
                     />
                 </label>
-                <label
-                    className={`${styles.transactionDescription} ${styles.twoColumns}`}
-                >
+                <label className={`${styles.transactionDescription} ${styles.twoColumns}`}>
                     <strong>Descrição</strong>
                     <TextInput />
                 </label>
@@ -133,9 +129,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         <span>Fixo</span>
                     </label>
                 </fieldset>
-                <label
-                    className={`${styles.hasExpiration} ${styles.twoColumns}`}
-                >
+                <label className={`${styles.hasExpiration} ${styles.twoColumns}`}>
                     <input
                         type="checkbox"
                         value="com-vencimento"
