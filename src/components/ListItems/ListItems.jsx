@@ -6,7 +6,7 @@ export default function ListItems({categories}){
   return(
     <div className={styles.wrapper}>
       <h3>TOTAL POR CATEGORIA</h3>
-      <div className={styles.categoriesWrapper}>
+      <div>
         {categories.map((category, key) =>{
           return (
             <div key={key} className={styles.category}>
