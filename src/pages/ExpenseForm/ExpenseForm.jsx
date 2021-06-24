@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
+import Header from '../../components/Header';
 
 import TextInput from "../../components/Form/TextInput";
 
@@ -33,12 +35,9 @@ function ExpenseForm({ title, isEditing = false }) {
     };
 
     return (
-        <div className={`container ${styles.wrapper}`}>
-            <header className={`${styles.header} ${styles.twoColumns}`}>
-                <h1>{title}</h1>
-                <img src="/images/avatar.svg" alt="avatar" />
-            </header>
-            <form action="#" className={`${styles.form} ${styles.twoColumns}`}>
+        <>
+            <Header className={styles.header} title={title} />
+            <form action="#" className={`container ${styles.form} ${styles.twoColumns}`}>
                 <label className={`${styles.transactionValue} ${styles.twoColumns}`}>
                     <sup>R$</sup>
                     <input
@@ -172,7 +171,7 @@ function ExpenseForm({ title, isEditing = false }) {
                     Voltar
                 </button>
             </form>
-        </div>
+        </>
     );
 }
 

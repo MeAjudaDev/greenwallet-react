@@ -60,24 +60,6 @@ input {
     }
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto, 2);
-}
-
-.header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-    h1 {
-        color: #444c66;
-        font-size: 3.6rem;
-        font-weight: 400;
-    }
-}
-
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
