@@ -1,32 +1,36 @@
-@import '../../variables.module.scss';
+@import "../../variables.module.scss";
 
-.wrapper{
-  width: 100%;
-  h3{
-    font-size:1.2rem;
-    color:$color-text;
-    font-weight: 700;
-    &::after{
-      content:'';
-      display:block;
-      height: 1px;
-      background-color: $color-light-gray;
-      margin: 8px 0;
+.wrapper {
+    width: 100%;
+
+    h3 {
+        font-size: 1.2rem;
+        color: $color-text;
+        font-weight: 700;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: $color-light-gray;
+            margin: 8px 0;
+        }
     }
-  }
 }
 
-.category{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size:1.6rem;
-  font-weight: 400;
-  color:$color-text;
-  div + div{
-    color:$color-background-success;
-  }
-  &:not(:last-child){
-    margin-bottom: 24px;
-  }
+.category {
+    align-items: center;
+    color: $color-text;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 400;
+    justify-content: space-between;
+
+    div + div {
+        color: $color-background-success;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
 }
