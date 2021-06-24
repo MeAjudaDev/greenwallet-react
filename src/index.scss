@@ -9,17 +9,18 @@
     padding: 0;
 }
 
-html {
+html,
+body,
+input {
     font-family: "Roboto", sans-serif;
     font-size: 62.5%;
 }
 
 body {
     background-color: $color-background-default;
-    font-size: 1.6rem;
+    font-size: $font-size-default;
     height: 100vh;
     overflow: auto;
-    padding: 1.8rem;
 }
 
 h1,

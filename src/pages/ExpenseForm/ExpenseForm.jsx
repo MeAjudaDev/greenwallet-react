@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
+import Header from '../../components/Header';
 
 import TextInput from "../../components/Form/TextInput";
 
@@ -33,15 +35,10 @@ function ExpenseForm({ title, isEditing = false }) {
     };
 
     return (
-        <div className={`container ${styles.wrapper}`}>
-            <header className={`${styles.header} ${styles.twoColumns}`}>
-                <h1>{title}</h1>
-                <img src="/images/avatar.svg" alt="avatar" />
-            </header>
-            <form action="#" className={`${styles.form} ${styles.twoColumns}`}>
-                <label
-                    className={`${styles.transactionValue} ${styles.twoColumns}`}
-                >
+        <>
+            <Header className={styles.header} title={title} />
+            <form action="#" className={`container ${styles.form} ${styles.twoColumns}`}>
+                <label className={`${styles.transactionValue} ${styles.twoColumns}`}>
                     <sup>R$</sup>
                     <input
                         type="number"
@@ -51,11 +48,14 @@ function ExpenseForm({ title, isEditing = false }) {
                         onChange={handleValueChange}
                     />
                 </label>
-                <label
-                    className={`${styles.transactionDescription} ${styles.twoColumns}`}
-                >
+                <label className={`${styles.transactionDescription} ${styles.twoColumns}`}>
                     <strong>Descrição</strong>
-                    <TextInput />
+                    <TextInput
+                        autoFocus
+                        onChange={handleDescriptionChange}
+                        placeholder="Descrição"
+                        value={description}
+                    />
                 </label>
                 <fieldset className={`${styles.categories}`}>
                     <strong>Categoria</strong>
@@ -133,9 +133,7 @@ function ExpenseForm({ title, isEditing = false }) {
                         <span>Fixo</span>
                     </label>
                 </fieldset>
-                <label
-                    className={`${styles.hasExpiration} ${styles.twoColumns}`}
-                >
+                <label className={`${styles.hasExpiration} ${styles.twoColumns}`}>
                     <input
                         type="checkbox"
                         value="com-vencimento"
@@ -173,7 +171,7 @@ function ExpenseForm({ title, isEditing = false }) {
                     Voltar
                 </button>
             </form>
-        </div>
+        </>
     );
 }
 

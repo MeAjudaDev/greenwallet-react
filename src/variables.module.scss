@@ -9,13 +9,17 @@ $color-background-danger: $color-danger;
 $color-background-dark: #a2a1a1;
 $color-background-default: #f9f8fe;
 $color-background-gray: #ebebeb;
+$color-background-light-gray: #f1f1f1;
 $color-background-light: #fff;
 $color-background-success: #01c9b8;
 $color-background-info: $color-info;
 $color-light-gray: #c4c4c4;
-$color-text: #222;
+$color-text-default: #222;
 
 /* SPACING */
 $spacing-extra-small: 1rem;
 $spacing-small: 1.5rem;
 $spacing-default: 1.8rem;
+
+/* FONTS */
+$font-size-default: 1.6rem;
