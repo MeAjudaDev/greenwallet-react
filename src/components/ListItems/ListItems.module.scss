@@ -12,7 +12,7 @@
             content: "";
             display: block;
             height: 1px;
-            background-color: $color-light-gray;
+            background-color: $color-background-light-gray;
             margin: 8px 0;
         }
     }
@@ -22,7 +22,7 @@
     align-items: center;
     color: $color-text;
     display: flex;
-    font-size: 1.6rem;
+    font-size: $font-size-default;
     font-weight: 400;
     justify-content: space-between;
 
