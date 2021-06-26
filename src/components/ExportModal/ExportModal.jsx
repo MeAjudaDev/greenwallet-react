@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./ExportModal.module.scss";
+import InputDate from "../InputDate";
+import InputRadio from "../InputRadio";
 
 export default function ExportModal() {
     return (
@@ -8,19 +10,13 @@ export default function ExportModal() {
                 <h2>Export</h2>
                 <form action="">
                     <fieldset className={styles.dateWrapper}>
-                        <input type="date" />
-                        <input type="date" />
+                        <InputDate />
+                        <InputDate />
                     </fieldset>
-                    <fieldset className={styles.radioWrapper}>
+                    <fieldset>
                         <h3>Formato</h3>
-                        <label>
-                            <input type="radio" name="file-format" />
-                            CSV
-                        </label>
-                        <label>
-                            <input type="radio" name="file-format" />
-                            PDF
-                        </label>
+                        <InputRadio label={"CSV"} />
+                        <InputRadio label={"PDF"} />
                     </fieldset>
                     <fieldset className={styles.buttonWrapper}>
                         <button type="button">Cancelar</button>
