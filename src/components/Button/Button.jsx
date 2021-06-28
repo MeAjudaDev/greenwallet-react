@@ -9,7 +9,7 @@ export default function Button({
     textOnly,
 }) {
     return (
-        <button className={styles.button} type="button">
+        <button className={`${styles.button} ${styles.primary}`} type="button">
             {children}
         </button>
     );
