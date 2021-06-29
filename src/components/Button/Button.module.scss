@@ -8,6 +8,9 @@
     align-items: center;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
     border-radius: $border-radius-default;
+    &:disabled{
+        cursor:not-allowed;
+    }
 }
 
 .primary {
@@ -16,11 +19,22 @@
 }
 
 .secondary{
-    background-color: red;
-    color: $color-background-light-gray;
+    background-color: $color-background-light-gray;
+    color: $color-background-success;
+}
+
+.outlined {
+    border:1px solid $color-background-success;
+    color:$color-background-success;
+    background-color: transparent;
 }
 
 .textOnly{
     background-color: transparent;
     color:$color-background-success;
+}
+
+.danger{
+    background-color: $color-background-danger;
+    color:$color-background-light-gray;
 }
