@@ -8,33 +8,60 @@
     align-items: center;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
     border-radius: $border-radius-default;
-    &:disabled{
-        cursor:not-allowed;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.25s;
+
+    &:disabled {
+        cursor: not-allowed;
     }
 }
 
 .primary {
     background-color: $color-background-success;
     color: $color-background-light-gray;
+
+    &:hover {
+        background-color: $color-background-dark;
+    }
 }
 
-.secondary{
+.secondary {
     background-color: $color-background-light-gray;
     color: $color-background-success;
+
+    &:hover {
+        background-color: $color-background-gray;
+    }
 }
 
 .outlined {
-    border:1px solid $color-background-success;
-    color:$color-background-success;
+    border: 1px solid $color-background-success;
+    color: $color-background-success;
     background-color: transparent;
+
+    &:hover {
+        border: 1px solid $color-background-dark;
+        color: $color-background-dark;
+    }
 }
 
-.textOnly{
+.textOnly {
     background-color: transparent;
-    color:$color-background-success;
+    color: $color-background-success;
+    box-shadow: none;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-background-dark;
+    }
 }
 
-.danger{
+.danger {
     background-color: $color-background-danger;
-    color:$color-background-light-gray;
+    color: $color-background-light-gray;
+
+    &:hover {
+        background-color: #ff6760;
+    }
 }

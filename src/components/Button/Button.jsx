@@ -23,10 +23,9 @@ export default function Button(props) {
     );
 }
 Button.defaultProps = {
-    type:'button',
-    children:'default',
-    primary:true
-}
+    type: "button",
+    children: "default",
+};
 
 Button.prototype = {
     type: PropTypes.string.isRequired,
@@ -35,5 +34,5 @@ Button.prototype = {
     secondary: PropTypes.bool,
     textOnly: PropTypes.bool,
     outlined: PropTypes.bool,
-    danger:PropTypes.bool,
+    danger: PropTypes.bool,
 };
