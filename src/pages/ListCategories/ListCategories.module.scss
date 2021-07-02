@@ -1,6 +1,10 @@
 @import "../../variables.module.scss";
 
-.categoriesList__totalValue {
+.wrapper {
+    padding: 0 16px;
+}
+
+.totalValue {
     text-align: center;
     color: $color-danger;
     font-size: 3.6rem;
@@ -8,32 +12,32 @@
     margin-top: 25px;
 }
 
-.categoriesList__description {
+.description {
     color: #afb3bb;
 }
 
-.categoriesList__divider {
+.divider {
     border: none;
     height: 1px;
     background-color: $color-danger;
     margin-bottom: 15px;
 }
 
-.categoriesList {
+.list {
     font-size: 1.8rem;
 }
 
-.categoriesList__item {
+.listItem {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.4rem;
 }
 
-.categoriesList__item span {
+.listItem span {
     color: $color-title;
 }
 
-.categoriesList__item span:last-child {
+.listItem span:last-child {
     color: $color-danger;
 }
