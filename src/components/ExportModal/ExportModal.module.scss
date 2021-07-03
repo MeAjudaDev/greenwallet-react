@@ -56,16 +56,16 @@
     margin-bottom: 32px;
 }
 
-.radioWrapper{
+.radioWrapper {
     flex: 1;
     margin-bottom: 32px;
 
-    label:first-child{
+    label:first-child {
         margin-bottom: 8px;
     }
 }
 
-.buttonWrapper{
-    align-self: flex-end;
-    justify-self: flex-end;
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
 }

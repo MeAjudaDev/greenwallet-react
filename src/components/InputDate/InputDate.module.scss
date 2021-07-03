@@ -3,6 +3,8 @@
 .wrapper {
     position: relative;
     display: table-cell;
+    background-color: $color-background-gray;
+    border-radius: 5px;
     img {
         position: absolute;
         top: 8px;
@@ -13,8 +15,8 @@
 .input {
     height: 32px;
     background-color: $color-background-gray;
-    padding-left: 16px;
     border-radius: 5px;
+    padding-left: 16px;
     font-size: 1.4rem;
 }
 

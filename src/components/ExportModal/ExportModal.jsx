@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ExportModal.module.scss";
 import InputDate from "../InputDate";
 import InputRadio from "../InputRadio";
+import Button from "../Button";
 
 export default function ExportModal() {
     return (
@@ -19,8 +20,12 @@ export default function ExportModal() {
                         <InputRadio label={"PDF"} />
                     </fieldset>
                     <fieldset className={styles.buttonWrapper}>
-                        <button type="button">Cancelar</button>
-                        <button type="submit">Exportar</button>
+                        <Button type="button" textOnly>
+                            Cancelar
+                        </Button>
+                        <Button type="submit" primary>
+                            Exportar
+                        </Button>
                     </fieldset>
                 </form>
             </div>
