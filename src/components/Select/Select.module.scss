@@ -1,5 +1,9 @@
 @import "../../variables.module.scss";
 
 .select {
-    background: $color-background-light-gray;
+    background-color: $color-background-light-gray;
+    width: 15.6rem;
+    height: 4rem;
+    padding: 0rem 1.2rem;
+    -webkit-appearance: none;
 }

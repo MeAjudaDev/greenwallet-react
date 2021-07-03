@@ -1,4 +1,5 @@
-import Styles from "./Select.module.scss"
+import Styles from "./Select.module.scss";
+import arrow from '../../assets/dropdown-icon.svg';
 
 export default function Select({ name }) {
 
@@ -10,7 +11,7 @@ export default function Select({ name }) {
         {value: 'value5', label: 'label5'}
     ]
 
-    return <select name={name} className={Styles.select}>
+    return <select name={name} className={Styles.select} style={{backgroundImage: arrow + 'no-repeat right #ddd'}} >
        {
            options.map(option => (
                <option value={ option.value }>{ option.label } </option>
