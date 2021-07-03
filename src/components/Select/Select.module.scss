@@ -1,9 +1,9 @@
 @import "../../variables.module.scss";
 
 .select {
-    font-size: $font-size-default;
+    font-size: $font-size-default;    
     position: relative;
-    width: 15.6rem;
+    width: 100%;
 
     select {
         -webkit-appearance: none;
@@ -13,7 +13,7 @@
         cursor: pointer;
         height: 4rem;
         padding: 0rem 1.2rem;
-        width: 15.6rem;
+        width: 100%;
     }
 
     select:active + img {

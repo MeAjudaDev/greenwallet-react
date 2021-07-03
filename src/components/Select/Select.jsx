@@ -4,11 +4,11 @@ import arrow from "../../assets/dropdown-icon.svg";
 export default function Select({
     name,
     options = [
-        { value: "value1", label: "label1" },
-        { value: "value2", label: "label2" },
-        { value: "value3", label: "label3" },
-        { value: "value4", label: "label4" },
-        { value: "value5", label: "label5" },
+        { value: "value1", label: "Option1" },
+        { value: "value2", label: "Option2" },
+        { value: "value3", label: "Option3" },
+        { value: "value4", label: "Option4" },
+        { value: "value5", label: "Option5" },
     ],
 }) {
     return (
