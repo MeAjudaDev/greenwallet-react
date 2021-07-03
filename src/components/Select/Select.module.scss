@@ -1,9 +1,31 @@
 @import "../../variables.module.scss";
 
 .select {
-    background-color: $color-background-light-gray;
     width: 15.6rem;
-    height: 4rem;
-    padding: 0rem 1.2rem;
-    -webkit-appearance: none;
+
+    position: relative;
+    
+    select {
+        background-color: $color-background-light-gray;
+        width: 15.6rem;
+        height: 4rem;
+        padding: 0rem 1.2rem;
+        -webkit-appearance: none;
+
+        cursor: pointer;
+    }
+
+    select:focus + img {
+        transform: rotate(180deg) translateY(50%);
+    }
+
+    img {
+        position: absolute; 
+        top: 50%;        
+        right: 1.2rem;
+        transform: translateY(-50%);
+
+        pointer-events: none;
+    }
 }
+
