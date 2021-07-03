@@ -1,3 +1,5 @@
+import Styles from "./Select.module.scss"
+
 export default function Select({ name }) {
 
     const options = [
@@ -8,10 +10,12 @@ export default function Select({ name }) {
         {value: 'value5', label: 'label5'}
     ]
 
-    return <select name={name}>
+    return <select name={name} className={Styles.select}>
        {
            options.map(option => (
-           ))
+               <option value={ option.value }>{ option.label } </option>
+            )
+           )
        }
     </select>;
 }
