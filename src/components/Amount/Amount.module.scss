@@ -1,0 +1,32 @@
+@import "../../variables.module.scss";
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.currency {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-background-dark;
+}
+
+.amountValue {
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.positive {
+    color: $color-background-success;
+}
+
+.negative {
+    color: $color-background-danger;
+}
