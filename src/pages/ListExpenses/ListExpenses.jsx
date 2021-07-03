@@ -6,6 +6,8 @@ import MonthsNavBar from "../../components/MonthsNavBar";
 import { filterExpenses } from "../../api/v1/expenses";
 import toBRL from "../../utils/formatNumber";
 
+import styles from "./ListExpenses.module.scss";
+
 export default function ListExpenses() {
     const [expenses, setExpenses] = useState([]);
 
@@ -59,12 +61,12 @@ export default function ListExpenses() {
         <>
             <Header title="Casa" />
             <MonthsNavBar items={months} />
-            <section className="expensesListWrapper">
-                <h2 className="expensesList__totalValue">{toBRL(1956)}</h2>
-                <ul className="expensesList">
+            <section className={styles.wrapper}>
+                <h2 className={styles.totalValue}>{toBRL(1956)}</h2>
+                <ul className={styles.list}>
                     {expenses &&
                         expenses.map((expense) => (
-                            <li key={expense.id} className="expensesList__item">
+                            <li key={expense.id} className={styles.listItem}>
                                 <span>{expense.description}</span>
                                 <span>{toBRL(expense.value)}</span>
                             </li>

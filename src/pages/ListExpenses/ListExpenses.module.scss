@@ -1,26 +1,28 @@
 @import "../../variables.module.scss";
 
-.expensesList__totalValue {
+.totalValue {
     text-align: center;
-    color: $color-info;
+    color: $color-danger;
+    font-size: 3.6rem;
     margin-bottom: 2rem;
+    margin-top: 25px;
 }
 
-.expensesList {
+.list {
     font-size: 1.8rem;
 }
 
-.expensesList__item {
+.listIitem {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.4rem;
 }
 
-.expensesList__item span {
+.listIitem span {
     color: $color-title;
 }
 
-.expensesList__item span:last-child {
+.listIitem span:last-child {
     color: $color-info;
 }
