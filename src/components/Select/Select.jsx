@@ -1,5 +1,5 @@
-import Styles from "./Select.module.scss";
-import arrow from "../../assets/dropdown-icon.svg";
+import styles from "./Select.module.scss";
+import imgArrow from "../../assets/dropdown-icon.svg";
 
 export default function Select({
     name,
@@ -12,11 +12,11 @@ export default function Select({
     ],
 }) {
     return (
-        <div className={Styles.select}>
+        <div className={styles.select}>
             <select
                 name={name}
                 style={{
-                    backgroundImage: "url(" + arrow + ") no-repeat right #ddd",
+                    backgroundImage: "url(" + imgArrow + ") no-repeat right #ddd",
                 }}
             >
                 {options.map((option) => (
