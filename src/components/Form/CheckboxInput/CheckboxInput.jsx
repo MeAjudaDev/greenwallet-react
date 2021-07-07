@@ -1,6 +1,6 @@
 import styles from './CheckboxInput.module.scss'
 
-export default function TextInput({
+export default function CheckboxInput({
     checked = false,
     checkboxClass = '',
     id,
