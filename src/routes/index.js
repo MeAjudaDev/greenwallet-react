@@ -3,7 +3,6 @@ import EditCategory from "../pages/EditCategory";
 import ListCategories from "../pages/ListCategories";
 import ExpenseForm from "../pages/ExpenseForm";
 import ListExpenses from "../pages/ListExpenses";
-import Select from "../components/Select";
 
 export default function Routes() {
     return (
@@ -20,9 +19,6 @@ export default function Routes() {
                 </Route>
                 <Route path="/expenses/list">
                     <ListExpenses title="Despesas" group="Casa" />
-                </Route>
-                <Route path="/">
-                    <Select name="Comp"/>
                 </Route>
             </Switch>
         </BrowserRouter>
