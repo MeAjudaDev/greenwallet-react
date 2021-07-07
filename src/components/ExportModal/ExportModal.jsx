@@ -16,8 +16,10 @@ export default function ExportModal() {
                     </fieldset>
                     <fieldset>
                         <h3>Formato</h3>
-                        <InputRadio label={"CSV"} />
-                        <InputRadio label={"PDF"} />
+                        <div className={styles.radioWrapper}>
+                            <InputRadio label={"CSV"} />
+                            <InputRadio label={"PDF"} />
+                        </div>
                     </fieldset>
                     <fieldset className={styles.buttonWrapper}>
                         <Button type="button" textOnly>

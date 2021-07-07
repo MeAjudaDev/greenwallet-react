@@ -7,23 +7,25 @@ fieldset,
     background: #ffffff;
 }
 
-fieldset {
-    label {
-        align-items: center;
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 0.7rem;
+.form {
+    fieldset {
+        label {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0.7rem;
 
-        &:nth-child(2) {
-            margin-top: 1.8rem;
-        }
+            &:nth-child(2) {
+                margin-top: 1.8rem;
+            }
 
-        &:not(:last-child) {
-            margin-bottom: 1.3rem;
-        }
+            &:not(:last-child) {
+                margin-bottom: 1.3rem;
+            }
 
-        span {
-            margin-left: 0.9rem;
+            span {
+                margin-left: 0.9rem;
+            }
         }
     }
 }

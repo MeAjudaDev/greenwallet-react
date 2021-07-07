@@ -2,13 +2,14 @@
 
 .wrapper {
     position: relative;
-    display: table-cell;
+    display: flex;
     background-color: $color-background-gray;
     border-radius: 5px;
     img {
         position: absolute;
         top: 8px;
         right: 8px;
+        pointer-events: none;
     }
 }
 
@@ -18,8 +19,5 @@
     border-radius: 5px;
     padding-left: 16px;
     font-size: 1.4rem;
-}
-
-.react-datepicker {
-    font-size: 24px !important;
+    width: 100%;
 }
