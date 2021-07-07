@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from '../../components/Header';
 
 import TextInput from "../../components/Form/TextInput";
+import CheckboxInput from "../../components/Form/CheckboxInput";
 
 import styles from "./ExpenseForm.module.scss";
 
@@ -133,15 +134,16 @@ function ExpenseForm({ title, isEditing = false }) {
                         <span>Fixo</span>
                     </label>
                 </fieldset>
-                <label className={`${styles.hasExpiration} ${styles.twoColumns}`}>
-                    <input
-                        type="checkbox"
+
+                <div className={styles.hasExpiration}>
+                    <CheckboxInput
+                        label="Com vencimento"
                         value="com-vencimento"
                         checked={hasExpiration}
                         onChange={() => setHasExpiration(!hasExpiration)}
                     />
-                    <span>Com vencimento</span>
-                </label>
+                </div>
+
                 <input
                     className={`${styles.twoColumns} ${styles.expirationDate}`}
                     type="date"
