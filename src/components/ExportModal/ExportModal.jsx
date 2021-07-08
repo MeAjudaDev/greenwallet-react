@@ -8,8 +8,8 @@ export default function ExportModal() {
     return (
         <section className={styles.modalContainer}>
             <div className={styles.modalWrapper}>
-                <h2>Export</h2>
-                <form action="">
+                <h2>Exportar</h2>
+                <form>
                     <fieldset className={styles.dateWrapper}>
                         <InputDate />
                         <InputDate />
