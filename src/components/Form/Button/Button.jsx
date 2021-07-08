@@ -22,12 +22,13 @@ export default function Button(props) {
         </button>
     );
 }
+
 Button.defaultProps = {
     type: "button",
     children: "default",
 };
 
-Button.prototype = {
+Button.propTypes = {
     type: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
     primary: PropTypes.bool,
