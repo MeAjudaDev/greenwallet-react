@@ -14,3 +14,9 @@ input.textInput {
         color: $color-background-dark;
     }
 }
+
+.labelText {
+    display: block;
+    font-weight: bold;
+    margin-bottom: $spacing-extra-small;
+}
