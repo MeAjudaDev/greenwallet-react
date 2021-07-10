@@ -34,6 +34,7 @@
         height: 30px;
         background: $color-background-gray;
         border-radius: 5px;
+
         &::-webkit-calendar-picker-indicator {
             background-color: $color-background-success;
         }
@@ -43,6 +44,7 @@
             justify-content: center;
         }
     }
+
     h3 {
         color: #222222;
         font-size: 1.2rem;
