@@ -1,0 +1,63 @@
+@import "../../../variables.module.scss";
+
+.checkboxInput {
+    [type="checkbox"] {
+        &:checked,
+        &:not(:checked) {
+            left: -9999px;
+            position: absolute;
+        }
+
+        &:checked + span,
+        &:not(:checked) + span {
+            cursor: pointer;
+            display: inline-block;
+            line-height: 20px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        &:checked + span:before,
+        &:not(:checked) + span:before {
+            background: $color-background-light;
+            border: 1px solid $color-background-success;
+            border-radius: 2px;
+            content: "";
+            left: 0;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            width: 16px;
+        }
+
+        &:checked + span:after,
+        &:not(:checked) + span:after {
+            background: $color-background-success;
+            border: 1px solid $color-background-success;
+            border-radius: 1px;
+            height: 12px;
+            left: 2px;
+            position: absolute;
+            top: 2px;
+            width: 12px;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        &:not(:checked) + span:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        &:checked + span:after {
+            align-items: center;
+            justify-content: center;
+            content: url(../../../assets/check.svg);
+            display: flex;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
