@@ -1,0 +1,31 @@
+@import "../../variables.module.scss";
+
+.select {
+    font-size: $font-size-default;    
+    position: relative;
+    width: 100%;
+
+    select {
+        -webkit-appearance: none;
+        background-color: $color-background-light-gray;
+        border-radius: $border-radius-default;
+        border: 1px solid $color-background-gray;
+        cursor: pointer;
+        height: 4rem;
+        padding: 0rem 1.2rem;
+        width: 100%;
+    }
+
+    select:active + img {
+        transform: rotate(-180deg) translateY(50%);
+    }
+
+    img {
+        pointer-events: none;
+        position: absolute;
+        right: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.2s ease-in-out;
+    }
+}
