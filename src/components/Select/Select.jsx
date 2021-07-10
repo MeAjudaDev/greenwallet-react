@@ -6,7 +6,7 @@ export default function Select({ name, options = [] }) {
         <div className={styles.select}>
             <select name={name}>
                 {options.map((option) => (
-                    <option value={option.value}>{option.label} </option>
+                    <option value={option.value}>{option.label}</option>
                 ))}
             </select>
             <img src={imgArrow} alt="arrow dropdown icon" />
