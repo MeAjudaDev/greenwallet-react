@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 
 import TextInput from "../../components/Form/TextInput";
 import CheckboxInput from "../../components/Form/CheckboxInput";
+import RadioInput from "../../components/Form/RadioInput";
 
 import styles from "./ExpenseForm.module.scss";
 import SelectInput from "../../components/Form/SelectInput/SelectInput";
@@ -43,9 +44,8 @@ function ExpenseForm({ title, isEditing = false }) {
             <TextInput labelText="Descrição" />
             <SelectInput labelText="Categoria" />
             <fieldset>
-                <label>
-                    
-                </label>
+                <RadioInput inputName="expense-type" />
+                <RadioInput inputName="expense-type" />
             </fieldset>
         </form>
     </>;
