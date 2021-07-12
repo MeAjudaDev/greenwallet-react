@@ -1,7 +1,9 @@
 @import "../../../variables.module.scss";
 
 .select {
+    display: block;
     font-size: $font-size-default;
+    margin-bottom: $spacing-small;
     position: relative;
     width: 100%;
 
