@@ -6,6 +6,7 @@ import TextInput from "../../components/Form/TextInput";
 import CheckboxInput from "../../components/Form/CheckboxInput";
 
 import styles from "./ExpenseForm.module.scss";
+import SelectInput from "../../components/Form/SelectInput/SelectInput";
 
 function ExpenseForm({ title, isEditing = false }) {
     const [value, setValue] = useState(0);
@@ -40,6 +41,12 @@ function ExpenseForm({ title, isEditing = false }) {
         <form className={styles.form}>
             <TextInput labelText="Valor" />
             <TextInput labelText="Descrição" />
+            <SelectInput labelText="Categoria" />
+            <fieldset>
+                <label>
+                    
+                </label>
+            </fieldset>
         </form>
     </>;
 }
