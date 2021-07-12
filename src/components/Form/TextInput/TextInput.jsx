@@ -10,7 +10,7 @@ export default function TextInput({
     value,
 }) {
     return (
-        <label className={className ?? ''}>
+        <label className={`${styles.textInputLabel} ${className ?? ''}`}>
             <span className={styles.labelText}>{labelText}</span>
             <input
                 autoFocus={autoFocus}

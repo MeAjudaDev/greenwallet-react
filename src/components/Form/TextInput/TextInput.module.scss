@@ -1,6 +1,6 @@
 @import "../../../variables.module.scss";
 
-input.textInput {
+.textInput {
     background: $color-background-light-gray;
     border: 1px solid $color-background-gray;
     color: $color-text-default;
@@ -13,6 +13,11 @@ input.textInput {
     &::placeholder {
         color: $color-background-dark;
     }
+}
+
+.textInputLabel {
+    display: block;
+    margin-bottom: $spacing-small;
 }
 
 .labelText {
