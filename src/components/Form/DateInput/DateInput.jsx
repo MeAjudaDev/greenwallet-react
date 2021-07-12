@@ -2,7 +2,7 @@ import React from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "./DateInput.module.scss";
-import calendar from "../../assets/calendar.svg";
+import calendar from "../../../assets/calendar.svg";
 import ptBR from "date-fns/locale/pt-BR";
 registerLocale("pt-BR", ptBR);
 
