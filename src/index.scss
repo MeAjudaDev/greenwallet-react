@@ -18,6 +18,12 @@ textarea {
     font-size: 62.5%;
 }
 
+legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: $spacing-extra-small;
+}
+
 body {
     background-color: $color-background-default;
     font-size: $font-size-default;
