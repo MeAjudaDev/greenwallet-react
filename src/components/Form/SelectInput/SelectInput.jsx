@@ -10,7 +10,6 @@ export default function SelectInput({ labelText, name, options = [] }) {
                     <option value={option.value}>{option.label}</option>
                 ))}
             </select>
-            <img src={imgArrow} alt="arrow dropdown icon" />
         </label>
     );
 }
