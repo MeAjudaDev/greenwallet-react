@@ -1,1 +1,1 @@
-export { default } from './InputRadio'
+export { default } from './RadioInput';
