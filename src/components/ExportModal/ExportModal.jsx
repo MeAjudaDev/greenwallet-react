@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ExportModal.module.scss";
 import InputDate from "../InputDate";
 import RadioInput from "../Form/RadioInput";
-import Button from "../Button";
+import Button from "../Form/Button";
 
 export default function ExportModal() {
     return (
