@@ -1,9 +1,15 @@
 @import "../../../variables.module.scss";
 
 .select {
-    font-size: $font-size-default;    
+    font-size: $font-size-default;
     position: relative;
     width: 100%;
+
+    span {
+        display: block;
+        font-weight: bold;
+        margin-bottom: $spacing-extra-small;
+    }
 
     select {
         -webkit-appearance: none;
