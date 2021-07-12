@@ -1,5 +1,5 @@
 import styles from "./SelectInput.module.scss";
-import imgArrow from "../../assets/dropdown-icon.svg";
+import imgArrow from "../../../assets/dropdown-icon.svg";
 
 export default function SelectInput({ name, options = [] }) {
     return (
