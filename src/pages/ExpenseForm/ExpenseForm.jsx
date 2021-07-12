@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-import Header from '../../components/Header';
+import Header from "../../components/Header";
 
 import TextInput from "../../components/Form/TextInput";
 import CheckboxInput from "../../components/Form/CheckboxInput";
 import RadioInput from "../../components/Form/RadioInput";
+import DateInput from "../../components/Form/DateInput";
+import Button from "../../components/Form/Button";
 
 import styles from "./ExpenseForm.module.scss";
 import SelectInput from "../../components/Form/SelectInput/SelectInput";
@@ -37,18 +39,26 @@ function ExpenseForm({ title, isEditing = false }) {
         setExpirationDate(target.value);
     };
 
-    return <>
-        <Header title={title} />
-        <form className={styles.form}>
-            <TextInput labelText="Valor" />
-            <TextInput labelText="Descrição" />
-            <SelectInput labelText="Categoria" />
-            <fieldset>
-                <RadioInput inputName="expense-type" />
-                <RadioInput inputName="expense-type" />
-            </fieldset>
-        </form>
-    </>;
+    return (
+        <>
+            <Header title={title} />
+            <form className={`container ${styles.form}`}>
+                <TextInput labelText="Valor" />
+                <TextInput labelText="Descrição" />
+                <SelectInput labelText="Categoria" />
+                <fieldset>
+                    <legend>Tipo</legend>
+                    <RadioInput inputName="expense-type" labelText="Variável" />
+                    <RadioInput inputName="expense-type" labelText="Fixa" />
+                </fieldset>
+                <fieldset>
+                    <CheckboxInput label="Com vencimento" />
+                    <DateInput />
+                </fieldset>
+                <Button type="submit" primary>Salvar</Button>
+            </form>
+        </>
+    );
 }
 
 export default ExpenseForm;
