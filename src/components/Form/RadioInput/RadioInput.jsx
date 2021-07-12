@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./InputRadio.module.scss";
+import styles from "./RadioInput.module.scss";
 
 export default function InputRadio({ checked, label, inputName }) {
     return (
