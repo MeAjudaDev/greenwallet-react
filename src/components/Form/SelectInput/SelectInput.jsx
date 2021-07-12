@@ -1,7 +1,7 @@
-import styles from "./Select.module.scss";
+import styles from "./SelectInput.module.scss";
 import imgArrow from "../../assets/dropdown-icon.svg";
 
-export default function Select({ name, options = [] }) {
+export default function SelectInput({ name, options = [] }) {
     return (
         <div className={styles.select}>
             <select name={name}>
