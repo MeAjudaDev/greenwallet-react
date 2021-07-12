@@ -1,0 +1,17 @@
+@import "../../variables.module.scss";
+.form {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 6.4rem);
+    fieldset {
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacing-small;
+        label {
+            margin-right: $spacing-large;
+        }
+    }
+    button {
+      justify-self:flex-end;
+    }
+}
