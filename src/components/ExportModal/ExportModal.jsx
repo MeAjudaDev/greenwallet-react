@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ExportModal.module.scss";
 import InputDate from "../InputDate";
-import InputRadio from "../InputRadio";
+import RadioInput from "../Form/RadioInput";
 import Button from "../Button";
 
 export default function ExportModal() {
@@ -17,8 +17,8 @@ export default function ExportModal() {
                     <fieldset>
                         <h3>Formato</h3>
                         <div className={styles.radioWrapper}>
-                            <InputRadio label={"CSV"} />
-                            <InputRadio label={"PDF"} />
+                            <RadioInput label={"CSV"} />
+                            <RadioInput label={"PDF"} />
                         </div>
                     </fieldset>
                     <fieldset className={styles.buttonWrapper}>
