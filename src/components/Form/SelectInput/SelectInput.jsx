@@ -1,5 +1,4 @@
 import styles from "./SelectInput.module.scss";
-import imgArrow from "../../../assets/dropdown-icon.svg";
 
 export default function SelectInput({ labelText, name, options = [] }) {
     return (
