@@ -43,19 +43,26 @@ function ExpenseForm({ title, isEditing = false }) {
         <>
             <Header title={title} />
             <form className={`container ${styles.form}`}>
-                <TextInput labelText="Valor" />
-                <TextInput labelText="Descrição" />
-                <SelectInput labelText="Categoria" />
-                <fieldset>
-                    <legend>Tipo</legend>
-                    <RadioInput inputName="expense-type" labelText="Variável" />
-                    <RadioInput inputName="expense-type" labelText="Fixa" />
-                </fieldset>
-                <fieldset>
-                    <CheckboxInput label="Com vencimento" />
-                    <DateInput />
-                </fieldset>
-                <Button type="submit" primary>Salvar</Button>
+                <div>
+                    <TextInput labelText="Valor" />
+                    <TextInput labelText="Descrição" />
+                    <SelectInput labelText="Categoria" />
+                    <fieldset>
+                        <legend>Tipo</legend>
+                        <RadioInput
+                            inputName="expense-type"
+                            labelText="Variável"
+                        />
+                        <RadioInput inputName="expense-type" labelText="Fixa" />
+                    </fieldset>
+                    <fieldset>
+                        <CheckboxInput label="Com vencimento" />
+                        <DateInput />
+                    </fieldset>
+                </div>
+                <Button type="submit" primary>
+                    Salvar
+                </Button>
             </form>
         </>
     );
