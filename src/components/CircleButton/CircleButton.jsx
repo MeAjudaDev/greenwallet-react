@@ -14,7 +14,7 @@ export default function CircleButton(props) {
                 [styles.outlined]: props.outlined,
             })}
         >
-            {props.children}
+            <img src={props.children} />
         </button>
     )
 }
