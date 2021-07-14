@@ -14,32 +14,3 @@
         background-color: $color-background-success-dark;
     }
 }
-
-.secondary {
-    background-color: $color-background-light-gray;
-    color: $color-background-success;
-
-    &:hover {
-        background-color: $color-background-gray;
-    }
-}
-
-.outlined {
-    border: 1px solid $color-background-success;
-    color: $color-background-success;
-    background-color: transparent;
-
-    &:hover {
-        border: 1px solid $color-background-dark;
-        color: $color-background-dark;
-    }
-}
-
-.danger {
-    background-color: $color-background-danger;
-    color: $color-background-light-gray;
-
-    &:hover {
-        background-color: $color-background-danger-dark;
-    }
-}
