@@ -12,7 +12,7 @@ export default function Routes() {
                     <EditCategory title="Editar Categoria" id={1} />
                 </Route>
                 <Route path="/categoria/listar">
-                    <ListCategories title="Despesas" />
+                    <ListCategories title="Categorias" />
                 </Route>
                 <Route path="/despesa/editar">
                     <ExpenseForm title="Editar Despesa" isEditing={true} />
