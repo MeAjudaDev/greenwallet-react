@@ -8,16 +8,16 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/category/edit">
+                <Route path="/categoria/editar">
                     <EditCategory title="Editar Categoria" id={1} />
                 </Route>
-                <Route path="/category/list">
+                <Route path="/categoria/listar">
                     <ListCategories title="Despesas" />
                 </Route>
-                <Route path="/expense/edit">
+                <Route path="/despesa/editar">
                     <ExpenseForm title="Editar Despesa" isEditing={true} />
                 </Route>
-                <Route path="/expenses/list">
+                <Route path="/despesas/listar">
                     <ListExpenses title="Despesas" group="Casa" />
                 </Route>
             </Switch>
