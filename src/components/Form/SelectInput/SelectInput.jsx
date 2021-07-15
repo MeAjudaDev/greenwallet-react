@@ -5,8 +5,8 @@ export default function SelectInput({ labelText, name, options = [] }) {
         <label className={styles.select}>
             <span>{labelText}</span>
             <select name={name}>
-                {options.map((option) => (
-                    <option value={option.value}>{option.label}</option>
+                {options.map((option, index) => (
+                    <option key={index} value={option.value}>{option.label}</option>
                 ))}
             </select>
         </label>
