@@ -37,7 +37,7 @@ function ExpenseForm({ title, isEditing = false }) {
         setExpirationDate(target.value);
     };
 
-    return <form className={`container ${styles.form}`}>
+    return <form className={styles.form}>
         <div>
             <TextInput labelText="Valor" />
             <TextInput labelText="Descrição" />
