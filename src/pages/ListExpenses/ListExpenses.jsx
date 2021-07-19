@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 
 import Header from "../../components/Header";
 import SelectInput from "../../components/Form/SelectInput";
+import CircleButton from "../../components/Form/CircleButton";
 
 import { filterExpenses } from "../../api/v1/expenses";
 import toBRL from "../../utils/formatNumber";
 
+import addIcon from "../../assets/add.svg";
 import styles from "./ListExpenses.module.scss";
 
 export default function ListExpenses() {
@@ -51,6 +53,7 @@ export default function ListExpenses() {
                 <SelectInput labelText="Ano" name="year" options={years} />
             </fieldset>
         </form>
+        <output>-123.000.987,00</output>
         <table>
             <thead>
                 <tr>
@@ -66,5 +69,6 @@ export default function ListExpenses() {
                 })}
             </tbody>
         </table>
+        <CircleButton primary icon={addIcon} />
     </>;
 }
