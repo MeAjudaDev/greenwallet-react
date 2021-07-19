@@ -1,0 +1,16 @@
+@import "../../variables.module.scss";
+
+.button {    
+    border-radius: 2.8rem;
+    width: 5.6rem;
+    height: 5.6rem;
+}
+
+.primary {
+    background-color: $color-background-success;
+    color: $color-background-light-gray;
+
+    &:hover {
+        background-color: $color-background-success-dark;
+    }
+}
