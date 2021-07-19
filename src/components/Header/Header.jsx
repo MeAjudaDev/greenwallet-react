@@ -11,20 +11,18 @@ export default function Header({ title }) {
         setOpen(true);
     }
 
-    return (
-        <>
-            <Menu open={open} setOpen={setOpen} />
-            <header className={styles.header}>
-                <button
-                    role="menuopen"
-                    className={styles.menuButton}
-                    onClick={handleOpenMenu}
-                >
-                    <img src={imgMenu} alt="menu open" />
-                </button>
-                <h1>{title}</h1>
-                <Avatar url="/images/avatar.svg" />
-            </header>
-        </>
-    );
+    return <>
+        <Menu open={open} setOpen={setOpen} />
+        <header className={styles.header}>
+            <button
+                role="menuopen"
+                className={styles.menuButton}
+                onClick={handleOpenMenu}
+            >
+                <img src={imgMenu} alt="menu open" />
+            </button>
+            <h1>{title}</h1>
+            <Avatar url="/images/avatar.svg" />
+        </header>
+    </>;
 }
