@@ -1,10 +1,9 @@
-import Header from "../../components/Header";
 import MonthsNavBar from "../../components/MonthsNavBar";
 import toBRL from "../../utils/formatNumber";
 
 import styles from "./ListCategories.module.scss";
 
-function ListCategories(props) {
+function ListCategories() {
     const months = [
         { label: "Janeiro", link: "#", selected: false },
         { label: "Fevereiro", link: "#", selected: false },
@@ -22,28 +21,25 @@ function ListCategories(props) {
         { description: "Saúde", value: 310.0 },
     ];
 
-    return (
-        <div>
-            <Header title={props.title} />
-            <MonthsNavBar items={months} />
-            <section className={styles.wrapper}>
-                <h2 className={styles.totalValue}>{toBRL(103599.57)}</h2>
-                <h3 className={styles.description}>TOTAL POR CATEGORIA</h3>
-                <hr className={styles.divider} />
-                <ul className={styles.list}>
-                    {categories.map((category) => (
-                        <li
-                            key={category.description}
-                            className={styles.listItem}
-                        >
-                            <span>{category.description}</span>
-                            <span>{toBRL(category.value)}</span>
-                        </li>
-                    ))}
-                </ul>
-            </section>
-        </div>
-    );
+    return <>
+        <MonthsNavBar items={months} />
+        <section className={styles.wrapper}>
+            <h2 className={styles.totalValue}>{toBRL(103599.57)}</h2>
+            <h3 className={styles.description}>TOTAL POR CATEGORIA</h3>
+            <hr className={styles.divider} />
+            <ul className={styles.list}>
+                {categories.map((category) => (
+                    <li
+                        key={category.description}
+                        className={styles.listItem}
+                    >
+                        <span>{category.description}</span>
+                        <span>{toBRL(category.value)}</span>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    </>;
 }
 
 export default ListCategories;

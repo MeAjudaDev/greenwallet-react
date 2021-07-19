@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import Header from "../../components/Header";
-
 import TextInput from "../../components/Form/TextInput";
 import CheckboxInput from "../../components/Form/CheckboxInput";
 import RadioInput from "../../components/Form/RadioInput";
@@ -39,26 +37,23 @@ function ExpenseForm({ title, isEditing = false }) {
         setExpirationDate(target.value);
     };
 
-    return <>
-        <Header title={title} />
-        <form className={`container ${styles.form}`}>
-            <div>
-                <TextInput labelText="Valor" />
-                <TextInput labelText="Descrição" />
-                <SelectInput labelText="Categoria" />
-                <fieldset>
-                    <legend>Tipo</legend>
-                    <RadioInput inputName="expense-type" labelText="Variável" />
-                    <RadioInput inputName="expense-type" labelText="Fixa" />
-                </fieldset>
-                <fieldset>
-                    <CheckboxInput label="Com vencimento" />
-                    <DateInput />
-                </fieldset>
-            </div>
-            <Button type="submit" primary>Salvar</Button>
-        </form>
-    </>;
+    return <form className={`container ${styles.form}`}>
+        <div>
+            <TextInput labelText="Valor" />
+            <TextInput labelText="Descrição" />
+            <SelectInput labelText="Categoria" />
+            <fieldset>
+                <legend>Tipo</legend>
+                <RadioInput inputName="expense-type" labelText="Variável" />
+                <RadioInput inputName="expense-type" labelText="Fixa" />
+            </fieldset>
+            <fieldset>
+                <CheckboxInput label="Com vencimento" />
+                <DateInput />
+            </fieldset>
+        </div>
+        <Button type="submit" primary>Salvar</Button>
+    </form>;
 }
 
 export default ExpenseForm;
