@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import styles from "./Menu.module.scss";
 import closeIcon from "../../assets/close.svg";
 import logo from "../../assets/logo.svg";
@@ -11,21 +11,18 @@ import key from "../../assets/key.svg";
 import config from "../../assets/config.svg";
 import logOut from "../../assets/log-out.svg";
 
-export function Menu() {
-    const [open, setOpen] = React.useState(false);
-
+export function Menu({ open, setOpen }) {
     const handleCloseMenu = () => {
         setOpen(false);
     };
 
-    const handleOpenMenu = () => {
-        setOpen(true);
-    };
-
     return (
         <>
-            <button onClick={handleOpenMenu}>Menu</button>
-            <aside className={`${styles.wrapper} ${open ? styles.active : ""}`}>
+            <aside
+                className={`${styles.wrapper} ${open ? styles.active : ""}`}
+                aria-label="menu"
+                role="menu-nav"
+            >
                 <button onClick={handleCloseMenu}>
                     <img src={closeIcon} alt="close icon" />
                 </button>
@@ -35,48 +32,48 @@ export function Menu() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src={graphUp} alt="graphUp Icon" />
                                 Receitas
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/despesas/listar">
                                 <img src={graphDown} alt="graphDown Icon" />
                                 Despesas
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src={dollar} alt="dollar Icon" />
                                 Investimentos
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src={newCategory} alt="newCategory Icon" />
                                 Nova Categoria
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link href="/">
                                 <img src={key} alt="Key Icon" />
                                 Trocar Senha
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link href="/">
                                 <img src={config} alt="Config Icon" />
                                 Configurações
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
                         <li className={styles.logOut}>
-                            <a href="/">
+                            <Link href="/">
                                 <img src={logOut} alt="Log Out Icon" />
                                 Sair
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
