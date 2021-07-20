@@ -1,0 +1,12 @@
+.toastsContainer {
+    position: fixed;
+    z-index: 65535;
+    right: 0;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.toastsContainer:last-child {
+    margin-bottom: 0;
+}
