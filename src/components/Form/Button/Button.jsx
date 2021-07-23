@@ -30,7 +30,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
     type: PropTypes.string.isRequired,
-    children: PropTypes.element.isRequired,
+    children: PropTypes.any.isRequired,
     primary: PropTypes.bool,
     secondary: PropTypes.bool,
     textOnly: PropTypes.bool,
