@@ -1,8 +1,8 @@
-import styles from './CheckboxInput.module.scss'
+import styles from "./CheckboxInput.module.scss";
 
 export default function CheckboxInput({
     checked = false,
-    checkboxClass = '',
+    checkboxClass = "",
     id,
     label,
     name,
@@ -12,7 +12,7 @@ export default function CheckboxInput({
     return (
         <label className={`${styles.checkboxInput} ${checkboxClass}`}>
             <input
-                checked={checked}
+                defaultChecked={checked}
                 id={id}
                 name={name}
                 onChange={onChange}
@@ -21,5 +21,5 @@ export default function CheckboxInput({
             />
             <span>{label}</span>
         </label>
-    )
+    );
 }
