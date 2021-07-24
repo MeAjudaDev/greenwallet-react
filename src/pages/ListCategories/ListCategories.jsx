@@ -1,16 +1,33 @@
-import MonthsNavBar from "../../components/MonthsNavBar";
+import SelectInput from "../../components/Form/SelectInput";
+import Amount from "../../components/Amount";
+import ListItems from "../../components/ListItems";
+import CircleButton from "../../components/Form/CircleButton";
 import toBRL from "../../utils/formatNumber";
+import addIcon from "../../assets/add.svg";
 
 import styles from "./ListCategories.module.scss";
 
 function ListCategories() {
+    const date = new Date();
     const months = [
-        { label: "Janeiro", link: "#", selected: false },
-        { label: "Fevereiro", link: "#", selected: false },
-        { label: "Março", link: "#", selected: false },
-        { label: "Abril", link: "#", selected: true },
-        { label: "Maio", link: "#", selected: false },
+        { label: "Janeiro", value: 1 },
+        { label: "Fevereiro", value: 2 },
+        { label: "Março", value: 3 },
+        { label: "Abril", value: 4 },
+        { label: "Maio", value: 5 },
+        { label: "Junho", value: 6 },
+        { label: "Julho", value: 7 },
+        { label: "Agosto", value: 8 },
+        { label: "Setembro", value: 9 },
+        { label: "Outubro", value: 10 },
+        { label: "Novembro", value: 11 },
+        { label: "Dezembro", value: 12 },
     ];
+
+    const year = date.getFullYear();
+    const years = Array(21)
+        .fill(null)
+        .map((_, i) => ({ label: year - 10 + i, value: year - 10 + i }));
 
     const categories = [
         { description: "Alimentação", value: 831.66 },
@@ -21,25 +38,27 @@ function ListCategories() {
         { description: "Saúde", value: 310.0 },
     ];
 
-    return <>
-        <MonthsNavBar items={months} />
-        <section className={styles.wrapper}>
-            <h2 className={styles.totalValue}>{toBRL(103599.57)}</h2>
-            <h3 className={styles.description}>TOTAL POR CATEGORIA</h3>
-            <hr className={styles.divider} />
-            <ul className={styles.list}>
-                {categories.map((category) => (
-                    <li
-                        key={category.description}
-                        className={styles.listItem}
-                    >
-                        <span>{category.description}</span>
-                        <span>{toBRL(category.value)}</span>
-                    </li>
-                ))}
-            </ul>
-        </section>
-    </>;
+    return (
+        <div className={styles.wrapper}>
+            <div>
+                <div className={styles.dateInputs}>
+                    <div>
+                        <span>Mês</span>
+                        <SelectInput options={months} />
+                    </div>
+                    <div>
+                        <span>Ano</span>
+                        <SelectInput options={years} />
+                    </div>
+                </div>
+                <Amount negative>{toBRL(-1500)}</Amount>
+
+                <ListItems categories={categories} />
+            </div>
+
+            <CircleButton primary icon={addIcon} />
+        </div>
+    );
 }
 
 export default ListCategories;

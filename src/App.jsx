@@ -5,12 +5,14 @@ import Header from "./components/Header";
 import Routes from "./routes";
 
 function App() {
-    return <BrowserRouter>
-        <Header />
-        <main className={styles.mainContent}>
-            <Routes />
-        </main>
-    </BrowserRouter>;
+    return (
+        <BrowserRouter>
+            <Header />
+            <main className={styles.mainContent}>
+                <Routes />
+            </main>
+        </BrowserRouter>
+    );
 }
 
 export default App;
