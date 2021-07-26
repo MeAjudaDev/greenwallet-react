@@ -61,7 +61,7 @@ export default function ListExpenses() {
                 </tr>
             </thead>
             <tbody>
-                {totalSums.map((sum, index) => {
+                {totalSums &&  totalSums.map((sum, index) => {
                     <tr key={index}>
                         <td>{sum.category}</td>
                         <td>{toBRL(sum.amount)}</td>
