@@ -46,12 +46,12 @@ export default function ListExpenses() {
 
     return <>
         <form>
-            <fieldset>
+            <fieldset className={styles.dateForm}>
                 <SelectInput labelText="Mês" name="month" options={months} />
                 <SelectInput labelText="Ano" name="year" options={years} />
             </fieldset>
         </form>
-        <output>-123.000.987,00</output>
+        <output className={styles.expensesValue}>-123.000.987,00</output>
         <table>
             <thead>
                 <tr>
@@ -59,7 +59,7 @@ export default function ListExpenses() {
                 </tr>
             </thead>
             <tbody>
-                {totalSums &&  totalSums.map((sum, index) => {
+                {totalSums && totalSums.map((sum, index) => {
                     <tr key={index}>
                         <td>{sum.category}</td>
                         <td>{toBRL(sum.amount)}</td>
