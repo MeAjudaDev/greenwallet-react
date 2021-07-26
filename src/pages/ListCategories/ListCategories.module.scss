@@ -1,43 +1,29 @@
 @import "../../variables.module.scss";
 
 .wrapper {
-    padding: 0 16px;
-}
-
-.totalValue {
-    text-align: center;
-    color: $color-danger;
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
-    margin-top: 25px;
-}
-
-.description {
-    color: $color-background-dark;
-}
-
-.divider {
-    border: none;
-    height: 1px;
-    background-color: $color-danger;
-    margin-bottom: 15px;
-}
-
-.list {
-    font-size: 1.8rem;
-}
-
-.listItem {
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 1.4rem;
+    flex-direction: column;
+    height: 100%;
+
+    & > div:first-child {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
 }
 
-.listItem span {
-    color: $color-title;
-}
+.dateInputs {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
 
-.listItem span:last-child {
-    color: $color-danger;
+    & > div {
+        flex: 1;
+    }
 }

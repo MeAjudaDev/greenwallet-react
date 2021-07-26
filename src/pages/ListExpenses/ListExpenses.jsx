@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import Header from "../../components/Header";
 import SelectInput from "../../components/Form/SelectInput";
 import CircleButton from "../../components/Form/CircleButton";
 
@@ -46,7 +45,6 @@ export default function ListExpenses() {
         .map((year, index) => ({ value: year - index, label: year - index }));
 
     return <>
-        <Header title="Casa" />
         <form>
             <fieldset>
                 <SelectInput labelText="Mês" name="month" options={months} />

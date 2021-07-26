@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getCategoryById, updateCategory } from "../../api/v1/expenses";
-import Header from "../../components/Header";
 import styles from "./EditCategory.module.scss";
 
 export default function EditCategory({ id, title }) {
@@ -45,42 +44,37 @@ export default function EditCategory({ id, title }) {
         });
     }
 
-    return (
-        <>
-            <Header title="Editar categoria"/>
-            <div className="container">
-                <h1>{title}</h1>
-                <form
-                    action="#"
-                    className="newCategoryForm twoColumns"
-                    onSubmit={handleSubmit}
-                >
-                    <label id="description">
-                        Descrição
-                        <br />
-                        <input
-                            onChange={handleTextInputChange}
-                            type="text"
-                            name="name"
-                            value={category?.name}
-                        />
-                    </label>
-                    <label id="enabled">
-                        Habilitado?
-                        <br />
-                        <input
-                            onChange={handleCheckboxChange}
-                            checked={category?.state === "A"}
-                            name="state"
-                            type="checkbox"
-                        />
-                    </label>
-                    <button className="buttonCancelar">Cancelar</button>
-                    <button type="submit" className="buttonSalvar">
-                        Salvar
-                    </button>
-                </form>
-            </div>
-        </>
-    );
+    return <>
+        <h1>{title}</h1>
+        <form
+            action="#"
+            className="newCategoryForm twoColumns"
+            onSubmit={handleSubmit}
+        >
+            <label id="description">
+                Descrição
+                <br />
+                <input
+                    onChange={handleTextInputChange}
+                    type="text"
+                    name="name"
+                    value={category?.name}
+                />
+            </label>
+            <label id="enabled">
+                Habilitado?
+                <br />
+                <input
+                    onChange={handleCheckboxChange}
+                    checked={category?.state === "A"}
+                    name="state"
+                    type="checkbox"
+                />
+            </label>
+            <button className="buttonCancelar">Cancelar</button>
+            <button type="submit" className="buttonSalvar">
+                Salvar
+            </button>
+        </form>
+    </>;
 }
