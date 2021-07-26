@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ExportModal.module.scss";
-import InputDate from "../InputDate";
+import DateInput from "../Form/DateInput";
 import RadioInput from "../Form/RadioInput";
 import Button from "../Form/Button";
 
@@ -11,8 +11,8 @@ export default function ExportModal() {
                 <h2>Exportar</h2>
                 <form>
                     <fieldset className={styles.dateWrapper}>
-                        <InputDate />
-                        <InputDate />
+                        <DateInput />
+                        <DateInput />
                     </fieldset>
                     <fieldset>
                         <h3>Formato</h3>
