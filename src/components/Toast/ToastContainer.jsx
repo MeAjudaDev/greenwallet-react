@@ -1,11 +1,11 @@
 import Toast from "./Toast";
 import styles from "./ToastContainer.module.scss";
 
-export default function ToastsContainer({ toasts, onToastFinished }) {
+export default function ToastsContainer({ toasts }) {
     return (
         <div className={styles.toastsContainer}>
-            {toasts.map((toast, index) => (
-                <Toast key={index} {...toast} onHide={onToastFinished} />
+            {toasts?.map((content, index) => (
+                <Toast key={index} {...content} />
             ))}
         </div>
     );

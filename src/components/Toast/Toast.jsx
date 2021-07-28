@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "./Toast.scss";
 import { v4 as uuid } from "uuid";
+import { useToast } from "./ToastProvider";
 
-function Toast({ id = uuid(), delay = 5500, message, onHide }) {
+function Toast({ id = uuid(), delay = 2500, message }) {
     const [className, setClassname] = useState("toast-container show-toast");
+    const { removeToast } = useToast();
 
-    console.log("render toast", id);
     useEffect(() => {
-        console.log("toast set timeout", id);
-        let hideTimeout = null;
-
-        const timeout = setTimeout(() => {
-            console.log("toast timeout", id);
+        const timer = setTimeout(() => {
             setClassname("toast-container hide-toast");
-            console.log("hide toast", id);
-            hideTimeout = setTimeout(() => {
-                onHide && onHide(id);
-            }, 500);
         }, delay);
 
+        if (className.includes("hide-toast")) {
+            removeToast(id);
+        }
+
         return () => {
-            console.log("toast clear timeout", id);
-            clearTimeout(timeout);
-            clearTimeout(hideTimeout);
+            clearTimeout(timer);
         };
-    }, [id, delay, message]);
+    }, [className]);
 
     return <div className={className}>{message}</div>;
 }

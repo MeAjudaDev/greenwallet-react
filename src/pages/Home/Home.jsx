@@ -1,30 +1,13 @@
 import { useState } from "react";
 import ToastsContainer from "../../components/Toast/ToastContainer";
+import { useToast } from "../../components/Toast/ToastProvider";
 
 export default function Home(props) {
-    const [toasts, setToasts] = useState([]);
-
-    const showToast = () => {
-        const id = toasts.length;
-        const toast = {
-            id,
-            message: `This is the ${id + 1} toast message`,
-            delay: 2500,
-        };
-        setToasts([...toasts, toast].reverse());
-    };
-
-    const onToastFinished = (id) => {
-        setToasts(toasts.filter((toast) => toast.id !== id));
-    };
+    const { addToast } = useToast();
 
     return (
         <div className="App">
-            <button onClick={showToast}>Show toast</button>
-            <ToastsContainer
-                toasts={toasts}
-                onToastFinished={onToastFinished}
-            />
+            <button onClick={addToast}>Show toast</button>
         </div>
     );
 }
