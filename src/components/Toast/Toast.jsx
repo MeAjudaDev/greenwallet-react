@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Toast.scss";
-import { v4 as uuid } from "uuid";
-import { useToast } from "./ToastProvider";
 
-function Toast({ id = uuid(), delay = 2500, message }) {
-    const [className, setClassname] = useState("toast-container show-toast");
-    const { removeToast } = useToast();
+import { useToast } from "./ToastProvider";
+import "./Toast.scss";
+
+function Toast({ delay = 2500, message }) {
+    const [className, setClassName] = useState("show-toast");
+    const { hideToast } = useToast();
+
+    const id = "Toast__" + Math.random().toString(36).slice(8);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setClassname("toast-container hide-toast");
-        }, delay);
+        const timer = setTimeout(setClassName, delay, "hide-toast");
 
         if (className.includes("hide-toast")) {
-            removeToast(id);
+            hideToast(id);
         }
 
         return () => {
@@ -21,7 +21,11 @@ function Toast({ id = uuid(), delay = 2500, message }) {
         };
     }, [className]);
 
-    return <div className={className}>{message}</div>;
+    return (
+        <div id={id} className={`toast ${className}`}>
+            {message}
+        </div>
+    );
 }
 
-export default React.memo(Toast);
+export default Toast;

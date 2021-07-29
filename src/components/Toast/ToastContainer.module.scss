@@ -1,8 +1,9 @@
 .toastsContainer {
     position: fixed;
     z-index: 65535;
+    top: 68px;
     right: 0;
-    max-width: 250px;
+    max-width: 300px;
     display: flex;
     flex-direction: column-reverse;
 }

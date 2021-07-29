@@ -1,6 +1,6 @@
 @import "../../variables.module.scss";
 
-.toast-container {
+.toast {
     visibility: hidden;
     position: relative;
     z-index: 65535;
@@ -11,20 +11,20 @@
     border-radius: 10px;
     padding: 10px;
 
-    max-width: 250px;
+    width: 250px;
 }
 
-.toast-container.show-toast {
+.toast.show-toast {
     visibility: visible;
     right: 24px;
     animation: slidein 0.5s;
 }
 
-.toast-container + .toast-container {
+.toast + .toast {
     margin-bottom: 10px;
 }
 
-.toast-container.hide-toast {
+.toast.hide-toast {
     visibility: visible;
     animation: slideout 0.5s;
 }
