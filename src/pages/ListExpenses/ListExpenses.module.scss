@@ -1,28 +1,21 @@
 @import "../../variables.module.scss";
 
-.totalValue {
-    text-align: center;
-    color: $color-danger;
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
-    margin-top: 25px;
-}
-
-.list {
-    font-size: 1.8rem;
-}
-
-.listIitem {
-    align-items: center;
+.dateForm {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.4rem;
+    gap: $spacing-small;
 }
 
-.listIitem span {
-    color: $color-title;
+.expensesValue {
+    color: $color-danger;
+    display: block;
+    font-size: $font-size-extra-large;
+    text-align: center;
+    width: 100%;
 }
 
-.listIitem span:last-child {
-    color: $color-info;
+.expensesValue::before {
+    color: $color-text-subtle;
+    content: "R$";
+    font-size: $font-size-default;
+    float: left;
 }

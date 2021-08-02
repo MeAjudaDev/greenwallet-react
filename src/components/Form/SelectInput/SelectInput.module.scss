@@ -2,7 +2,6 @@
 
 .select {
     display: block;
-    font-size: $font-size-default;
     margin-bottom: $spacing-small;
     position: relative;
     width: 100%;
@@ -18,9 +17,10 @@
         border-radius: $border-radius-default;
         border: 1px solid $color-background-gray;
         cursor: pointer;
+        font-size: $font-size-default;
         height: 4rem;
         padding: 0rem 1.2rem;
-        width: 100%;
         position: relative;
+        width: 100%;
     }
 }

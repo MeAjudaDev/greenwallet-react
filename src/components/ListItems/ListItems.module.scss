@@ -5,7 +5,7 @@
 
     h3 {
         font-size: 1.2rem;
-        color: $color-text;
+        color: $color-text-default;
         font-weight: 700;
 
         &::after {
@@ -20,7 +20,7 @@
 
 .category {
     align-items: center;
-    color: $color-text;
+    color: $color-text-default;
     display: flex;
     font-size: $font-size-default;
     font-weight: 400;
