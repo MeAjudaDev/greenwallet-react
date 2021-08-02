@@ -5,7 +5,15 @@ export default function Home(props) {
 
     return (
         <div className="App">
-            <button onClick={() => toast("Meu toast")}>Show toast</button>
+            <button style={{ marginLeft: 8 }} onClick={() => toast("Sucesso")}>
+                Sucesso
+            </button>
+            <button style={{ marginLeft: 8 }} onClick={() => toast("Error")}>
+                Error
+            </button>
+            <button style={{ marginLeft: 8 }} onClick={() => toast("Info")}>
+                Info
+            </button>
         </div>
     );
 }

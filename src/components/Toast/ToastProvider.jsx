@@ -1,11 +1,6 @@
-import {
-    createContext,
-    useCallback,
-    useContext,
-    useRef,
-    useState,
-} from "react";
+import { createContext, useContext, useState } from "react";
 
+import { v4 as uuidv4 } from "uuid";
 import ToastsContainer from "./ToastContainer";
 
 const ToastContext = createContext(null);
@@ -20,18 +15,20 @@ const ToastProvider = ({ children }) => {
             ? toastAttrs
             : { message: toastAttrs };
 
+        toast.id = "Toast__" + uuidv4();
+
         setToasts(toasts.length ? [...toasts, toast] : [toast]);
     };
 
     const hideToast = (id) => {
-        const newToasts = toasts;
+        const newToasts = [...toasts];
         const toastIndex = newToasts.findIndex((t) => t.id === id);
         newToasts.splice(toastIndex, 1);
         setToasts(newToasts);
     };
 
     return (
-        <ToastContext.Provider value={{ toast, hideToast }}>
+        <ToastContext.Provider value={{ toast, hideToast, toasts }}>
             <ToastsContainer toasts={toasts} />
             {children}
         </ToastContext.Provider>
