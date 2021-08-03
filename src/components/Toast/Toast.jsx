@@ -5,12 +5,6 @@ import { ReactComponent as CloseSvg } from "../../assets/close.svg";
 
 import "./Toast.scss";
 
-const getIcon = async (variant) => {
-    const svg = await import(`../../assets/circle-${variant}.svg`);
-    console.log(svg.default);
-    return svg.default;
-};
-
 function Toast({ id, delay = 2500, message, type, title }) {
     const [className, setClassName] = useState("show-toast");
     const { hideToast } = useToast();
