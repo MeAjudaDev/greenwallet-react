@@ -8,15 +8,9 @@ const ToastContext = createContext(null);
 const ToastProvider = ({ children }) => {
     const [toasts, setToasts] = useState([]);
 
-    // toastAttrs pode ser uma string contendo a mensagem do toast
-    // ou um objeto contendo { message, delay }
-    const toast = (toastAttrs) => {
-        const toast = toastAttrs?.message
-            ? toastAttrs
-            : { message: toastAttrs };
-
+    // toast -> { title, message, delay, type }
+    const toast = (toast) => {
         toast.id = "Toast__" + uuidv4();
-
         setToasts(toasts.length ? [...toasts, toast] : [toast]);
     };
 
