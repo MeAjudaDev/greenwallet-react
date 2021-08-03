@@ -5,6 +5,7 @@ $border-radius-default: 4px;
 $color-danger: #ff7e78;
 $color-title: #444c66;
 $color-info: #78d7ed;
+$color-warning: #ffc800;
 $color-background-danger: $color-danger;
 $color-background-danger-dark: #ff6760;
 $color-background-dark: #a2a1a1;
@@ -13,8 +14,9 @@ $color-background-gray: #ebebeb;
 $color-background-light-gray: #f1f1f1;
 $color-background-light: #fff;
 $color-background-success: #01c9b8;
-$color-background-success-dark: #00968A;
+$color-background-success-dark: #00968a;
 $color-background-info: $color-info;
+$color-background-warning: $color-warning;
 $color-text-default: #222;
 $color-text-subtle: #e0e0e0;
 
@@ -26,4 +28,4 @@ $spacing-large: 3.5rem;
 
 /* FONTS */
 $font-size-default: 1.6rem;
-$font-size-extra-large:3.6rem;
+$font-size-extra-large: 3.6rem;
