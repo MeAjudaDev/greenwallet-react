@@ -8,11 +8,12 @@ let cx = classNames.bind(styles);
  * import {imgAdd} from "path-to-imgAdd.svg";
  * <CircleButton primary icon={imgAdd} />
 */
-export default function CircleButton({ primary, icon }) {
+export default function CircleButton({ primary, icon, className }) {
     return <button
         className={cx({
             [styles.button]: true,
             [styles.primary]: primary,
+            [className]: className
         })}
     >
         <img src={icon} />

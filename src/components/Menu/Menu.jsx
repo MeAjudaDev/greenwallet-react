@@ -56,13 +56,13 @@ export function Menu({ open, setOpen }) {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link to="/">
                                 <img src={key} alt="Key Icon" />
                                 Trocar Senha
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link to="/">
                                 <img src={config} alt="Config Icon" />
                                 Configurações
                             </Link>
@@ -70,7 +70,7 @@ export function Menu({ open, setOpen }) {
                     </ul>
                     <ul>
                         <li className={styles.logOut}>
-                            <Link href="/">
+                            <Link to="/">
                                 <img src={logOut} alt="Log Out Icon" />
                                 Sair
                             </Link>

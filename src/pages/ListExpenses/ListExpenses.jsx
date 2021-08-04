@@ -44,58 +44,33 @@ export default function ListExpenses() {
         .fill(new Date().getFullYear())
         .map((year, index) => ({ value: year - index, label: year - index }));
 
-    return <div className={styles.listExpenses}>
-        <form>
-            <fieldset className={styles.dateForm}>
-                <SelectInput labelText="Mês" name="month" options={months} />
-                <SelectInput labelText="Ano" name="year" options={years} />
-            </fieldset>
-        </form>
-        <output className={styles.expensesValue}>-123.000.987,00</output>
-        <table className={styles.table}>
-            <thead>
-                <tr>
-                    <th colSpan="2" className={styles.tableTitle}>Total por categoria</th>
-                </tr>
-            </thead>
-            <tbody>
-                {totalSums && totalSums.map((sum, index) => {
-                    <tr key={index}>
-                        <td>{sum.category}</td>
-                        <td>{toBRL(sum.amount)}</td>
-                    </tr>
-                })}
-
-                <tr>
-                    <td>Casa</td>
-                    <td className={styles.tableValues}>R$ 8.397,66</td>
-                </tr>
-                <tr>
-                    <td>Alimentação</td>
-                    <td className={styles.tableValues}>R$ 1.956,00</td>
-                </tr>
-                <tr>
-                    <td>Transporte</td>
-                    <td className={styles.tableValues}>R$ 2.000,00</td>
-                </tr>
-                <tr>
-                    <td>Estudo</td>
-                    <td className={styles.tableValues}>R$ 1.225,00</td>
-                </tr>
-                <tr>
-                    <td>Lazer</td>
-                    <td className={styles.tableValues}>R$ 800,00</td>
-                </tr>
-                <tr>
-                    <td>Saúde</td>
-                    <td className={styles.tableValues}>R$ 700,00</td>
-                </tr>
-                <tr>
-                    <td>Empréstimo</td>
-                    <td className={styles.tableValues}>R$ 500,00</td>
-                </tr>
-            </tbody>
-        </table>
-        <CircleButton primary icon={addIcon} className={styles.btnAddCategory} />
-    </div>;
+    return (
+        <div className={styles.listExpenses}>
+            <div className={styles.keepsFooterAtBottom}>
+                <form>
+                    <fieldset className={styles.dateForm}>
+                        <SelectInput labelText="Mês" name="month" options={months} />
+                        <SelectInput labelText="Ano" name="year" options={years} />
+                    </fieldset>
+                </form>
+                <output className={styles.expensesValue}>-123.000.987,00</output>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th colSpan="2" className={styles.tableTitle}>Total por categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {totalSums && totalSums.map((sum, index) => {
+                            <tr key={index}>
+                                <td>{sum.category}</td>
+                                <td>{toBRL(sum.amount)}</td>
+                            </tr>
+                        })}
+                    </tbody>
+                </table>
+            </div>
+            <CircleButton primary icon={addIcon} className={styles.btnAddCategory} />
+        </div>
+    );
 }

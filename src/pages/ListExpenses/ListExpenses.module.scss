@@ -3,7 +3,7 @@
 .listExpenses {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .dateForm {
@@ -52,8 +52,10 @@
     text-align: right;
 }
 
-button {
+.btnAddCategory {
     align-self: center;
-    justify-self: end;
-    position: relative;
+}
+
+.keepsFooterAtBottom {
+    flex: 1;
 }
