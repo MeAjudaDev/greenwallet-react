@@ -1,5 +1,11 @@
 @import "../../variables.module.scss";
 
+.listExpenses {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .dateForm {
     display: flex;
     gap: $spacing-small;
@@ -18,4 +24,36 @@
     content: "R$";
     font-size: $font-size-default;
     float: left;
+    margin: 2rem auto;
+    top: 171px;
+}
+
+.table {
+    height: 50%;
+    width: 100%;
+
+    tr {
+        height: 40px;
+        left: 0px;
+        top: 148px;
+    }
+}
+
+.tableTitle {
+    border-bottom: 1px solid #AAAAAA;
+    font-size: 12px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.tableValues {
+    color:$color-background-danger;
+    text-align: right;
+}
+
+button {
+    align-self: center;
+    justify-self: end;
+    position: relative;
 }
