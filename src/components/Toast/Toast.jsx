@@ -46,7 +46,7 @@ function Toast({ id, delay = 2500, message, type, title }) {
                 <p className="toast-message">{message}</p>
             </div>
 
-            <button className="toast-close">
+            <button className="toast-close" onClick={() => hideToast(id)}>
                 <CloseSvg />
             </button>
         </div>
