@@ -1,0 +1,27 @@
+@import "../../../variables.module.scss";
+
+.textInput {
+    background: $color-background-light-gray;
+    border: 1px solid $color-background-gray;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    height: 4.0rem;
+    padding: $spacing-extra-small $spacing-small;
+    border-radius: $border-radius-default;
+    width: 100%;
+
+    &::placeholder {
+        color: $color-background-dark;
+    }
+}
+
+.textInputLabel {
+    display: block;
+    margin-bottom: $spacing-small;
+}
+
+.labelText {
+    display: block;
+    font-weight: bold;
+    margin-bottom: $spacing-extra-small;
+}

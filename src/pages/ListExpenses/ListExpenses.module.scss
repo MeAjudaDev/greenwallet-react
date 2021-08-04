@@ -1,0 +1,21 @@
+@import "../../variables.module.scss";
+
+.dateForm {
+    display: flex;
+    gap: $spacing-small;
+}
+
+.expensesValue {
+    color: $color-danger;
+    display: block;
+    font-size: $font-size-extra-large;
+    text-align: center;
+    width: 100%;
+}
+
+.expensesValue::before {
+    color: $color-text-subtle;
+    content: "R$";
+    font-size: $font-size-default;
+    float: left;
+}

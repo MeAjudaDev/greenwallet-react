@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #01c9b8;
+    color: white;
+    height: 6.4rem;
+    padding: 1.6rem;
+
+    span {
+        display: inline-block;
+        font-size: 3.6rem;
+    }
+
+    h1 {
+        display: inline-block;
+        line-height: 0;
+        color: #fafafa;
+        font-size: 24px;
+        font-weight: 500;
+        vertical-align: baseline;
+        padding-top: 0.5rem;
+        flex: 1;
+    }
+}
+
+.menuButton {
+    background:transparent;
+    margin-right: 16px;
+    cursor:pointer;
+}

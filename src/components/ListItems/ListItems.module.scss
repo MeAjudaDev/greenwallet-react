@@ -1,0 +1,36 @@
+@import "../../variables.module.scss";
+
+.wrapper {
+    width: 100%;
+
+    h3 {
+        font-size: 1.2rem;
+        color: $color-text-default;
+        font-weight: 700;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: $color-background-light-gray;
+            margin: 8px 0;
+        }
+    }
+}
+
+.category {
+    align-items: center;
+    color: $color-text-default;
+    display: flex;
+    font-size: $font-size-default;
+    font-weight: 400;
+    justify-content: space-between;
+
+    div + div {
+        color: $color-background-success;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}

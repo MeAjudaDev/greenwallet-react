@@ -1,0 +1,6 @@
+@import "./variables.module.scss";
+
+.mainContent {
+    padding: $spacing-small;
+    height: calc(100vh - 6.4rem);
+}

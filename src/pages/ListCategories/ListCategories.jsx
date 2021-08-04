@@ -1,43 +1,62 @@
-import './ListCategories.css';
-import AppHeader from '../../components/AppHeader';
-import NavBar from '../../components/NavBar';
-import toBRL from '../../utils/formatNumber';
+import SelectInput from "../../components/Form/SelectInput";
+import Amount from "../../components/Amount";
+import ListItems from "../../components/ListItems";
+import CircleButton from "../../components/Form/CircleButton";
+import toBRL from "../../utils/formatNumber";
+import addIcon from "../../assets/add.svg";
 
-function ListCategories(props) {
+import styles from "./ListCategories.module.scss";
+
+function ListCategories() {
+    const date = new Date();
     const months = [
-        { label: "Janeiro", link: "#", selected: false },
-        { label: "Fevereiro", link: "#", selected: false },
-        { label: "Março", link: "#", selected: false },
-        { label: "Abril", link: "#", selected: true },
-        { label: "Maio", link: "#", selected: false }
+        { label: "Janeiro", value: 1 },
+        { label: "Fevereiro", value: 2 },
+        { label: "Março", value: 3 },
+        { label: "Abril", value: 4 },
+        { label: "Maio", value: 5 },
+        { label: "Junho", value: 6 },
+        { label: "Julho", value: 7 },
+        { label: "Agosto", value: 8 },
+        { label: "Setembro", value: 9 },
+        { label: "Outubro", value: 10 },
+        { label: "Novembro", value: 11 },
+        { label: "Dezembro", value: 12 },
     ];
 
+    const year = date.getFullYear();
+    const years = Array(21)
+        .fill(null)
+        .map((_, i) => ({ label: year - 10 + i, value: year - 10 + i }));
+
     const categories = [
-        { description: 'Alimentação', value: 831.66 },
-        { description: 'Casa', value: 1956.00 },
-        { description: 'Transporte', value: 200.00 },
-        { description: 'Estudo', value: 356.00 },
-        { description: 'Lazer', value: 256.21 },
-        { description: 'Saúde', value: 310.00 }
+        { description: "Alimentação", value: 831.66 },
+        { description: "Casa", value: 1956.0 },
+        { description: "Transporte", value: 200.0 },
+        { description: "Estudo", value: 356.0 },
+        { description: "Lazer", value: 256.21 },
+        { description: "Saúde", value: 310.0 },
     ];
 
     return (
-        <div>
-            <AppHeader title={props.title} />
-            <NavBar items={months} />
-            <section className='categoriesListWrapper'>
-                <h2 className='categoriesList__totalValue'>{toBRL(3599.57)}</h2>
-                <h3 className='categoriesList__description'>TOTAL POR CATEGORIA</h3>
-                <hr className='categoriesList__divider' />
-                <ul className='categoriesList'>
-                    {categories.map(category =>
-                        <li key={category.description} className='categoriesList__item'>
-                            <span>{category.description}</span>
-                            <span>{toBRL(category.value)}</span>
-                        </li>
-                    )}
-                </ul>
-            </section>
+        <div className={styles.wrapper}>
+            <div>
+                <div className={styles.dateInputs}>
+                    <div>
+                        <span>Mês</span>
+                        <SelectInput options={months} />
+                    </div>
+                    <div>
+                        <span>Ano</span>
+                        <SelectInput options={years} />
+                    </div>
+                </div>
+                <Amount negative>{toBRL(-1500)}</Amount>
+
+                <ListItems categories={categories} />
+            </div>
+
+            <CircleButton primary icon={addIcon} />
         </div>
     );
 }

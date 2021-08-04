@@ -1,0 +1,79 @@
+@import "../../variables.module.scss";
+
+.modalContainer {
+    align-items: center;
+    background-color: rgba($color: #000, $alpha: 0.3);
+    display: flex;
+    justify-content: center;
+    left: 0;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.modalWrapper {
+    background: white;
+    border-radius: $border-radius-default;
+    padding: 1.6rem;
+    width: 90%;
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    input[type="date"] {
+        height: 30px;
+        background: $color-background-gray;
+        border-radius: 5px;
+
+        &::-webkit-calendar-picker-indicator {
+            background-color: $color-background-success;
+        }
+
+        &::-webkit-datetime-edit-fields-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    h3 {
+        color: #222222;
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+}
+
+.dateWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.8rem;
+    margin-bottom: 32px;
+}
+
+.radioWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+
+    label {
+        flex: 1;
+    }
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+
+    button {
+        height: 40px !important;
+    }
+}

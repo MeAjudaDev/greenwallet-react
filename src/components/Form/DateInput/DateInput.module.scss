@@ -1,0 +1,24 @@
+@import "../../../variables.module.scss";
+
+.wrapper {
+    position: relative;
+    display: flex;
+    background-color: $color-background-gray;
+    border-radius: 5px;
+
+    img {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        pointer-events: none;
+    }
+}
+
+.input {
+    height: 32px;
+    background-color: $color-background-gray;
+    border-radius: 5px;
+    padding-left: 16px;
+    font-size: 1.4rem;
+    width: 100%;
+}

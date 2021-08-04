@@ -1,0 +1,29 @@
+@import "../../variables.module.scss";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+
+    & > div:first-child {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+}
+
+.dateInputs {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+
+    & > div {
+        flex: 1;
+    }
+}
