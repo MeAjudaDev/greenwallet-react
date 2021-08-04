@@ -17,7 +17,7 @@ function Toast({ id, delay = 2500, message, type, title }) {
         return () => {
             clearTimeout(timer);
         };
-    }, []);
+    }, [delay]);
 
     useEffect(() => {
         let timer = null;
@@ -29,7 +29,7 @@ function Toast({ id, delay = 2500, message, type, title }) {
         return () => {
             clearTimeout(timer);
         };
-    }, [className, hideToast]);
+    }, [id, className, hideToast]);
 
     return (
         <div id={id} className={`toast ${className} ${type ?? ""}`}>
