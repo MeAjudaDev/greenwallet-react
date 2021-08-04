@@ -1,6 +1,9 @@
 # Modo de uso
 
 ```jsx
+import { useToast } from "../../components/Toast/ToastProvider";
+import Button from "../../components/Button";
+
 const { toast } = useToast();
 
 const showToast = () => {
