@@ -23,7 +23,7 @@ function Toast({ id, delay = 2500, message, type, title }) {
         let timer = null;
 
         if (className.includes("hide-toast")) {
-            timer = setTimeout(() => hideToast(id), 600);
+            timer = setTimeout(() => hideToast(id), 100);
         }
 
         return () => {
