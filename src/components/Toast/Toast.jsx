@@ -3,6 +3,8 @@ import { useToast } from "./ToastProvider";
 
 import { ReactComponent as CloseSvg } from "../../assets/close.svg";
 
+import ProgressBar from "../../components/ProgressBar";
+
 import "./Toast.scss";
 
 function Toast({ id, delay = 2500, message, type, title }) {
@@ -49,6 +51,13 @@ function Toast({ id, delay = 2500, message, type, title }) {
             <button className="toast-close" onClick={() => hideToast(id)}>
                 <CloseSvg />
             </button>
+
+            <ProgressBar
+                progressClass="toast-progress"
+                progressBarClass="toast-progressbar"
+                max={delay}
+                reverse
+            />
         </div>
     );
 }

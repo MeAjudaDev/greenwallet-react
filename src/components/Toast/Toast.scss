@@ -15,6 +15,17 @@
     flex-wrap: nowrap;
     align-items: start;
 
+    &-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &-progressbar {
+        border-radius: 0px 2px 2px 4px;
+        background: rgba(#222222, 0.25);
+    }
+
     &-icon {
         margin-right: 1.6rem;
     }
