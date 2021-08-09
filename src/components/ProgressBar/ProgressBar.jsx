@@ -26,7 +26,7 @@ function ProgressBar({
         return () => {
             clearTimeout(timer);
         };
-    }, [progress, setProgress]);
+    }, [reverse, tick, progress, setProgress]);
 
     return (
         <div className={`${progressClass} ${styles.progress}`}>
