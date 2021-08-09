@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 import styles from "./ProgressBar.module.scss";
 
 function ProgressBar({
@@ -37,5 +39,13 @@ function ProgressBar({
         </div>
     );
 }
+
+ProgressBar.propTypes = {
+    progressClass: PropTypes.string,
+    progressBarClass: PropTypes.string,
+    reverse: PropTypes.bool,
+    max: PropTypes.number,
+    tick: PropTypes.number
+};
 
 export default ProgressBar;

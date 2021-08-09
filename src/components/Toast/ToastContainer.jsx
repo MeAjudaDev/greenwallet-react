@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+import PropTypes from "prop-types";
 
 import Toast from "./Toast";
 import styles from "./ToastContainer.module.scss";
@@ -13,3 +14,7 @@ export default function ToastsContainer({ toasts }) {
         document.body
     );
 }
+
+ToastsContainer.propTypes = {
+    toasts: PropTypes.array.isRequired,
+};

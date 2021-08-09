@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 import { useToast } from "./ToastProvider";
 
 import { ReactComponent as CloseSvg } from "../../assets/close.svg";
@@ -61,5 +63,13 @@ function Toast({ id, delay = 2500, message, type, title }) {
         </div>
     );
 }
+
+Toast.propTypes = {
+    id: PropTypes.string.isRequired,
+    delay: PropTypes.number,
+    message: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string,
+};
 
 export default Toast;
