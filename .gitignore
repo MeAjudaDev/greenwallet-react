@@ -26,3 +26,6 @@ yarn-error.log*
 # dev tools
 db.json
 expenses.http
+
+# ide
+.vscode
