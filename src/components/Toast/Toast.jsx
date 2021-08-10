@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-
 import { useToast } from "./ToastProvider";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import styles from "./Toast.module.scss";
 
 import { ReactComponent as CloseSvg } from "../../assets/close.svg";
 
 import ProgressBar from "../../components/ProgressBar";
 
-import "./Toast.scss";
-
 function Toast({ id, delay = 2500, message, type, title }) {
-    const [className, setClassName] = useState("show-toast");
+    const [className, setClassName] = useState("show");
     const { hideToast } = useToast();
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setClassName("hide-toast");
+            setClassName("hide");
         }, delay);
 
         return () => {
@@ -26,7 +25,7 @@ function Toast({ id, delay = 2500, message, type, title }) {
     useEffect(() => {
         let timer = null;
 
-        if (className.includes("hide-toast")) {
+        if (className.includes("hide")) {
             timer = setTimeout(() => hideToast(id), 100);
         }
 
@@ -36,27 +35,30 @@ function Toast({ id, delay = 2500, message, type, title }) {
     }, [id, className, hideToast]);
 
     return (
-        <div id={id} className={`toast ${className} ${type ?? ""}`}>
+        <div
+            id={id}
+            className={cx(styles.toast, styles[className], styles[type])}
+        >
             {type && (
                 <img
-                    className="toast-icon"
+                    className={styles.icon}
                     src={require(`../../assets/circle-${type}.svg`).default}
                     alt="Ícone do toast"
                 />
             )}
 
-            <div className="toast-text">
-                <h2 className="toast-title">{title}</h2>
-                <p className="toast-message">{message}</p>
+            <div className={styles.text}>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.message}>{message}</p>
             </div>
 
-            <button className="toast-close" onClick={() => hideToast(id)}>
+            <button className={styles.close} onClick={() => hideToast(id)}>
                 <CloseSvg />
             </button>
 
             <ProgressBar
-                progressClass="toast-progress"
-                progressBarClass="toast-progressbar"
+                progressClass={styles.progress}
+                progressBarClass={styles.progressBar}
                 max={delay}
                 reverse
             />

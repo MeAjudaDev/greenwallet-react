@@ -1,0 +1,107 @@
+@import "../../variables.module.scss";
+
+.toast {
+    visibility: hidden;
+    position: relative;
+    z-index: 65535;
+    right: -1000px;
+    color: #fafafa;
+    background-color: #5d5d5d;
+    border-radius: $border-radius-default;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+    padding: 1.6rem;
+    width: 250px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: start;
+
+    + .toast {
+        margin-bottom: 10px;
+    }
+}
+
+.progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.progressBar {
+    border-radius: 0px 2px 2px 4px;
+    background: rgba(#222222, 0.25);
+}
+
+.icon {
+    margin-right: 1.6rem;
+}
+
+.text {
+    padding-right: 1.2rem;
+}
+
+.title {
+    color: inherit;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.message {
+    font-size: 1.2rem;
+}
+
+.success {
+    background-color: $color-background-success;
+}
+
+.error {
+    background-color: $color-background-danger;
+}
+
+.warning {
+    background-color: $color-background-warning;
+}
+
+.info {
+    background-color: $color-background-info;
+}
+
+.close {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    color: #fafafa;
+    background: transparent;
+}
+
+.show {
+    visibility: visible;
+    right: 24px;
+    animation: slidein 0.5s;
+}
+
+.hide {
+    visibility: visible;
+    animation: slideout 0.5s;
+}
+
+@keyframes slidein {
+    from {
+        right: -1000px;
+        opacity: 0;
+    }
+    to {
+        right: 24px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideout {
+    from {
+        right: 24px;
+        opacity: 1;
+    }
+    to {
+        right: -1000px;
+        opacity: 0;
+    }
+}
