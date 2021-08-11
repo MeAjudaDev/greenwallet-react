@@ -1,10 +1,9 @@
-import SelectInput from "../../components/Form/SelectInput";
-import Amount from "../../components/Amount";
-import ListItems from "../../components/ListItems";
-import CircleButton from "../../components/Form/CircleButton";
-import toBRL from "../../utils/formatNumber";
 import addIcon from "../../assets/add.svg";
-
+import Amount from "../../components/Amount";
+import CircleButton from "../../components/Form/CircleButton";
+import SelectInput from "../../components/Form/SelectInput";
+import ListItems from "../../components/ListItems";
+import toBRL from "../../utils/formatNumber";
 import styles from "./ListCategories.module.scss";
 
 function ListCategories() {

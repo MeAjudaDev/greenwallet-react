@@ -1,9 +1,9 @@
+import ptBR from "date-fns/locale/pt-BR";
 import React from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import styles from "./DateInput.module.scss";
 import calendar from "../../../assets/calendar.svg";
-import ptBR from "date-fns/locale/pt-BR";
+import styles from "./DateInput.module.scss";
 registerLocale("pt-BR", ptBR);
 
 export default function InputData({ placeholder }) {

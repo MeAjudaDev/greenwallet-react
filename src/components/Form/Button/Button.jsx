@@ -1,6 +1,6 @@
+import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import styles from "./Button.module.scss";
-import classNames from "classnames/bind";
 
 let cx = classNames.bind(styles);
 

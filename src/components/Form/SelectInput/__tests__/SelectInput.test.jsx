@@ -2,20 +2,16 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SelectInput from "../SelectInput";
 
-const mockedOptions = [
-    {
-        value: 1,
-        label: "Água",
-    },
-    {
-        value: 2,
-        label: "Luz",
-    },
-    {
-        value: 3,
-        label: "Internet",
-    },
-];
+const mockedOptions = [{
+    value: 1,
+    label: "Água",
+}, {
+    value: 2,
+    label: "Luz",
+}, {
+    value: 3,
+    label: "Internet",
+}];
 
 test("should render correct label text", () => {
     render(<SelectInput labelText="Categorias" options={mockedOptions} />);

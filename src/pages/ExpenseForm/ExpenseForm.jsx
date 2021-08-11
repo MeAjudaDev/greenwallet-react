@@ -1,13 +1,11 @@
 import { useState } from "react";
-
-import TextInput from "../../components/Form/TextInput";
-import CheckboxInput from "../../components/Form/CheckboxInput";
-import RadioInput from "../../components/Form/RadioInput";
-import DateInput from "../../components/Form/DateInput";
 import Button from "../../components/Form/Button";
-
-import styles from "./ExpenseForm.module.scss";
+import CheckboxInput from "../../components/Form/CheckboxInput";
+import DateInput from "../../components/Form/DateInput";
+import RadioInput from "../../components/Form/RadioInput";
 import SelectInput from "../../components/Form/SelectInput/SelectInput";
+import TextInput from "../../components/Form/TextInput";
+import styles from "./ExpenseForm.module.scss";
 
 function ExpenseForm({ title, isEditing = false }) {
     const [value, setValue] = useState(0);

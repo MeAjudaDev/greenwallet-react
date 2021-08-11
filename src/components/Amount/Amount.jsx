@@ -1,7 +1,6 @@
-import { memo } from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames/bind";
-
+import PropTypes from "prop-types";
+import { memo } from "react";
 import styles from "./Amount.module.scss";
 
 let cx = classNames.bind(styles);

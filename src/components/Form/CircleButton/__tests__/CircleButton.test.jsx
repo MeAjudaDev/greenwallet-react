@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import CircleButton from "../CircleButton";
-
 import addIcon from "../../../../assets/add.svg";
+import CircleButton from "../CircleButton";
 
 test("should render circle button", () => {
     render(<CircleButton />);
