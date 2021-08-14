@@ -16,10 +16,7 @@ export default function Button(props) {
                 [styles.danger]: props.danger,
             })}
             type={props.type}
-            {...props}
-        >
-            {props.children}
-        </button>
+            {...props}>{props.children}</button>
     );
 }
 

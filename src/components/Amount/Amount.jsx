@@ -15,15 +15,11 @@ function Amount(props) {
     return (
         <div className={styles.wrapper}>
             <span className={styles.currency}>R$</span>
-            <span
-                className={cx({
-                    [styles.amountValue]: true,
-                    [styles.positive]: props.positive,
-                    [styles.negative]: props.negative,
-                })}
-            >
-                {props.children}
-            </span>
+            <span className={cx({
+                [styles.amountValue]: true,
+                [styles.positive]: props.positive,
+                [styles.negative]: props.negative,
+            })}>{props.children}</span>
         </div>
     );
 }

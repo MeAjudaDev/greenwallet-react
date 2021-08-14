@@ -1,14 +1,14 @@
-export async function filterExpenses(filter) {
+export async function filterExpenses({  }) {
     /*
-        --> filtrar por categoria
+        --> filtrar por categoria e mês
         {
             categories: [1, 2, 3],
         }
     */
-    return fetch(`${process.env.REACT_APP_API_URL}/expenses`);
+    return fetch(`${process.env.REACT_APP_API_URL}/expenses-summary`);
 }
 
-export function deleteExpense(expenseId) {
+export function deleteExpenseById(expenseId) {
     return fetch(`${process.env.REACT_APP_API_URL}/expenses/${expenseId}`, {
         method: "DELETE",
     });
