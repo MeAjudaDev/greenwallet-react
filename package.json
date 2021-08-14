@@ -43,6 +43,8 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.18",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
     "concurrently": "6.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "json-server": "0.16.3",
