@@ -26,7 +26,7 @@ function ListCategories() {
     const year = date.getFullYear();
     const years = Array(21)
         .fill(null)
-        .map((_, i) => ({ label: year - 10 + i, value: year - 10 + i }));
+        .map((_, i) => ({ label: String(year - 10 + i), value: year - 10 + i }));
 
     const categories = [
         { description: "Alimentação", value: 831.66 },
@@ -41,14 +41,8 @@ function ListCategories() {
         <div className={styles.wrapper}>
             <div>
                 <div className={styles.dateInputs}>
-                    <div>
-                        <span>Mês</span>
-                        <SelectInput options={months} />
-                    </div>
-                    <div>
-                        <span>Ano</span>
-                        <SelectInput options={years} />
-                    </div>
+                        <SelectInput name="month" labelText="Mês" options={months} />
+                        <SelectInput name="year" labelText="Ano" options={years} />
                 </div>
                 <Amount negative>{toBRL(-1500)}</Amount>
 

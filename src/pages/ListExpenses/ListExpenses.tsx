@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
-import { filterExpenses } from "../../api/v1/expenses";
+import { filterExpenses } from "../../api/v1/api";
 import addIcon from "../../assets/add.svg";
 import CircleButton from "../../components/Form/CircleButton";
 import SelectInput from "../../components/Form/SelectInput";
+import { CategorySummary } from "../../types/CategorySummary";
 import toBRL from "../../utils/formatNumber";
 import styles from "./ListExpenses.module.scss";
 
 export default function ListExpenses() {
-    const [totalSums, setTotalSums] = useState([]);
+    const [totalSums, setTotalSums] = useState<CategorySummary[]>([]);
     const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
 
     useEffect(() => {
-        filterExpenses({ month: 4 }).then(response => {
+        filterExpenses().then(response => {
             if (response.status !== 200)
                 throw new Error(response.statusText);
-            return response.json();
+            setTotalSums(response.data);
         }).catch(err => {
             console.error(err);
-        }).then(response => {
-            setTotalSums(response);
-        });
+        })
     }, []);
 
     const months = [
@@ -39,7 +38,7 @@ export default function ListExpenses() {
 
     const years = Array(5)
         .fill(new Date().getFullYear())
-        .map((year, index) => ({ value: year - index, label: year - index }));
+        .map((year, index) => ({ value: year - index, label: String(year - index) }));
 
     return (
         <div className={styles.listExpenses}>
@@ -54,7 +53,7 @@ export default function ListExpenses() {
                 <table className={styles.table}>
                     <thead>
                         <tr>
-                            <th colSpan="2" className={styles.tableTitle}>Total por categoria</th>
+                            <th colSpan={2} className={styles.tableTitle}>Total por categoria</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -3,19 +3,23 @@ import styles from "./CircleButton.module.scss";
 
 let cx = classNames.bind(styles);
 
-/**
- * Usage:
- * import {imgAdd} from "path-to-imgAdd.svg";
- * <CircleButton primary icon={imgAdd} />
-*/
-export default function CircleButton({ primary, icon, className }) {
-    return <button
-        className={cx({
-            [styles.button]: true,
-            [styles.primary]: primary,
-            [className]: className
-        })}
-    >
-        <img src={icon} />
-    </button>;
+interface CircleButtonProps {
+    primary?: boolean;
+    className?: string;
+    icon: string;
+}
+
+export default function CircleButton({ primary, icon, className="" }: CircleButtonProps) {
+    const classNames = cx({
+        [styles.button]: true,
+        [styles.primary]: primary
+    });
+
+    return (
+        <button
+            className={`${classNames} ${className}`}
+        >
+            <img src={icon} />
+        </button>
+        );
 }

@@ -1,41 +1,46 @@
-import { useEffect, useState } from "react";
-import { getCategoryById, updateCategory } from "../../api/v1/expenses";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { getCategoryById, updateCategory } from "../../api/v1/api";
+import { Category } from "../../types/Category";
+import { TransactionType } from "../../types/TransactionType";
 
-export default function EditCategory({ id, title }) {
-    const [category, setCategory] = useState({
+interface EditCategoryProps {
+    id: number;
+    title: string;
+}
+
+export default function EditCategory({ id, title }: EditCategoryProps) {
+    const [category, setCategory] = useState<Category>({
+        id: 0,
         name: "",
-        state: "",
+        type: TransactionType.Expense,
+        enabled: true
     });
 
     useEffect(() => {
         getCategoryById(id).then((category) => {
-            setCategory(category);
+            setCategory(category.data);
         });
     }, [id]);
 
-    function handleTextInputChange(event) {
+    function handleTextInputChange(event: ChangeEvent<HTMLInputElement>) {
         const element = event.target;
 
-        setCategory((prevState) => {
-            setCategory({
-                ...prevState,
-                [element.name]: element.value,
-            });
-        });
+        setCategory((prevState) => ({
+            ...prevState,
+            [element.name]: element.value
+        }));
     }
 
-    function handleCheckboxChange(event) {
+    function handleCheckboxChange(event: ChangeEvent<HTMLInputElement>) {
         const element = event.target;
 
-        setCategory((prevState) => {
-            setCategory({
-                ...prevState,
-                state: element.checked ? "A" : "D",
-            });
-        });
+        setCategory((prevState) => ({
+            ...prevState,
+            enabled: element.checked
+        }));
     }
 
-    function handleSubmit(event) {
+    function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
         updateCategory(category).then((response) => {
             console.log("Enviou dados");
@@ -64,7 +69,7 @@ export default function EditCategory({ id, title }) {
                     Habilitado?<br />
                     <input
                         onChange={handleCheckboxChange}
-                        checked={category?.state === "A"}
+                        checked={category?.enabled}
                         name="state"
                         type="checkbox"
                     />
