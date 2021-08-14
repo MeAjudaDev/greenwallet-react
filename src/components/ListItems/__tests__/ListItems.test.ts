@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import ListItems from "../ListItems";
 
 const categories = [
     { description: "Alimentação", value: 831.66 },
@@ -19,13 +18,13 @@ test("should render default test when no data is passed in", () => {
 });
 
 test("should render list with correct items count", () => {
-    render(<ListItems categories={categories} />);
+    render(<ListItems categories={ categories } />);
     const listElement = screen.getByTestId("list");
     expect(listElement.children.length).toBe(3);
 });
 
 test("should render list with correct items description", () => {
-    render(<ListItems categories={categories} />);
+    render(<ListItems categories={ categories } />);
     const listDescriptionElements = screen.getAllByTestId("list-description");
     expect(listDescriptionElements[0].textContent).toBe("Alimentação");
     expect(listDescriptionElements[1].textContent).toBe("Casa");
@@ -33,7 +32,7 @@ test("should render list with correct items description", () => {
 });
 
 test("should render list with correct items value", () => {
-    render(<ListItems categories={categories} />);
+    render(<ListItems categories={ categories } />);
     const listValueElements = screen.getAllByTestId("list-value");
     expect(listValueElements[0].textContent).toBe("R$ 831,66");
     expect(listValueElements[1].textContent).toBe("R$ 1956,00");

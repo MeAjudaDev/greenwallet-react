@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../Form/Button";
 import DateInput from "../Form/DateInput";
 import RadioInput from "../Form/RadioInput";

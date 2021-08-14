@@ -6,19 +6,19 @@ import ListExpenses from "../pages/ListExpenses";
 
 export default function Routes() {
     return (
-    <Switch>
-        <Route path="/categoria/editar">
-            <EditCategory title="Editar Categoria" id={1} />
-        </Route>
-        <Route path="/categoria/listar">
-            <ListCategories />
-        </Route>
-        <Route path="/despesa/editar">
-            <ExpenseForm title="Editar Despesa" isEditing={true} />
-        </Route>
-        <Route path="/despesas/listar">
-            <ListExpenses />
-        </Route>
-    </Switch>
- );
+        <Switch>
+            <Route path="/categoria/editar">
+                <EditCategory title="Editar Categoria" id={1} />
+            </Route>
+            <Route path="/categoria/listar">
+                <ListCategories />
+            </Route>
+            <Route path="/despesa/editar">
+                <ExpenseForm title="Editar Despesa" isEditing={true} />
+            </Route>
+            <Route path="/despesas/listar">
+                <ListExpenses />
+            </Route>
+        </Switch>
+    );
 }

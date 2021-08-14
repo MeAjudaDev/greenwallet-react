@@ -9,7 +9,7 @@ interface CircleButtonProps {
     icon: string;
 }
 
-export default function CircleButton({ primary, icon, className="" }: CircleButtonProps) {
+export default function CircleButton({ primary, icon, className = "" }: CircleButtonProps) {
     const classNames = cx({
         [styles.button]: true,
         [styles.primary]: primary
@@ -21,5 +21,5 @@ export default function CircleButton({ primary, icon, className="" }: CircleButt
         >
             <img src={icon} />
         </button>
-        );
+    );
 }

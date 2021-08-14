@@ -5,7 +5,7 @@ interface SelectInputProps {
     options: { label: string; value: string | number }[];
 }
 
-export default function SelectInput({ labelText, name, options}: SelectInputProps) {
+export default function SelectInput({ labelText, name, options }: SelectInputProps) {
     return (
         <label className={styles.select}>
             <span>{labelText}</span>

@@ -41,8 +41,8 @@ function ListCategories() {
         <div className={styles.wrapper}>
             <div>
                 <div className={styles.dateInputs}>
-                        <SelectInput name="month" labelText="Mês" options={months} />
-                        <SelectInput name="year" labelText="Ano" options={years} />
+                    <SelectInput name="month" labelText="Mês" options={months} />
+                    <SelectInput name="year" labelText="Ano" options={years} />
                 </div>
                 <Amount negative>{toBRL(-1500)}</Amount>
 
