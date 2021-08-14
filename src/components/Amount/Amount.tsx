@@ -1,29 +1,24 @@
 import classNames from "classnames/bind";
-import PropTypes from "prop-types";
-import { memo } from "react";
+import { memo, ReactElement } from "react";
 import styles from "./Amount.module.scss";
 
 let cx = classNames.bind(styles);
 
-Amount.proptype = {
-    positive: PropTypes.bool,
-    negative: PropTypes.bool,
-    children: PropTypes.element.isRequired,
+interface Props {
+    positive?: boolean,
+    negative?: boolean,
+    children?: ReactElement[],
 };
 
-function Amount(props) {
+function Amount({ positive, negative, children }: Props) {
     return (
         <div className={styles.wrapper}>
             <span className={styles.currency}>R$</span>
-            <span
-                className={cx({
-                    [styles.amountValue]: true,
-                    [styles.positive]: props.positive,
-                    [styles.negative]: props.negative,
-                })}
-            >
-                {props.children}
-            </span>
+            <span className={cx({
+                [styles.amountValue]: true,
+                [styles.positive]: positive,
+                [styles.negative]: negative,
+            })}>{children}</span>
         </div>
     );
 }

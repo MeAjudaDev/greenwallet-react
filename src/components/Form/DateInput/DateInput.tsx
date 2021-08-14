@@ -6,17 +6,21 @@ import calendar from "../../../assets/calendar.svg";
 import styles from "./DateInput.module.scss";
 registerLocale("pt-BR", ptBR);
 
-export default function InputData({ placeholder }) {
+interface DateInputProps {
+    placeholder: string;
+}
+
+export default function DateInput({ placeholder }: DateInputProps) {
     const [date, setDate] = React.useState("");
 
     return (
         <span className={styles.wrapper}>
             <DatePicker
                 closeOnScroll={true}
-                selected={date}
+                selected={new Date(date)}
                 dateFormat="dd/MM/yyyy"
                 locale="pt-BR"
-                onChange={(date) => setDate(date)}
+                onChange={date => setDate(date)}
                 className={styles.input}
                 placeholderText={placeholder}
             />

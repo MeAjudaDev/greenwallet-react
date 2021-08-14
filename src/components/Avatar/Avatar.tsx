@@ -1,6 +1,10 @@
 import styles from "./Avatar.module.scss";
 
-export default function Avatar({ url }) {
+interface Props {
+    url: string;
+}
+
+export default function Avatar({ url }: Props) {
     return (
         <div
             data-testid="avatar"
