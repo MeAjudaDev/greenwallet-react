@@ -6,7 +6,7 @@ let cx = classNames.bind(styles);
 interface CircleButtonProps {
     primary?: boolean;
     className?: string;
-    icon: string;
+    icon?: string;
 }
 
 export default function CircleButton({ primary, icon, className = "" }: CircleButtonProps) {

@@ -34,7 +34,7 @@ test("should have focus when autoFocus prop is true", () => {
 
 test("should update input when user types in", () => {
     render(<TextInput autoFocus />);
-    const inputElement = screen.getByRole("textbox");
+    const inputElement = screen.getByRole("textbox") as HTMLInputElement;
 
     userEvent.type(inputElement, "25.00");
 

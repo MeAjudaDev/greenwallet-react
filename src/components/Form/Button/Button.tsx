@@ -1,24 +1,33 @@
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
+import { ButtonHTMLAttributes } from "react";
 import styles from "./Button.module.scss";
 
 let cx = classNames.bind(styles);
 
-export default function Button(props) {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    primary?: boolean;
+    secondary?: boolean;
+    outlined?: boolean;
+    textOnly?: boolean;
+    danger?: boolean;
+}
+
+export default function Button({ primary, secondary, outlined, textOnly, danger, children, type, ...rest }: ButtonProps) {
     return (
         <button
             className={cx({
                 [styles.button]: true,
-                [styles.primary]: props.primary,
-                [styles.secondary]: props.secondary,
-                [styles.outlined]: props.outlined,
-                [styles.textOnly]: props.textOnly,
-                [styles.danger]: props.danger,
+                [styles.primary]: primary,
+                [styles.secondary]: secondary,
+                [styles.outlined]: outlined,
+                [styles.textOnly]: textOnly,
+                [styles.danger]: danger,
             })}
-            type={props.type}
-            {...props}
+            type={type}
+            {...rest}
         >
-            {props.children}
+            {children}
         </button>
     );
 }

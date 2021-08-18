@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import imgMenu from "../../assets/menu.svg";
 import Avatar from "../Avatar";
 import { Menu } from "../Menu/Menu";
 import styles from "./Header.module.scss";
 
-export default function Header({ title }) {
-    const [open, setOpen] = React.useState(false);
+interface HeaderProps {
+    title: string;
+}
+
+export default function Header({ title }: HeaderProps) {
+    const [open, setOpen] = useState(false);
 
     function handleOpenMenu() {
         setOpen(true);

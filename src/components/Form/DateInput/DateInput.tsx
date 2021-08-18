@@ -1,5 +1,5 @@
 import ptBR from "date-fns/locale/pt-BR";
-import React from "react";
+import { useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import calendar from "../../../assets/calendar.svg";
@@ -11,7 +11,7 @@ interface DateInputProps {
 }
 
 export default function DateInput({ placeholder }: DateInputProps) {
-    const [date, setDate] = React.useState("");
+    const [date, setDate] = useState(new Date());
 
     return (
         <span className={styles.wrapper}>
@@ -20,7 +20,7 @@ export default function DateInput({ placeholder }: DateInputProps) {
                 selected={new Date(date)}
                 dateFormat="dd/MM/yyyy"
                 locale="pt-BR"
-                onChange={date => setDate(date)}
+                onChange={date => {if(date instanceof Date) setDate(date);}}
                 className={styles.input}
                 placeholderText={placeholder}
             />

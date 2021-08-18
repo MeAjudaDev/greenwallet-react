@@ -1,4 +1,9 @@
+import { InputHTMLAttributes } from 'react';
 import styles from './TextInput.module.scss';
+
+interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+    labelText?: string;
+}
 
 export default function TextInput({
     autoFocus = false,
@@ -8,7 +13,7 @@ export default function TextInput({
     onChange,
     placeholder,
     value,
-}) {
+}: TextInputProps) {
     return (
         <label className={`${styles.textInputLabel} ${className ?? ''}`}>
             <span className={styles.labelText}>{labelText}</span>
