@@ -1,79 +1,29 @@
-/*layout*/
+@import "../../variables.module.scss";
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        'title title'
-        'description description'
-        'enabled enabled'
-        'cancel save';
-    gap: 1rem;
-    justify-items: stretch;
+.form {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 6.4rem);
+
+    div {
+        flex: 1;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;        
+        margin-bottom: $spacing-small;
+
+        legend {
+            margin: $spacing-extra-small 0;
+        }
+    }
+
+    button {
+        align-self: flex-end;
+    }
 }
 
-.container #description {
-    grid-area: description;
-}
-
-.container #description input {
-    width: 100%;
-}
-
-.container #enabled {
-    grid-area: enabled;
-}
-
-/*edições de texto*/
-
-.container>h1 {
-    grid-area: title;
-    font-size: 300;
-    font-weight: 400;
-    font-family: 'OpenSans', sans-serif;
-}
-
-.container label {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
-    font-weight: 500;
-}
-
-/*edições do input*/
-
-.container input {
-    border-radius: 4px;
-    border: 1px solid #d3d3d699;
-    background: #d3d3d699;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 0.8rem;
-    padding: 20px;
-}
-
-/*edições nos botões*/
-
-.container .buttonPage {
-    padding: 10px;
-}
-
-.container .buttonSalvar,
-.container .buttonCancelar {
-    margin: 5px;
-    border-radius: 7px;
-    border: 0;
-    font-size: 20px;
-    padding: 11px 35px;
-}
-
-.container .buttonSalvar {
-    justify-self: flex-start;
-    background: rgb(60, 224, 224);
-    color: white;
-}
-
-.container .buttonCancelar {
-    justify-self: flex-end;
-    background: rgb(185, 184, 184);
-    color: white;
+.formRadioInputContainer {
+    margin: $spacing-extra-small 0;
 }
