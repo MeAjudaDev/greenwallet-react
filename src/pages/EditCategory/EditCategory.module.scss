@@ -5,13 +5,13 @@
     flex-direction: column;
     height: calc(100vh - 6.4rem);
 
-    div {
+    .formContainer {
         flex: 1;
     }
 
     fieldset {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         margin-bottom: $spacing-small;
 
         legend {
@@ -26,4 +26,10 @@
 
 .formRadioInputContainer {
     margin: $spacing-extra-small 0;
+}
+
+.formButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-small;
 }

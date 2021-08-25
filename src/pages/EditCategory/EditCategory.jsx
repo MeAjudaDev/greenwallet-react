@@ -6,12 +6,12 @@ import Button from "../../components/Form/Button";
 import styles from "./EditCategory.module.scss";
 
 export default function EditCategory({ id, title }) {
-        
+
     const [category, setCategory] = useState({
         name: "",
         state: "",
     });
-    
+
     useEffect(() => {
         getCategoryById(id).then((category) => {
             setCategory(category);
@@ -36,13 +36,13 @@ export default function EditCategory({ id, title }) {
             console.log(response);
         });
     }
-    
+
     return (
         <form 
             className={styles.form}
             onSubmit={handleSubmit}
         >
-            <div>
+            <div className={styles.formContainer}>
                 <TextInput                  
                     labelText="Descrição" 
                     onChange={handleTextInputChange}
@@ -50,7 +50,7 @@ export default function EditCategory({ id, title }) {
                 <fieldset>
                     <legend>Tipo</legend>
                     <div className={styles.formRadioInputContainer}>
-                        <RadioInput inputName="expense-type" labelText="Despesa" checked />                        
+                        <RadioInput inputName="expense-type" labelText="Despesa" checked />
                     </div>
                     <div className={styles.formRadioInputContainer}>
                         <RadioInput inputName="expense-type" labelText="Receita" />
@@ -66,8 +66,10 @@ export default function EditCategory({ id, title }) {
                     </div>
                 </fieldset>
             </div>
-            <Button type="submit" primary>Salvar</Button>
-            <Button type="submit" secondary>Voltar</Button>
+            <div className={styles.formButtonsContainer}>
+                <Button type="submit" primary>Salvar</Button>
+                <Button type="submit" secondary>Voltar</Button>
+            </div>
         </form>
     );
 }
