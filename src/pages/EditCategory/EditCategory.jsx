@@ -68,7 +68,7 @@ export default function EditCategory({ id, title }) {
             </div>
             <div className={styles.formButtonsContainer}>
                 <Button type="submit" primary>Salvar</Button>
-                <Button type="submit" secondary>Voltar</Button>
+                <Button secondary>Voltar</Button>
             </div>
         </form>
     );
